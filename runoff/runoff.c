@@ -198,5 +198,8 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     if (minivotes)
+    {
+        candidates[i].eliminated = true;
+    }
     return;
 }
