@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -213,9 +214,12 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    if (min == candidates[i].votes)
+    for (int i = 0; i < candidate_count; i++)
     {
-        candidates[i].eliminated = true;
+        if (min == candidates[i].votes)
+        {
+            candidates[i].eliminated = true;
+        }
     }
     return;
 }
