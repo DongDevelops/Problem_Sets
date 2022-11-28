@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
-    int unit8_t header[n];
+    unit8_t header[n];
     while (fread(&header, 44, 1, input))
     {
         fwrite(&header, 44, 1, output);
