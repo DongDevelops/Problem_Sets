@@ -168,7 +168,7 @@ bool print_winner(void)
     {
         if (maxvotes >= voter_count/2 && maxvotes == candidates[i].votes)
         {
-            printf("%s\n", candidates[i].names);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
