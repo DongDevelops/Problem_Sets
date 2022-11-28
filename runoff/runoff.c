@@ -164,7 +164,6 @@ bool print_winner(void)
         if (maxvotes < candidates[i].votes)
         {
             maxvotes = candidates[i].votes;
-            return maxvotes;
         }
     }
 
@@ -195,6 +194,15 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
+    int maxvotes = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (maxvotes < candidates[i].votes)
+        {
+            maxvotes = candidates[i].votes;
+        }
+    }
+
     if (min == maxvotes)
     {
         return true;
