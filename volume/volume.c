@@ -10,7 +10,7 @@ const int HEADER_SIZE = 44;
 int main(int argc, char *argv[])
 {
     // Check command-line arguments
-    if (argc != 4) 
+    if (argc != 4)
     {
         printf("Usage: ./volume input.wav output.wav factor\n");
         return 1;
@@ -34,10 +34,8 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     uint8_t header[44];
-    while (fread(&header, 44, 1, input))
-    {
-        fwrite(&header, 44, 1, output);
-    }
+    fread(&header, 44, 1, input);
+    fwrite(&header, 44, 1, output);
 
     int16_t buffer;
     while (fread(&buffer, 2, 1, input))
