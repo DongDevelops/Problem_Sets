@@ -1,10 +1,10 @@
 #include "helpers.h"
 #include <math.h>
 #include <stdio.h>
+#define min(a,b)
 
 double round(double x);
 double ceil(double x);
-int imin(int, int);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
