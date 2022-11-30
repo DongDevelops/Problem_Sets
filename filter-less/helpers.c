@@ -1,10 +1,10 @@
 #include "helpers.h"
 #include <math.h>
 #include <stdio.h>
-#define min(a,b)
 
 double round(double x);
 double ceil(double x);
+int imin(int, int);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -28,9 +28,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            image[i][j].rgbtRed = min(round(.393*image[i][j].rgbtRed + .769*image[i][j].rgbtGreen + .189*image[i][j].rgbtBlue), 255);
-            image[i][j].rgbtGreen = scanf(round(.349*image[i][j].rgbtRed + .686*image[i][j].rgbtGreen + .168*image[i][j].rgbtBlue), 255);
-            image[i][j].rgbtBlue = scanf(round(.272*image[i][j].rgbtRed + .534*image[i][j].rgbtGreen + .131*image[i][j].rgbtBlue), 255);
+            image[i][j].rgbtRed = imin(round(.393*image[i][j].rgbtRed + .769*image[i][j].rgbtGreen + .189*image[i][j].rgbtBlue), 255);
+            image[i][j].rgbtGreen = imin(round(.349*image[i][j].rgbtRed + .686*image[i][j].rgbtGreen + .168*image[i][j].rgbtBlue), 255);
+            image[i][j].rgbtBlue = imin(round(.272*image[i][j].rgbtRed + .534*image[i][j].rgbtGreen + .131*image[i][j].rgbtBlue), 255);
         }
     }
     return;
@@ -46,4 +46,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
+}
+
+int imin(int n , int m)
+{
+    int min;
+    if(n < m)
+        min = n;
+    else
+        min = m;
+    return min;
 }
