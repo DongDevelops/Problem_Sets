@@ -1,6 +1,8 @@
 #include "helpers.h"
 #include <math.h>
 
+double round(double x);
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
