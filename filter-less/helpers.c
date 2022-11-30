@@ -2,6 +2,7 @@
 #include <math.h>
 
 double round(double x);
+double ceil(double x);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
