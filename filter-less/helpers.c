@@ -3,8 +3,6 @@
 #include <stdio.h>
 
 double round(double x);
-double ceil(double x);
-int imin(int, int);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -46,7 +44,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             {
                 sepiaBlue = 255;
             }
-            
+
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtGreen = sepiaGreen;
             image[i][j].rgbtBlue = sepiaBlue;
