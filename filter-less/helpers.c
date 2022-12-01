@@ -54,12 +54,3 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int imin(int n , int m)
-{
-    int min;
-    if(n < m)
-        min = n;
-    else
-        min = m;
-    return min;
-}
