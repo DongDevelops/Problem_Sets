@@ -32,6 +32,10 @@ int main(int argc, char *argv[])
                     FILE *img = fopen(filename, "w");
                     fwrite(%03i.jpg, 512, 1, buffer);
                 }
+                else if(buffer[n] == 0)
+                {
+                    return 1;
+                }
             }
         }
     }
