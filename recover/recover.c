@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         }
 
         int count = 0;
-        
+
         while(fread(buffer, 512, 1, argv[1]))
         {
             for(int n = 0; n < 512, n++);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
                     count ++;
 
                     FILE *img = fopen(filename, "w");
-                    fwrite(%03i.jpg, 512, 1, )
+                    fwrite(%03i.jpg, 512, 1, buffer);
                 }
             }
         }
