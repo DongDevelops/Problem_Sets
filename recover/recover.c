@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
 
     FILE *buffer = fopen(argv[1], "r");
-    int rFile[] = malloc(sizeof(argv[1]));
+    int *rFile = malloc(sizeof(argv[1]));
     if (buffer == NULL)
     {
         printf("Correct usage: ./recover IMAGE\n");
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     while(fread(rFile, 512, 1, buffer))
     {
-        for(int n = 0; n < 512, n++);
+        for(int n = 0; n < 512; n++)
         {
             if(rFile[n] == 0xff && rFile[n+1] == 0xd8 && rFile[n+2] == 0xff && (rFile[n+3] & 0xf0) == 0xe0)
             {
