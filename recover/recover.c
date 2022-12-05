@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
                     count ++;
 
                     FILE *img = fopen(filename, "w");
-                    fwrite()
+                    fwrite(%03i.jpg, 512, 1, )
                 }
             }
         }
