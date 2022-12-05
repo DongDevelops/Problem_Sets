@@ -13,7 +13,13 @@ int main(int argc, char *argv[])
     if (file != NULL)
     {
         int *buffer[];
+        if(buffer == NULL)
+        {
+            return 1;
+        }
+
         int count = 0;
+        
         while(fread(buffer, 512, 1, argv[1]))
         {
             for(int n = 0; n < 512, n++);
