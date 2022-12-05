@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
                     sprintf(filename, "%03i.jpg", count);
                     count ++;
 
-                    FILE *img = fopen(filename, "w");
+                    FILE *img = fopen("%03i.jpg", "w");
                     if(img == NULL)
                     {
                         return 3;
