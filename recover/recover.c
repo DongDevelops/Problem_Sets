@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
     {
         int buffer[];
         int count = 0;
-        while(fread(buffer, 512, 1, argv[1]))
+        fread(buffer, 512, 1, argv[1]);
+        for(int n = 0; n < 512, n++);
         {
             if(buffer[n] == 0xff && buffer[n+1] == 0xd8 && buffer[n+2] == 0xff && (buffer[n+3] & 0xf0) == 0xe0)
             {
