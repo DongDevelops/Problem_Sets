@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
                     return 1;
                 }
 
-                fwrite(img, 512, 1, rFile);
+                fwrite(, 512, 1, img);
             }
 
             else if(rFile[n] == 0)
