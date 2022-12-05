@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    int ReadFile[];
     FILE *buffer = fopen(argv[1], "r");
     if (buffer == NULL)
     {
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 
     int count = 0;
 
-    while(fread(buffer, 512, 1, argv[1]))
+    while(fread(buffer, 512, 1, buffer))
     {
         for(int n = 0; n < 512, n++);
         {
