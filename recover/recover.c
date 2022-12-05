@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
             {
                 sprintf(rFile, "%03i.jpg", count);
                 count ++;
-
+                continue;
                 FILE *img = fopen("%03i.jpg", "w");
                 if(img == NULL)
                 {
