@@ -10,5 +10,9 @@ int main(int argc, char *argv[])
     }
 
     FILE *f = fopen(argv[1], "r");
-    fread(buffer, 512, 1, argv[1]);
+    int buffer[];
+    while(fread(buffer, 512, 1, argv[1]))
+    {
+        if 
+    }
 }
