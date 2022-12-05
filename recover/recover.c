@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *buffer[] = fopen(argv[1], "r");
+    FILE *buffer = fopen(argv[1], "r");
     if (buffer == NULL)
     {
         printf("Correct usage: ./recover IMAGE\n");
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     int count = 0;
 
-    while(fread(buffer[], 512, 1, argv[1]))
+    while(fread(buffer, 512, 1, argv[1]))
     {
         for(int n = 0; n < 512, n++);
         {
