@@ -30,6 +30,10 @@ int main(int argc, char *argv[])
                     count ++;
 
                     FILE *img = fopen(filename, "w");
+                    if(img == NULL)
+                    {
+                        return 3;
+                    }
                     fwrite(%03i.jpg, 512, 1, buffer);
                 }
                 else if(buffer[n] == 0)
