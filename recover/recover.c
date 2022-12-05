@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
             {
                 count ++;
                 sprintf(filename, "%03i.jpg", count);
+                
                 FILE *img = fopen(filename, "w");
                 fwrite()
             }
