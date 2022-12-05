@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int ReadFile[];
+    int rFile[];
     FILE *buffer = fopen(argv[1], "r");
     if (buffer == NULL)
     {
