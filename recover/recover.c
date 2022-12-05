@@ -30,17 +30,17 @@ int main(int argc, char *argv[])
                 FILE *img = fopen("%03i.jpg", "w");
                 if(img == NULL)
                 {
-                    return 3;
+                    return 1;
                 }
 
-                fwrite(%03i.jpg, 512, 1, buffer);
+                fwrite(img, 512, 1, buffer);
             }
 
             else if(buffer[n] == 0)
             {
                 return 1;
             }
-            
+
         }
     }
 }
