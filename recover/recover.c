@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file != NULL)
     {
-        int buffer[];
+        int *buffer[];
         int count = 0;
         fread(buffer, 512, 1, argv[1]);
         for(int n = 0; n < 512, n++);
