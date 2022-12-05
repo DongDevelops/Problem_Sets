@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         {
             if(rFile[n] == 0xff && rFile[n+1] == 0xd8 && rFile[n+2] == 0xff && (rFile[n+3] & 0xf0) == 0xe0)
             {
-                sprintf(filename, "%03i.jpg", count);
+                sprintf(rFile, "%03i.jpg", count);
                 count ++;
 
                 FILE *img = fopen("%03i.jpg", "w");
