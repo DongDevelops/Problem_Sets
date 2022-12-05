@@ -14,16 +14,18 @@ int main(int argc, char *argv[])
     {
         int *buffer[];
         int count = 0;
-        fread(buffer, 512, 1, argv[1]);
-        for(int n = 0; n < 512, n++);
+        while(fread(buffer, 512, 1, argv[1]))
         {
-            if(buffer[n] == 0xff && buffer[n+1] == 0xd8 && buffer[n+2] == 0xff && (buffer[n+3] & 0xf0) == 0xe0)
+            for(int n = 0; n < 512, n++);
             {
-                sprintf(filename, "%03i.jpg", count);
-                count ++;
+                if(buffer[n] == 0xff && buffer[n+1] == 0xd8 && buffer[n+2] == 0xff && (buffer[n+3] & 0xf0) == 0xe0)
+                {
+                    sprintf(filename, "%03i.jpg", count);
+                    count ++;
 
-                FILE *img = fopen(filename, "w");
-                fwrite()
+                    FILE *img = fopen(filename, "w");
+                    fwrite()
+                }
             }
         }
     }
