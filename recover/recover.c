@@ -13,6 +13,6 @@ int main(int argc, char *argv[])
     int buffer[];
     while(fread(buffer, 512, 1, argv[1]))
     {
-        if 
+        if(buffer[0] == 0xff)
     }
 }
