@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     char* filename = malloc(8 * sizeof(char));
     FILE* outputPtr = NULL;
+    int count_image;
 
     FILE* inputPtr = fopen(inputFile, "r");
     if(inputPtr == NULL)
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
     {
         if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            sprintf()
+            sprintf(filename, "%03i.jpg", )
         }
     }
 
