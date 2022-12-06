@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     }
 
     unsigned char buffer[512];
+    char* filename = malloc(8 * sizeof(char));
 
     FILE* inputPtr = fopen(inputFile, "r");
     if(inputPtr == NULL)
