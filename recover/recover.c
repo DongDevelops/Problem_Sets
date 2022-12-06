@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-typedef
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
