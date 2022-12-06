@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     }
 
     unsigned char buffer[512];
-    
+
     FILE* inputPtr = fopen(inputFile, "r");
     if(inputPtr == NULL)
     {
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    fread(buffer, sizeof(char), 512, inputPtr);
+    while(fread(buffer, sizeof(char), 512, inputPtr) == 512);
 
 
 
