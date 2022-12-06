@@ -16,5 +16,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    unsigned char buffer[512];
     
 }
