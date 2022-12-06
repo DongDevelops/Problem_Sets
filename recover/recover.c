@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     char* inputFile = argv[1];
     if(inputFile == NULL)
     {
-        printf("Cannot open file: %s\n", inputFile);
+        printf("Correct usage: ./recover IMAGE\n");
         return 1;
     }
 
@@ -22,6 +22,6 @@ int main(int argc, char *argv[])
     FILE* inputPtr = fopen(inputFile, "r");
     fread(buffer, sizeof(char), 512, inputPtr);
 
-    
+
 
 }
