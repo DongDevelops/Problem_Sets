@@ -49,7 +49,6 @@ int main(int argc, char *argv[])
             fwrite(buffer, sizeof(BYTE), 512, outputPtr);
         }
     }
-
     fclose(inputPtr);
     fclose(outputPtr);
     free(filename);
