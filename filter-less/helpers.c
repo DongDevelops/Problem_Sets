@@ -90,7 +90,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     int count = 0;
-    
+    for (int a = 0; a < height; a++)
+    {
+        for (int b = 0; b < width; b++)
+        {
+            copy[i][j].rgbtRed
+            copy[i][j].rgbtRed
+            copy[i][j].rgbtRed
+        }
+    }
     return;
 }
 
