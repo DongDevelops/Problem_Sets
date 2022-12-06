@@ -106,9 +106,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     sumGreen += copy[i+k][j+h].rgbtGreen;
                     sumBlue += copy[i+k][j+h].rgbtBlue;
                     count ++;
-                    image[i][j].rgbtRed = sumRed/count;
-                    image[i][j].rgbtGreen = sumGreen/count;
-                    image[i][j].rgbtBlue = sumBlue/count;
+                    float image[i][j].rgbtRed = round(sumRed/count);
+                    float image[i][j].rgbtGreen = round(sumGreen/count);
+                    float image[i][j].rgbtBlue = round(sumBlue/count);
                 }
             }
         }
