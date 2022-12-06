@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    while(fread(buffer, sizeof(char), 512, inputPtr) == 512);
+    while(fread(buffer, sizeof(char), 512, inputPtr) != 0);
 
 
 
