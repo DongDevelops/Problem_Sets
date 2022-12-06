@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+typedef
+
 int main(int argc, char *argv[])
 {
     if (argc != 2)
