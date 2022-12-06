@@ -97,6 +97,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[i][j].rgbtRed
             copy[i][j].rgbtRed
             copy[i][j].rgbtRed
+
+            // copy[i-1] [1]
         }
     }
     return;
