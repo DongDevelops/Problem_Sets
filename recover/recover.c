@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    unsigned char buffer[512];
+    BYTE buffer[512];
     char* filename = malloc(8 * sizeof(char));
 
     FILE* inputPtr = fopen(inputFile, "r");
