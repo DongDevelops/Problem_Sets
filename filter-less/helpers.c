@@ -89,6 +89,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[i][j].rgbtBlue = image[i][j].rgbtBlue;
         }
     }
+    int count = 0;
     
     return;
 }
