@@ -20,6 +20,6 @@ int main(int argc, char *argv[])
 
     unsigned char buffer[512];
     FILE* inputPtr = fopen(inputFile, "r");
-    
+    fread(buffer, sizeof(char), 512, inputPtr);
 
 }
