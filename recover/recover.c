@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
         }
         if(outputPtr != NULL)
         {
-            fwrite(buffer, sizeof(char), 512, outputPtr);
+            fwrite(buffer, sizeof(BYTE), 512, outputPtr);
         }
     }
 
