@@ -44,10 +44,12 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", count_image);
             outputPtr = fopen(filename, "w");
         }
+
         if(outputPtr != NULL)
         {
             fwrite(buffer, sizeof(BYTE), 512, outputPtr);
         }
+        
     }
     fclose(inputPtr);
     fclose(outputPtr);
