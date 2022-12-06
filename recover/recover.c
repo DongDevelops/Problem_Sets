@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
     while(fread(buffer, sizeof(char), 512, inputPtr) == 512);
     {
-        if()
+        if(buffer[0])
     }
 
 
