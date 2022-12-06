@@ -50,5 +50,8 @@ int main(int argc, char *argv[])
         }
     }
 
-
+    fclose(inputPtr);
+    fclose(outputPtr);
+    free(filename);
+    return 0;
 }
