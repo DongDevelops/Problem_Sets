@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 
     BYTE buffer[512];
     char* filename = malloc(8 * sizeof(char));
+    FILE* outputPtr = NULL;
 
     FILE* inputPtr = fopen(inputFile, "r");
     if(inputPtr == NULL)
