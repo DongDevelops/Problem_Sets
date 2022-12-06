@@ -19,7 +19,14 @@ int main(int argc, char *argv[])
     }
 
     unsigned char buffer[512];
+    
     FILE* inputPtr = fopen(inputFile, "r");
+    if(inputPtr == NULL)
+    {
+        printf("Unable to open file: %s\n", inputFile);
+        return 1;
+    }
+
     fread(buffer, sizeof(char), 512, inputPtr);
 
 
