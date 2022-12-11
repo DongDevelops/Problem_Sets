@@ -44,10 +44,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    else
-    {
-        fread(file, sizeof(char), 1, dictionary);
-    }
+    fread(file, sizeof(char), 1, dictionary);
 
     return true;
 }
