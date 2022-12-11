@@ -36,7 +36,7 @@ unsigned int hash(const char *word)
     N = i;
     node word = malloc(sizeof(node));
     word -> next = table[N] -> next;
-    
+    table[N] = word;
 
     return N;
 }
