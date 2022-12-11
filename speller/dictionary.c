@@ -53,19 +53,19 @@ bool load(const char *dictionary)
 {
     // TODO
 
-    FILE* load_words = fopen(dictionary, "r");
-    if(load_words == NULL)
+    FILE* filePtr = fopen(dictionary, "r");
+    if(filePtr == NULL)
     {
         return false;
     }
-
+ 
     for(int i = 0; i<N; i++)
     {
         table[i] = NULL;
     }
 
 
-    
+
     while(fread(&load_words, sizeof(char), 1, dictionary));
     {
         if(load_words == NUL)
