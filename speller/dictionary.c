@@ -48,7 +48,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while(fread(file, sizeof(char), 1, dictionary) != EOF);
+    while(fread(file, sizeof(char), 1, dictionary));
     {
         if(file == NUL)
         {
