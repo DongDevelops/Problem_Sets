@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
     {
         value += tolower(word[i])
     }
-
+    return value % N;
 
     int i = word[0] % 26;
     N = i;
