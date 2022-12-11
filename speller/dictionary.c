@@ -33,13 +33,13 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     if(int i = 0; i < N; i++)
     {
-        
+
     }
     return toupper(word[0]) - 'A';
 }
 
 int word_count = 0;
-FILE* file;
+FILE* file = NULL;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
