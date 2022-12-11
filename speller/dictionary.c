@@ -50,7 +50,7 @@ bool load(const char *dictionary)
 
     while(fread(file, sizeof(char), 1, dictionary) != EOF);
     {
-        if(file == \n)
+        if(file == NUL)
         {
             word_count ++;
         }
