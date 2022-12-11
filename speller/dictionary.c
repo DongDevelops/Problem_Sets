@@ -58,11 +58,15 @@ bool load(const char *dictionary)
     {
         return false;
     }
- 
+
     for(int i = 0; i<N; i++)
     {
         table[i] = NULL;
     }
+
+    node* tempnode[N];
+
+    while(fscanf(filePtr, "%s\n", tempnode))
 
 
 
