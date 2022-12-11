@@ -76,7 +76,7 @@ bool load(const char *dictionary)
 
         if(table[key] == NULL)
         {
-            table
+            table[key] = tempNode;
         }
     }
 
