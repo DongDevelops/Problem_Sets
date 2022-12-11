@@ -86,15 +86,7 @@ bool load(const char *dictionary)
         }
     }
 
-
-    while(fread(&load_words, sizeof(char), 1, dictionary));
-    {
-        if(load_words == NUL)
-        {
-            word_count ++;
-        }
-
-    }
+    fclose(filePtr);
 
     return true;
 }
