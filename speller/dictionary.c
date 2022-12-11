@@ -32,13 +32,8 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
 
-    while(scanf(word))
-    {
-        if(int i = 0; i < N; i++)
-        {
-            table[i] = word[0] % 26;
-        }
-    }
+    int i = word[0] % 26;
+    
 
     return toupper(word[0]) - 'A';
 }
