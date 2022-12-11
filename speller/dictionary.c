@@ -39,10 +39,15 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE* file = fopen(dictionary, "r");
-    fread(file, sizeof(char), 1, dictionary);
-    
+    if(file = NULL)
+    {
+        return false;
+    }
 
-    return false;
+    while(fread(file, sizeof(char), 1, dictionary) == EOF);
+
+
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
