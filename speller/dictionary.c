@@ -76,7 +76,8 @@ bool load(const char *dictionary)
 
         if(table[key] == NULL)
         {
-            table[key] = tempWord;
+            tempNode->next = NULL;
+            table[key] = tempNodd;
         }
     }
 
