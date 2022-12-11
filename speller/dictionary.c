@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
     if(table[N] != NULL)
     {
         node new_word = malloc(sizeof(node));
-        new_word -> word = 
+        new_word -> word = word;
         word -> next = table[N] -> next;
         table[N] = word;
     }
