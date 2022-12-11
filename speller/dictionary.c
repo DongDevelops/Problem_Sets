@@ -24,6 +24,10 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    int key = hash(word);
+
+    node* nodePtr = table[key];
+
     return false;
 }
 
@@ -38,21 +42,7 @@ unsigned int hash(const char *word)
         value += tolower(word[i])
     }
     return value % N;
-
-    int i = word[0] % 26;
-    N = i;
-    if(table[N] != NULL)
-    {
-        node new_word = malloc(sizeof(node));
-        new_word -> word = word;
-        new_word -> next = table[N] -> next;
-        table[N] = word;
-    }
-
-
-    return N;
 }
-
 int wordCount = 0;
 
 // Loads dictionary into memory, returning true if successful, else false
