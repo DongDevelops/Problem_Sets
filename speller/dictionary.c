@@ -35,7 +35,8 @@ unsigned int hash(const char *word)
     int i = word[0] % 26;
     N = i;
     node word = malloc(sizeof(node));
-    word -> next = table[N].next
+    word -> next = table[N] -> next;
+    
 
     return N;
 }
