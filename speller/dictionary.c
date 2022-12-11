@@ -39,13 +39,15 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE* file = fopen(dictionary, "r");
-    if(file = NULL)
+    if(file == NULL)
     {
         return false;
     }
 
-    fread(file, sizeof(char), 1, dictionary);
-
+    else
+    {
+        fread(file, sizeof(char), 1, dictionary);
+    }
 
     return true;
 }
