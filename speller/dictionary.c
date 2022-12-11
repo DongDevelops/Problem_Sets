@@ -33,9 +33,9 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
 
     int i = word[0] % 26;
-    
+    N = i;
 
-    return toupper(word[0]) - 'A';
+    return N;
 }
 
 int word_count = 0;
