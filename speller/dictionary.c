@@ -59,6 +59,13 @@ bool load(const char *dictionary)
         return false;
     }
 
+    for(int i = 0; i<N; i++)
+    {
+        table[i] = NULL;
+    }
+
+
+    
     while(fread(&load_words, sizeof(char), 1, dictionary));
     {
         if(load_words == NUL)
