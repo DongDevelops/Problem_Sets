@@ -73,6 +73,11 @@ bool load(const char *dictionary)
         strcpy(tempNode->word, tempWord);
 
         int key = hash(tempWord);
+
+        if(table[key] == NULL)
+        {
+            table
+        }
     }
 
 
