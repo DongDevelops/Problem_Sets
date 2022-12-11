@@ -35,13 +35,14 @@ unsigned int hash(const char *word)
 }
 
 int word_count = 0;
+FILE* file == NULL;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
 
-    FILE* file = fopen(dictionary, "r");
+    file = fopen(dictionary, "r");
     if(file == NULL)
     {
         return false;
@@ -59,8 +60,12 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    if(file == NULL)
+    {
+        return 0;
+    }
     size = word_count;
-    return 0;
+    return size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
