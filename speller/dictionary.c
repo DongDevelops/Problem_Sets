@@ -28,6 +28,14 @@ bool check(const char *word)
 
     node* nodePtr = table[key];
 
+    while(nodePtr != NULL)
+    {
+        if(strcasecmp(nodePtr -> word, word) == 0)
+        {
+            return true;
+        }
+        nodePtr = nodePtr->next;
+    }
     return false;
 }
 
