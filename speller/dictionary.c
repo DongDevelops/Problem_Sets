@@ -38,6 +38,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    int word_count = 0;
     FILE* file = fopen(dictionary, "r");
     if(file == NULL)
     {
