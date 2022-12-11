@@ -57,6 +57,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    size = word_count;
     return 0;
 }
 
