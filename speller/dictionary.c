@@ -47,7 +47,7 @@ unsigned int hash(const char *word)
 }
 
 int word_count = 0;
-char* load_words = NULL;
+FILE* load_words = NULL;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
