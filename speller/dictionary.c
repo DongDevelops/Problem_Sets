@@ -64,7 +64,7 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
 
-    node* tempWord[N];
+    word tempWord[LENGTH + 1];
 
     while(fscanf(filePtr, "%s\n", tempWord) != EOF)
     {
