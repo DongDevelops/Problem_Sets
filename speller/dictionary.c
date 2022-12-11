@@ -31,7 +31,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    node* word = malloc(sizeof(node));
+
     while(scanf(word))
     {
         if(int i = 0; i < N; i++)
