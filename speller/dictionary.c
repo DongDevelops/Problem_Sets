@@ -34,9 +34,13 @@ unsigned int hash(const char *word)
 
     int i = word[0] % 26;
     N = i;
-    node word = malloc(sizeof(node));
-    word -> next = table[N] -> next;
-    table[N] = word;
+    if(table[N] != NULL)
+    {
+        node word = malloc(sizeof(node));
+        word -> next = table[N] -> next;
+        table[N] = word;
+    }
+
 
     return N;
 }
