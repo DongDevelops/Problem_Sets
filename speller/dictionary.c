@@ -81,7 +81,7 @@ bool load(const char *dictionary)
         }
         else
         {
-             
+             tempNode->next = 
         }
     }
 
