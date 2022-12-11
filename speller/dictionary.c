@@ -46,7 +46,7 @@ unsigned int hash(const char *word)
     return N;
 }
 
-int word_count = 0;
+int wordCount = 0;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
@@ -84,6 +84,7 @@ bool load(const char *dictionary)
              tempNode->next = table[key];
              table[key] = tempNode;
         }
+        wordCount++;
     }
 
     fclose(filePtr);
@@ -94,13 +95,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    if(file == NULL)
-    {
-        return 0;
-    }
-    size = word_count;
-    return size;
+    return wordCount;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
