@@ -31,6 +31,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    node 
     while(scanf(word))
     {
         if(int i = 0; i < N; i++)
@@ -43,22 +44,22 @@ unsigned int hash(const char *word)
 }
 
 int word_count = 0;
-FILE* file = NULL;
+char* load_words = NULL;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
 
-    file = fopen(dictionary, "r");
-    if(file == NULL)
+    load_words = fopen(dictionary, "r");
+    if(load_words == NULL)
     {
         return false;
     }
 
-    while(fread(file, sizeof(char), 1, dictionary));
+    while(fread(&load_words, sizeof(char), 1, dictionary));
     {
-        if(file == NUL)
+        if(load_words == NUL)
         {
             word_count ++;
         }
