@@ -31,10 +31,14 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    if(int i = 0; i < N; i++)
+    while(scanf(word))
     {
-
+        if(int i = 0; i < N; i++)
+        {
+            table[i] = word[0] % 26;
+        }
     }
+
     return toupper(word[0]) - 'A';
 }
 
