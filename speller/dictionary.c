@@ -70,7 +70,9 @@ bool load(const char *dictionary)
     {
         node* tempNode = malloc(sizeof(node));
 
-        strcpy(tempNode->word, tempWord)
+        strcpy(tempNode->word, tempWord);
+
+        int key = hash(tempWord);
     }
 
 
