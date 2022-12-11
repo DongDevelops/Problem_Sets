@@ -64,10 +64,12 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
 
-    node* tempnode[N];
+    node* tempWord[N];
 
-    while(fscanf(filePtr, "%s\n", tempnode))
-
+    while(fscanf(filePtr, "%s\n", tempWord) != EOF)
+    {
+        node* tempnode = malloc(sizeof(node));
+    }
 
 
     while(fread(&load_words, sizeof(char), 1, dictionary));
