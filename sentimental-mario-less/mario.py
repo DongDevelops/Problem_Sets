@@ -1,1 +1,1 @@
-# TODO
+height = input("Height: ")
