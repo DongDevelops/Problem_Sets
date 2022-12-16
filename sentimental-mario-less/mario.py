@@ -5,3 +5,5 @@ while True:
             print("#")
     else:
         print(")
+
+while height
