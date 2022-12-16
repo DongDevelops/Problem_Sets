@@ -8,4 +8,8 @@ while True:
 
 for i in range(0, height, 1):
     for j in range(0, height, 1):
-        print("#")
+        if i+j < height-1:
+            print(" ")
+        else:
+            print("#")
+
