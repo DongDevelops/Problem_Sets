@@ -1,4 +1,4 @@
-height = int(input("Height: "))
+height = input("Height: ")
 
 
 for i in height:
