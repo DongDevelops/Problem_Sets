@@ -1,7 +1,8 @@
 height = input("Height: ")
-while True:
-    if height == 9:
-        for i in range(height):
-            print("#")
+
+
+for i in range(height):
+    if height < 9:
+        print("#")
     else:
         input("Height: ")
