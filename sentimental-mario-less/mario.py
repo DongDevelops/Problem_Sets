@@ -1,3 +1,5 @@
 height = input("Height: ")
-for i in height:
-    print("#")
+while Ture:
+    0 < height and height < 9
+        for i in height:
+            print("#")
