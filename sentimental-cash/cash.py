@@ -2,7 +2,8 @@ from cs50 import get_float
 # TODO
 while True:
     change = get_float("How much change is owed? ")
-    if change > 0
+    if change > 0:
+        print(f"Change owed: {change}")
         break
 
 count = 0
@@ -27,4 +28,4 @@ while change > 0.01:
     count += 1
     return change, count
 
-print(f" ")
+print(f"{count} ")
