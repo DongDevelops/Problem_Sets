@@ -19,8 +19,8 @@ def main():
     with open(filename) as file:
         reader = csv.DictReader(file)
         for team in reader:
-            
-        teams = teams.append(reader)
+            team["rating"] = int(team["rating"])
+            teams.append(team)
 
     # TODO: Read teams into memory from file
 
