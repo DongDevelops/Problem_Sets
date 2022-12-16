@@ -10,19 +10,21 @@ count = 0
 while change > 0.25:
     change = change - 0.25
     count += 1
-    return change
+    return change, count
 
 while change > 0.10:
     change = change - 0.10
     count += 1
-    return change
+    return change, count
 
 while change > 0.05:
     change = change - 0.05
     count += 1
-    return change
+    return change, count
 
-**For example, 45 was given
-25, 10, 5, 1
+while change > 0.01:
+    change = change - 0.01
+    count += 1
+    return change, count
 
-45 - 25 = 20
+print(f" ")
