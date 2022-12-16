@@ -4,6 +4,4 @@ while True:
         for i in height:
             print("#")
     else:
-        print(")
-
-while height
+        input("Height: ")
