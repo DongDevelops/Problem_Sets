@@ -17,9 +17,9 @@ def main():
     teams = []
     filename = sys.argv[1]
     with open(filename) as file:
-        reader = csv.DictReader(file)
-        teams = teams.append()
-    
+        reader = int(csv.DictReader(file))
+        teams = teams.append(reader)
+
     # TODO: Read teams into memory from file
 
     counts = {}
