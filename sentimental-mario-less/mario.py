@@ -9,7 +9,8 @@ while True:
 for i in range(0, height, 1):
     for j in range(0, height, 1):
         if i+j < height-1:
-            print(" ")
+            print(" ", end="")
         else:
-            print("#")
+            print("#", end="")
+    print()
 
