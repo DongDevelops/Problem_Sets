@@ -1,7 +1,7 @@
-height = input("Height: ")
+height = int(input("Height: "))
 
 
-for i in int(height):
+for i in height:
     if height < 9:
         print("#")
     else:
