@@ -8,24 +8,24 @@ while True:
 
 count = 0
 
-while change > 0.25:
+while change >= 0.25:
     change = change - 0.25
     count += 1
-    return change, count
 
-while change > 0.10:
+
+while change >= 0.10:
     change = change - 0.10
     count += 1
-    return change, count
 
-while change > 0.05:
+
+while change >= 0.05:
     change = change - 0.05
     count += 1
-    return change, count
 
-while change > 0.01:
+
+while change >= 0.01:
     change = change - 0.01
     count += 1
-    return change, count
+
 
 print(f"{count} ")
