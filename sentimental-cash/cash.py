@@ -1,2 +1,3 @@
+from cs50 import get_float
 # TODO
-change = input("How much change is owed? ")
+change = get_float("How much change is owed? ")
