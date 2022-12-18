@@ -16,11 +16,11 @@ for i in range(0, A, 1):
     else:
         letters += 1
 
-float(L) = letters/words * 100
-float(S) = sentences/words * 100
+L = float(letters/words * 100)
+S = float(sentences/words * 100)
 
 
-calculate = 0.0588 * L - 0.296 * S - 15.8
+calculate = round(0.0588 * L - 0.296 * S - 15.8)
 
 if calculate >= 16:
     print("Grade 16+")
