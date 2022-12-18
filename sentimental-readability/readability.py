@@ -18,15 +18,12 @@ for i in range(0, A, 1):
 
 L = float(letters/words * 100)
 S = float(sentences/words * 100)
-
-
 calculate = round(0.0588 * L - 0.296 * S - 15.8)
 
-if calculate >= 16:
-    print("Grade 16+")
-
-if calculate < 1:
-    print("Before Grade 1")
-
-
-print(f"Grade {calculate}")
+while True:
+    if calculate >= 16:
+        print("Grade 16+")
+    elif calculate < 1:
+        print("Before Grade 1")
+    else:
+        print(f"Grade {calculate}")
