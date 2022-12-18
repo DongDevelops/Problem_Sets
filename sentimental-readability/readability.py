@@ -16,7 +16,7 @@ for i in range(0, A, 1):
     else:
         letters += 1
 
-float(L) = 0 * 100/words
+float(L) = letters/words * 100
 float(S) = 0
 
 
