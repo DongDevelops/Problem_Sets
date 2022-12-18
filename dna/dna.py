@@ -9,8 +9,8 @@ def main(argc, argv[]):
         print("Incorrect usage")
 
     # TODO: Read database file into a variable
-    file = fopen(argv[1], "r")
-    
+    file = open('argv[1]', 'r')
+
 
     # TODO: Read DNA sequence file into a variable
 
