@@ -2,10 +2,10 @@ import csv
 import sys
 
 
-def main(argc, argv[]):
+def main():
 
     # TODO: Check for command-line usage
-    if argc != 3:
+    if sys.argc != 3:
         print("Incorrect usage")
 
     # TODO: Read database file into a variable
