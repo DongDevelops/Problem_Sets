@@ -17,7 +17,7 @@ for i in range(0, A, 1):
         letters += 1
 
 float(L) = letters/words * 100
-float(S) = 0
+float(S) = sentences/words * 100
 
 
 calculate = 0.0588 * L - 0.296 * S - 15.8
