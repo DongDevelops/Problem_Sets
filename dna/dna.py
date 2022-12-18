@@ -28,8 +28,12 @@ def main():
         result[subsequence] = longest_match(dna_sequence, subsequence)
 
 
-    A = longest_match(sys.argv[2], AAGT)
     # TODO: Check database for matching profiles
+    for person in database:
+        match = 0
+        for subsequence in subsequences:
+            if int(person[subsequence]) == result[subsequence]:
+                match += 1
 
 
     return
