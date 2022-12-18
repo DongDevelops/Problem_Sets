@@ -3,7 +3,9 @@ from cs50 import get_string
 userInput = get_string("Text: ")
 
 A = len(userInput)
-userInput[A]
+
+if i in range(0, A, 1):
+    
 
 L = 0
 S = 0
