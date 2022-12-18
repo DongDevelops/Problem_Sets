@@ -6,21 +6,19 @@ A = len(userInput)
 
 words = 0
 sentences = 0
-averageL = 0
-averageS = 0
+letters = 0
 
 for i in range(0, A, 1):
     if userInput[i] = " ":
         words += 1
-    elif userInput[1] = "." or "?" or "!":
+    elif userInput[i] = "." or "?" or "!":
         sentences += 1
     else:
-        
+        letters += 1
 
+L = 0
+S = 0
 
-L += 1
-
-S += 1
 
 calculate = 0.0588 * L - 0.296 * S - 15.8
 
