@@ -9,15 +9,12 @@ def main():
         print("Incorrect usage")
 
     # TODO: Read database file into a variable
-    file = open('argv[1]')
+    file = open('sys.argv[1]')
     csv_reader = csv.reader(file)
     next(csv_reader)
 
-
-
-
     # TODO: Read DNA sequence file into a variable
-    with open('arvg[2]', 'r') as DNA:
+    with open('argv[2]', 'r') as DNA:
 
     # TODO: Find longest match of each STR in DNA sequence
 
