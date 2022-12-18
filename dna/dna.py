@@ -18,7 +18,7 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], 'r') as dnaFile:
-        dnaRead = dnaFile.read()
+        dna_sequence = dnaFile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
     subsequences = list(database[0].keys()[1:])
