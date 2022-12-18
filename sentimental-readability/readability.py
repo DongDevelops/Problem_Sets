@@ -16,7 +16,7 @@ for i in range(0, A, 1):
     else:
         letters += 1
 
-L = 0
+L = 0 * 100/words
 S = 0
 
 
