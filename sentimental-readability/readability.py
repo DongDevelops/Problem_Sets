@@ -11,7 +11,7 @@ letters = 0
 for i in range(0, A, 1):
     if userInput[i] == " ":
         words += 1
-    elif userInput[i] == "." or "?" or "!":
+    elif userInput[i] == "." or userInput[i] = "?" or userInput[i] = "!":
         sentences += 1
     else:
         letters += 1
