@@ -4,12 +4,18 @@ userInput = get_string("Text: ")
 
 A = len(userInput)
 
+words = 0
+sentences = 0
+averageL = 0
+averageS = 0
+
 for i in range(0, A, 1):
     if userInput[i] = " ":
+        words += 1
+    elif userInput[1] = "." or "?" or "!":
+        sentences += 1
+    else:
         
-
-L = 0
-S = 0
 
 
 L += 1
