@@ -1,19 +1,18 @@
 from cs50 import get_string
 
 userInput = get_string("Text: ")
-userInput = []
-A = len(userInput)
+
 
 words = 1
 sentences = 0
 letters = 0
 
-for i in range(0, A, 1):
-    if userInput[i] == " ":
+for i in userInput:
+    if i == " ":
         words += 1
-    elif userInput[i] == "." or userInput[i] == "?" or userInput[i] == "!":
+    elif i == "." or i == "?" or i == "!":
         sentences += 1
-    else:
+    elif i.isalpha():
         letters += 1
 
 L = letters/words * 100
