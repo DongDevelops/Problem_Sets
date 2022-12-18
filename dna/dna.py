@@ -9,8 +9,10 @@ def main(argc, argv[]):
         print("Incorrect usage")
 
     # TODO: Read database file into a variable
-    with open('argv[1]', 'r') as csvfile
-    
+    file = open('argv[1]')
+    csv_reader = csv.reader(file)
+    next(csv_reader)
+
 
 
 
