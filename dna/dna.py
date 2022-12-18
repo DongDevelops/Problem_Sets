@@ -21,7 +21,7 @@ def main():
         dnaRead = dnaFile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    A = longest_match()
+    A = longest_match(sys.argv[2], AAGT)
     # TODO: Check database for matching profiles
 
     return
