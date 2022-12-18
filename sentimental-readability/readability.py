@@ -4,8 +4,9 @@ userInput = get_string("Text: ")
 
 A = len(userInput)
 
-if i in range(0, A, 1):
-    
+for i in range(0, A, 1):
+    if userInput[i] = " ":
+        
 
 L = 0
 S = 0
