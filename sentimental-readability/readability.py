@@ -16,8 +16,8 @@ for i in range(0, A, 1):
     else:
         letters += 1
 
-L = 0 * 100/words
-S = 0
+float(L) = 0 * 100/words
+float(S) = 0
 
 
 calculate = 0.0588 * L - 0.296 * S - 15.8
