@@ -21,9 +21,16 @@ def main():
         dnaRead = dnaFile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    subsequences = list(database[0].keys()[1:])
+
+    results = {}
+    for subsequence in subsequences:
+        result[subsequence] = longest_match(dna_sequence, subsequence)
+
+
     A = longest_match(sys.argv[2], AAGT)
     # TODO: Check database for matching profiles
-    
+
 
     return
 
