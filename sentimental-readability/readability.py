@@ -16,8 +16,8 @@ for i in range(0, A, 1):
     else:
         letters += 1
 
-L = float(letters/words * 100)
-S = float(sentences/words * 100)
+L = letters/words * 100
+S = sentences/words * 100
 calculate = round(0.0588 * L - 0.296 * S - 15.8)
 
 if calculate >= 16:
