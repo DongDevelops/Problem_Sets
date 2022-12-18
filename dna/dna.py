@@ -2,12 +2,15 @@ import csv
 import sys
 
 
-def main():
+def main(argc, argv[]):
 
     # TODO: Check for command-line usage
-    if 
+    if argc != 3:
+        print("Incorrect usage")
 
     # TODO: Read database file into a variable
+    file = fopen(argv[1], "r")
+    
 
     # TODO: Read DNA sequence file into a variable
 
