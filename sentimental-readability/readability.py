@@ -4,7 +4,7 @@ userInput = get_string("Text: ")
 userInput = []
 A = len(userInput)
 
-words = 0
+words = 1
 sentences = 0
 letters = 0
 
