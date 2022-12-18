@@ -2,6 +2,9 @@ from cs50 import get_string
 
 userInput = get_string("Text: ")
 
+A = len(userInput)
+userInput[A]
+
 L = 0
 S = 0
 
