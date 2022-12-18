@@ -18,7 +18,7 @@ def main():
         dnaRead = dnaFile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    A = longest_match()
     # TODO: Check database for matching profiles
 
     return
