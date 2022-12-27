@@ -1,9 +1,9 @@
-table, th, tr {
+table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-th, tr {
+th, td {
     padding: 10px;
 }
 
