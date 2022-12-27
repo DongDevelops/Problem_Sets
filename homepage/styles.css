@@ -35,3 +35,8 @@ th {
     background-color: #04AA6D;
     color: white;
 }
+
+img {
+    width: 400px;
+    height: auto
+}
