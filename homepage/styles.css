@@ -7,6 +7,14 @@ th, td {
     padding: 10px;
 }
 
+h1 {
+    text-align: center;
+}
+
+body {
+    margin: 25px;
+}
+
 th {
     background-color: #FDDF95;
 }
