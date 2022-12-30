@@ -35,7 +35,12 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                        {% for name in Names %}
+                        {% for birthday in birthdays %}
+                            <tr>
+                                <td>{{ birthday.name }}</td>
+                                <td>{{ birthday.month}}/{{ birthday.day }}</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
