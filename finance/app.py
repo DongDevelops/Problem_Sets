@@ -141,7 +141,7 @@ def register():
         return redirect("/")
 
     else:
-
+        
 
     return apology("TODO")
 
