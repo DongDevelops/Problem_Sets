@@ -118,7 +118,8 @@ def quote():
             return apology("Please enter a symbol!")
 
         item = lookup(symbol)
-
+        if item == None:
+            return apology("Invalid!")
 
 
         return render_template("quoted.html", price = item["price"])
