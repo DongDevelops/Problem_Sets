@@ -118,8 +118,8 @@ def quote():
             return apology("Please enter a symbol!")
 
         stock = lookup(symbol)
-        
-        if stock == None:
+
+        if not stock:
             return apology("Invalid!")
 
 
