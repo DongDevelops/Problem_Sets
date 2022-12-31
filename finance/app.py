@@ -123,7 +123,7 @@ def quote():
             return apology("Invalid symbol!")
 
 
-        return render_template("quoted.html", item=item)
+        return render_template("quoted.html", item=item["price"])
 
     else:
         return render_template("quote.html")
