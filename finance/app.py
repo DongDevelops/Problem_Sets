@@ -119,8 +119,8 @@ def register():
     """Register user"""
     if request.method == "POST":
 
-        if not request.form.get("username") or
-        
+        if not request.form.get("username")
+            
 
         username = request.form.get("username")
         password = request.form.get("password")
