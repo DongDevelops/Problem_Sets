@@ -117,9 +117,9 @@ def quote():
         if not symbol:
             return apology("Please enter a symbol!")
 
-        item = lookup(symbol)
+        item = lookup(symbol.upper())
 
-        if not item:
+        if item == None:
             return apology("Invalid symbol!")
 
 
