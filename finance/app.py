@@ -121,7 +121,7 @@ def quote():
 
 
 
-        return render_template("quoted.html", item=item["price"])
+        return render_template("quoted.html", price = item["price"])
 
     else:
         return render_template("quote.html")
