@@ -75,6 +75,9 @@ def buy():
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)
 
+        if price * shares > cash:
+            return apology("Cannot afford", 403)
+
         
 
 
