@@ -77,9 +77,7 @@ def buy():
         username = request.form.get("username")
         symbol = request.form.get("symbol")
         price = lookup(symbol)["price"]
-
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
-
 
 
         if price * shares > cash:
