@@ -80,6 +80,8 @@ def buy():
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
 
+
+
         if price * shares > cash:
             return apology("Cannot afford", 403)
         else:
@@ -88,8 +90,6 @@ def buy():
 
     else:
         return render_template("buy.html")
-
-    return apology("TODO")
 
 
 @app.route("/history")
