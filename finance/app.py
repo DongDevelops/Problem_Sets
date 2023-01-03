@@ -135,9 +135,6 @@ def quote():
         symbol = request.form.get("symbol")
         stock = lookup(symbol)
 
-        if not stock:
-            return apology("Invalid", 403)
-
         return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
 
     else:
