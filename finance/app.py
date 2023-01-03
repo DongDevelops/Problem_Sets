@@ -55,7 +55,7 @@ def buy():
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
 
-        symbol = 
+        stock = lookup(symbol)
         elif len(lookup(symbol))
 
     return apology("TODO")
