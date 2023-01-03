@@ -53,6 +53,9 @@ def buy():
 
     if request.method == "POST":
 
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
 
@@ -62,6 +65,7 @@ def buy():
         if not request.form.get("shares"):
             return apology("must provide shares", 403)
 
+        username = request.form.get("username")
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         price = usd(lookup(symbol)["price"])
