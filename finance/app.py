@@ -59,8 +59,6 @@ def buy():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
 
-        stock = lookup(symbol)
-        elif len(lookup(symbol))
 
     return apology("TODO")
 
