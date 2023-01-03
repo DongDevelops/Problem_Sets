@@ -77,8 +77,8 @@ def buy():
 
         if price * shares > cash:
             return apology("Cannot afford", 403)
-
-        db.execute("INSERT INTO purchases (username, shares, symbol, price) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
+        else:
+            db.execute("INSERT INTO purchases (username, shares, symbol, price) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
 
     else:
         return render_template("buy.html")
