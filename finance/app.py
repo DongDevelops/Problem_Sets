@@ -68,12 +68,12 @@ def buy():
 
         username = request.form.get("username")
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = float(request.form.get("shares"))
         price = lookup(symbol)["price"]
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)
 
-        if usd(price * shares) > usd(cash):
+        if price * shares > cash:
             return apology("Cannot afford", 403)
 
         db.execute("INSERT INTO purchase (username, shares, symbol, price, time) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
