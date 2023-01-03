@@ -73,7 +73,7 @@ def buy():
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)
 
-        if (price * shares) > cash:
+        if usd(price * shares) > usd(cash):
             return apology("Cannot afford", 403)
 
         db.execute("INSERT INTO purchase (username, shares, symbol, price, time) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
