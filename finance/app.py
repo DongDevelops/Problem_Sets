@@ -64,7 +64,8 @@ def buy():
 
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
-        price = lookup(symbol).price
+        price = lookup(symbol)["price"]
+
 
 
     return apology("TODO")
