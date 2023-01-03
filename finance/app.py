@@ -80,6 +80,8 @@ def buy():
 
         db.execute("INSERT INTO purchase (username, shares, symbol, price, time) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
 
+    else:
+        
 
     return apology("TODO")
 
