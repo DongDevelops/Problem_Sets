@@ -44,6 +44,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+
+    
+
     return apology("TODO")
 
 
