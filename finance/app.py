@@ -52,11 +52,12 @@ def buy():
     """Buy shares of stock"""
 
     if request.method == "POST":
-        symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
-        
+
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
+
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
 
         stock = lookup(symbol)
         elif len(lookup(symbol))
