@@ -71,7 +71,7 @@ def buy():
         shares = float(request.form.get("shares"))
         price = lookup(symbol)["price"]
 
-        cash = db.execute("SELECT cash FROM users WHERE username = ?", username)
+        cash = float(db.execute("SELECT cash FROM users WHERE username = ?", username))
 
         if price * shares > cash:
             return apology("Cannot afford", 403)
