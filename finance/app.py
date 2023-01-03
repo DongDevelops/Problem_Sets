@@ -71,6 +71,8 @@ def buy():
         shares = float(request.form.get("shares"))
         price = lookup(symbol)["price"]
 
+        user_id = session["]
+
         cash = float(db.execute("SELECT cash FROM users WHERE username = ?", username))
 
         if price * shares > cash:
