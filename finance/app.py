@@ -59,7 +59,8 @@ def buy():
         if lookup(request.form.get("symbol")) is None:
             return apology("Symbol not exist", 403)
 
-        if 
+        if not request.form.get("shares"):
+            return apology("must provide shares", 403)
 
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
