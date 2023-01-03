@@ -78,7 +78,7 @@ def buy():
         if price * shares > cash:
             return apology("Cannot afford", 403)
 
-        db.execute("INSERT INTO purchase (username, shares, symbol, price, time))
+        db.execute("INSERT INTO purchase (username, shares, symbol, price, time) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
 
 
     return apology("TODO")
