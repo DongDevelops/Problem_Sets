@@ -176,7 +176,7 @@ def register():
             return apology("must provide confirmation confirmation", 400)
 
         if request.form.get("password") != request.form.get("confirmation"):
-            return apology("passwords should match", 403)
+            return apology("passwords should match", 400)
 
 
         username = request.form.get("username")
