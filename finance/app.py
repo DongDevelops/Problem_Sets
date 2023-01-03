@@ -64,7 +64,9 @@ def buy():
 
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
-        price = lookup(symbol)["price"]
+        price = usd(lookup(symbol)["price"])
+
+        db.execute("SELECT )
 
 
 
