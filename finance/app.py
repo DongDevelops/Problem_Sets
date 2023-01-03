@@ -76,10 +76,7 @@ def buy():
 
         username = request.form.get("username")
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
         price = lookup(symbol)["price"]
-
-
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
 
