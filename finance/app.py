@@ -78,6 +78,7 @@ def buy():
         if price * shares > cash:
             return apology("Cannot afford", 403)
         else:
+            db.execute("UPDATE users SET cash = ?", cash - (price * shares))
             db.execute("INSERT INTO purchases (username, shares, symbol, price) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
 
     else:
