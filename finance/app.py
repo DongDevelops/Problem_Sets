@@ -145,10 +145,12 @@ def quote():
     if request.method == "POST":
 
         symbol = request.form.get("symbol").upper()
-        stock = lookup(symbol)
+        quotes = lookup(symbol)
 
         if symbol is None:
             return apology("Please enter a symbol!", 403)
+
+        
 
         if lookup(request.form.get("symbol")) is None:
             return apology("Symbol does not exist", 403)
