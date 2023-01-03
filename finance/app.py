@@ -66,9 +66,17 @@ def buy():
         if not request.form.get("shares"):
             return apology("must provide shares", 403)
 
+        try:
+            shares = int(request.form.get("shares"))
+        except:
+            return apology("Shares must be an integer")
+
+        if shares <= 0:
+            return apology("Shares must be a positive integer")
+
         username = request.form.get("username")
         symbol = request.form.get("symbol")
-        shares = float(request.form.get("shares"))
+        shares = request.form.get("shares")
         price = lookup(symbol)["price"]
 
 
