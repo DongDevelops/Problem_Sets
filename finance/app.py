@@ -223,9 +223,10 @@ def sell():
 
     if request.method == "POST":
         selected = request.form.get("symbol")
+        rows = db.execute("SELECT)
         if not selected:
             return apology("Must select a symbol")
-        elif 
+        elif
 
 
     return apology("TODO")
