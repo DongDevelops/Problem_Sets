@@ -50,6 +50,12 @@ def index():
 
     balance = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
+    total = balance
+
+    for index in indexes:
+        total += 
+
+
     values = db.execute("SELECT symbol, SUM(shares) FROM purchases GROUP BY symbol")
 
     return render_template("index.html", indexex = indexes, balance = balance, values = values)
