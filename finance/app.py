@@ -226,10 +226,14 @@ def sell():
 
     if request.method == "POST":
         selected = request.form.get("symbol")
-        rows = db.execute("SELECT FROM purchases WHERE symbol = ? username = ?", selected, username)
+        rows = db.execute("SELECT ? FROM purchases WHERE username = ?", selected, username)
         if not selected:
             return apology("Must select a symbol")
-        elif
+        elif rows is None:
+            return apology("Doesn't own any shares of that stock")
+
+        shares = request.form.get("shares")
+        
 
 
     return apology("TODO")
