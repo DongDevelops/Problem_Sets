@@ -222,7 +222,7 @@ def sell():
     """Sell shares of stock"""
 
     if request.method == "POST":
-        symbol = request.form.get("symbol")
-        if 
+        selected = request.form.get("symbol")
+        if
 
     return apology("TODO")
