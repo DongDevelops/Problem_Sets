@@ -54,7 +54,7 @@ def index():
 
     for stock in stocks:
         total += lookup(stock["symbol"])["price"] * stock["totalShares"]
-        
+        stock["price"] = lookup(stock["symbol"])["price"]
 
     return render_template("index.html", stocks = stocks, balance = balance, total = total)
 
