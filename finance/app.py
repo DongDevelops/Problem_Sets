@@ -239,6 +239,7 @@ def sell():
 
         if shares < 0:
             return apology("Shares must be an positive integer")
-        elif 
+        elif  < :
+            return apology("Shares owned are smaller than shares typed to sell")
 
     return apology("TODO")
