@@ -53,7 +53,7 @@ def index():
     total = balance
 
     for stock in stocks:
-        total += stock["price"]
+        total += lookup(stock["stymbol"])["price"]
 
 
     values = db.execute("SELECT symbol, SUM(shares) FROM purchases GROUP BY symbol")
