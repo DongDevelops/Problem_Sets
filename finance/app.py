@@ -53,7 +53,7 @@ def index():
     total = balance
 
     for stock in stocks:
-        total += lookup(stock["stymbol"])["price"]
+        total += lookup(stock["symbol"])["price"]
 
     return render_template("index.html", stocks = stocks, balance = balance, total = total)
 
