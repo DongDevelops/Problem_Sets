@@ -97,6 +97,8 @@ def buy():
             db.execute("UPDATE users SET cash = ? WHERE username = ?", cash - (price * shares), username)
             db.execute("INSERT INTO purchases (username, shares, symbol, price) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
 
+        return redirect ("/")
+
     else:
         return render_template("buy.html")
 
