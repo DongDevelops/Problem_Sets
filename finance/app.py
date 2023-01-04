@@ -46,7 +46,9 @@ def index():
     """Show portfolio of stocks"""
     user_id = session.get("user_id")
 
-    index = db.execute("SELECT * FROM purchases GROUP BY id)
+    indexes = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
+
+
     symbols = db.execute("SELECT symbol FROM purchases WHERE id = ?", user_id)[0]["symbol"]
     shares = db.execute("SELECT share FROM purchases WHERE id = ?", user_id)[0]["share"]
     prices = db.execute("SELECT price FROM purchases WHERE id = ?", user_id)[0]["price"]
@@ -54,7 +56,7 @@ def index():
     valances = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     totals = values + valances
 
-    return render_template("index.html", )
+    return render_template("index.html", indexex = indexes)
 
 
 @app.route("/buy", methods=["GET", "POST"])

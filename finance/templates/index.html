@@ -6,16 +6,25 @@
 
 {% block main %}
     <table>
-        <tr>
-            <th>Symbol</th>
-            <th>Share</th>
-            <th>Price</th>
-            <th>Value</th>
-            <th>Balance</th>
-            <th>Total</th>
-        </tr>
-        <tr>
-
-        </tr>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Share</th>
+                <th>Price</th>
+                <th>Value</th>
+                <th>Balance</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index in indexes %}
+                <tr>
+                    <td>{{index.symbol}}</td>
+                    <td>{{index.share}}</td>
+                    <td>{{index.price}}</td>
+                    <td>{{index.}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
     </table>
 {% endblock %}
