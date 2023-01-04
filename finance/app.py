@@ -45,7 +45,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-
+    symbols = db.execute("SELECT symbol)
 
     return render_template("index.html")
 
