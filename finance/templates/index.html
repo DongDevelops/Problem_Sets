@@ -22,7 +22,7 @@
                     <td>{{index.symbol}}</td>
                     <td>{{index.share}}</td>
                     <td>{{lookup(index.symbol)["price"]}}</td>
-                    <td>{{index.share * index.price}}</td>
+                    <td>{{index.share * lookup(index.symbol)["price"]}}</td>
                     <td>{{balance}}</td>
                     <td>{{(index.share * index.price) + balance}}</td>
                 </tr>
