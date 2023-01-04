@@ -49,10 +49,10 @@ def index():
     indexes = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
 
     balance = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-    
-    totals = values + balance
 
-    return render_template("index.html", indexex = indexes, balance = balance)
+    values = 
+
+    return render_template("index.html", indexex = indexes, balance = balance, values = values)
 
 
 @app.route("/buy", methods=["GET", "POST"])
