@@ -46,6 +46,7 @@ def index():
     """Show portfolio of stocks"""
     user_id = session.get("user_id")
     symbols = db.execute("SELECT symbol FROM purchases WHERE id = ?", user_id)[0]["symbol"]
+    shares = db.execute("SELECT share FROM purchases WHERE id = ?", user_id)[0]["share"]
     
 
     return render_template("index.html")
