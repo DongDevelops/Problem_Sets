@@ -223,6 +223,6 @@ def sell():
 
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        if
+        if 
 
     return apology("TODO")
