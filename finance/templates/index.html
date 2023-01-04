@@ -17,12 +17,12 @@
             </tr>
         </thead>
         <tbody>
-            {% for index in indexes %}
+            {% for stock in stocks %}
                 <tr>
-                    <td>{{index.symbol}}</td>
-                    <td>{{index.share}}</td>
-                    <td>{{lookup(index.symbol)["price"]}}</td>
-                    <td>{{index.share * lookup(index.symbol)["price"]}}</td>
+                    <td>{{stock.symbol}}</td>
+                    <td>{{stock.share}}</td>
+                    <td>{{lookup(stock.symbol)["price"]}}</td>
+                    <td>{{stock.share * lookup(stock.symbol)["price"]}}</td>
                 </tr>
             {% endfor %}
                 <tr>

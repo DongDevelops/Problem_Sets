@@ -44,21 +44,21 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    user_id = session.get("user_id")
+    user_id = session["user_id"]
 
-    indexes = db.execute("SELECT symbol, price, SUM(shares) as TotalShares FROM purchases WHERE id = ? GROUP BY symbol", user_id)
+    stocks = db.execute("SELECT symbol, price, SUM(shares) as TotalShares FROM purchases WHERE id = ? GROUP BY symbol", user_id)
 
     balance = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
     total = balance
 
-    for index in indexes:
-        total += 
+    for stock in stocks:
+        total += stock["price"]
 
 
     values = db.execute("SELECT symbol, SUM(shares) FROM purchases GROUP BY symbol")
 
-    return render_template("index.html", indexex = indexes, balance = balance, values = values)
+    return render_template("index.html", stocks = stocks, balance = balance, values = values)
 
 
 @app.route("/buy", methods=["GET", "POST"])
