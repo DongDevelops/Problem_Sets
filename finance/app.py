@@ -50,9 +50,9 @@ def index():
     prices = db.execute("SELECT price FROM purchases WHERE id = ?", user_id)[0]["price"]
     values = shares * prices
     valances = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-    totals = 
+    totals = values + valances
 
-    return render_template("index.html")
+    return render_template("index.html", )
 
 
 @app.route("/buy", methods=["GET", "POST"])
