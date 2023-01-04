@@ -8,7 +8,8 @@
     <form action="/sell" method="POST">
         <label for="symbol">Choose a symbol:</label>
             <select name="symbol" id="symbol">
-                <option value=""
+                {% for symbol in symbols %}
+                    <option value="{{symbol}}"></option>
             </select>
     </form>
 {% endblock %}
