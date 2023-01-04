@@ -44,8 +44,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-
-    symbols = db.execute("SELECT symbol FROM purchases WHERE user)
+    username = session(username)
+    symbols = db.execute("SELECT symbol FROM purchases WHERE username = ?", username)
 
     return render_template("index.html")
 
