@@ -21,8 +21,8 @@
                 <tr>
                     <td>{{stock["symbol"]}}</td>
                     <td>{{stock["TotalShares"]}}</td>
-                    <td>{% lookup(stock.symbol)["price" %}</td>
-                    <td>{% stock["TotalShares"] * lookup(stock["symbol"])["price"] %}</td>
+                    <td>{{stock["price"]}}</td>
+                    <td>{{stock["TotalShares"] * stock["price"]}}</td>
                 </tr>
             {% endfor %}
                 <tr>
