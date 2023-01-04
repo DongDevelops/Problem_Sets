@@ -47,6 +47,7 @@ def index():
     user_id = session.get("user_id")
     symbols = db.execute("SELECT symbol FROM purchases WHERE id = ?", user_id)[0]["symbol"]
     shares = db.execute("SELECT share FROM purchases WHERE id = ?", user_id)[0]["share"]
+    prices = db.execute("SELECT price FROM purchases WHERE id = ?", user_id)[0]["price"]
     
 
     return render_template("index.html")
