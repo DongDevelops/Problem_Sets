@@ -53,6 +53,7 @@ def index():
     shares = db.execute("SELECT share FROM purchases WHERE id = ?", user_id)[0]["share"]
     prices = db.execute("SELECT price FROM purchases WHERE id = ?", user_id)[0]["price"]
     values = shares * prices
+    
     valances = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     totals = values + valances
 
