@@ -46,6 +46,10 @@ def index():
     """Show portfolio of stocks"""
     user_id = session["user_id"]
 
+    current_price = lookup(stock["symbol"])["price"]
+
+    db.execute("UPDATE purchases SET price = current_price)
+
     stocks = db.execute("SELECT symbol, price, SUM(shares) as totalShares FROM purchases WHERE id = ? GROUP BY symbol", user_id)
 
     balance = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
@@ -54,7 +58,7 @@ def index():
 
     for stock in stocks:
         total += lookup(stock["symbol"])["price"] * stock["totalShares"]
-        current_price = lookup(stock["symbol"])["price"]
+
 
     return render_template("index.html", stocks = stocks, balance = balance, total = total)
 
