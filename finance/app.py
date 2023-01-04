@@ -232,8 +232,12 @@ def sell():
         elif rows is None:
             return apology("Doesn't own any shares of that stock")
 
-        shares = request.form.get("shares")
-        
+        try:
+            shares = int(request.form.get("shares"))
+        except:
+            apology("Shares must be a positive integer")
 
+        if not shares:
+            return apology("Must provide shares")
 
     return apology("TODO")
