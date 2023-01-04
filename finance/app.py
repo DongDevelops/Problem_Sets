@@ -235,9 +235,10 @@ def sell():
         try:
             shares = int(request.form.get("shares"))
         except:
-            apology("Shares must be a positive integer")
+            apology("Shares must be an integer")
 
-        if not shares:
-            return apology("Must provide shares")
+        if shares < 0:
+            return apology("Shares must be an positive integer")
+        elif 
 
     return apology("TODO")
