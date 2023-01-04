@@ -24,6 +24,7 @@
                     <td>{{index.price}}</td>
                     <td>{{index.share * index.price}}</td>
                     <td>{{balance}}</td>
+                    <td>{{(index.share * index.price) + balance}}</td>
                 </tr>
             {% endfor %}
         </tbody>
