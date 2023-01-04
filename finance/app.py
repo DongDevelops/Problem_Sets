@@ -55,10 +55,7 @@ def index():
     for stock in stocks:
         total += lookup(stock["stymbol"])["price"]
 
-
-    values = db.execute("SELECT symbol, SUM(shares) FROM purchases GROUP BY symbol")
-
-    return render_template("index.html", stocks = stocks, balance = balance, values = values)
+    return render_template("index.html", stocks = stocks, balance = balance, total = total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
