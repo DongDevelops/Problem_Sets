@@ -221,9 +221,12 @@ def register():
 def sell():
     """Sell shares of stock"""
 
+    user_id = session["user_id"]
+    username = db.execute("SELECT username FROM purchases WHERE id = ?", user_id)[0]["username"]
+
     if request.method == "POST":
         selected = request.form.get("symbol")
-        rows = db.execute("SELECT FROM purchases WHERE symbol = ?", selected)
+        rows = db.execute("SELECT FROM purchases WHERE symbol = ? username = ?", selected, username)
         if not selected:
             return apology("Must select a symbol")
         elif
