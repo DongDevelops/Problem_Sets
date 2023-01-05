@@ -223,7 +223,6 @@ def sell():
 
     user_id = session["user_id"]
     username = db.execute("SELECT username FROM purchases WHERE id = ?", user_id)[0]["username"]
-    stocks = db.execute("SELECT symbol, price, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol", username)
 
     if request.method == "POST":
         selected = request.form.get("symbol")
@@ -243,10 +242,10 @@ def sell():
         elif  < :
             return apology("Shares owned are smaller than shares typed to sell")
 
-        db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ? )
+        db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ?", username, selected)
+        
+
         """changes in number of shares and the amount of balance"""
-
-
 
 
         return redirect("/")
