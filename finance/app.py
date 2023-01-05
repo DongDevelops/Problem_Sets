@@ -242,7 +242,11 @@ def sell():
         elif  < :
             return apology("Shares owned are smaller than shares typed to sell")
 
+
+        """changes in number of shares and the amount of balance"""
+
         
+
 
         return redirect("/")
 
