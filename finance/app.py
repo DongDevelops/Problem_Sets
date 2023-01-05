@@ -243,7 +243,7 @@ def sell():
         elif  < :
             return apology("Shares owned are smaller than shares typed to sell")
 
-        db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE)
+        db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ? )
         """changes in number of shares and the amount of balance"""
 
 
