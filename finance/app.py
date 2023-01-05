@@ -245,4 +245,4 @@ def sell():
         return redirect("/")
 
     else:
-        return apology("TODO")
+        return render_template("sell.html")
