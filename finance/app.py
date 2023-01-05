@@ -244,7 +244,8 @@ def sell():
 
         totalShare = db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ?", username, selected)[0]["totalShares"]
         db.execute("UPDATE )
-
+        cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
+        db.execute("UPDATE users SET cash = ?", cash - (shares * lookup(symbol))
         """changes in number of shares and the amount of balance"""
 
 
