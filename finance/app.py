@@ -242,6 +242,8 @@ def sell():
         elif  < :
             return apology("Shares owned are smaller than shares typed to sell")
 
+        
+
         return redirect("/")
 
     else:
