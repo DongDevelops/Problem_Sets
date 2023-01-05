@@ -237,15 +237,14 @@ def sell():
         except:
             apology("Shares must be an integer")
 
-        if shares < 0:
-            return apology("Shares must be an positive integer")
-        elif  < :
-            return apology("Shares owned are smaller than shares typed to sell")
-
-
         totalShares = db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ?", username, selected)[0]["totalShares"]
         newShares = totalShares - shares
-        db.execute("UPDATE purchases SET )
+
+        if shares < 0:
+            return apology("Shares must be an positive integer")
+        elif newShares < 0 :
+            return apology("Shares owned are smaller than shares typed to sell")
+
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
         db.execute("UPDATE users SET cash = ?", cash - (shares * lookup(symbol)["price"]))
