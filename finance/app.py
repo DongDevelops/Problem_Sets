@@ -243,8 +243,9 @@ def sell():
             return apology("Shares owned are smaller than shares typed to sell")
 
 
-        totalShare = db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ?", username, selected)[0]["totalShares"]
-        db.execute("UPDATE )
+        totalShares = db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ?", username, selected)[0]["totalShares"]
+        newShares = totalShares - shares
+        db.execute("UPDATE purchases SET )
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
         db.execute("UPDATE users SET cash = ?", cash - (shares * lookup(symbol)["price"]))
