@@ -248,7 +248,7 @@ def sell():
 
 
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
-        db.execute("UPDATE users SET cash = ?", cash - (shares * lookup(selected)["price"]))
+        db.execute("UPDATE users SET cash = ?", cash + (shares * lookup(selected)["price"]))
 
         return redirect("/")
 
