@@ -19,10 +19,12 @@
         <tbody>
             {% for purchase in purchases %}
                 <tr>
-                    <td>{{stock["symbol"]}}</td>
-                    <td>{{stock["totalShares"]}}</td>
-                    <td>{{stock["price"]}}</td>
-                    <td>{{stock["totalShares"] * stock["price"]}}</td>
+                    <td>{{purchase["symbol"]}}</td>
+                    <td>{{purchase["totalShares"]}}</td>
+                    <td>{{purchase["price"]}}</td>
+                    <td>{{purchase["totalShares"]}}</td>
+                    <td>{{purchase["totalShares"]}}</td>
+                    <td>{{purchase["type"]}}</td>
                 </tr>
             {% endfor %}
         </tbody>
