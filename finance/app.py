@@ -113,7 +113,7 @@ def history():
     """Show history of transactions"""
 
 
-    return apology("TODO")
+    return render_template("history.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
