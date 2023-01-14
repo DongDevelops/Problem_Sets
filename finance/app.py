@@ -99,7 +99,7 @@ def buy():
             return apology("Cannot afford", 403)
         else:
             db.execute("UPDATE users SET cash = ? WHERE username = ?", cash - (price * shares), username)
-            db.execute("INSERT INTO purchases (username, shares, symbol, price) VALUES(?, ?, ?, ?)", username, shares, symbol, price)
+            db.execute("INSERT INTO purchases (username, shares, symbol, price, type) VALUES(?, ?, ?, ?, ?)", username, shares, symbol, price, "buy")
 
         return redirect ("/")
 
@@ -250,7 +250,7 @@ def sell():
         price = lookup(selected)["price"]
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
         db.execute("UPDATE users SET cash = ?", cash + (shares * lookup(selected)["price"]))
-        db.execute("INSERT INTO purchases (username, shares, symbol, price, type) VALUES (?, ?, ?, ?, "sell")", username, -shares, selected, price)
+        db.execute("INSERT INTO purchases (username, shares, symbol, price, type) VALUES (?, ?, ?, ?, ?)", username, -shares, selected, price, "sell")
 
         return redirect("/")
 
