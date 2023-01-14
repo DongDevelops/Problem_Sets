@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+            <ul>
+                {% for purchase in purchases %}
+                    <list>{{ symbol["symbol"] }}</list>
+                {% endfor %}
+            </ul>
+
+{% endblock %}

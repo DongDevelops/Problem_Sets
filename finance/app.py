@@ -111,9 +111,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    purchases = db.execute("SELECT username FROM purchases")
 
-
-    return render_template("history.html")
+    return render_template("history.html", purchases = purchases)
 
 
 @app.route("/login", methods=["GET", "POST"])
