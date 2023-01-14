@@ -112,7 +112,7 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    
+
     return apology("TODO")
 
 
@@ -250,7 +250,7 @@ def sell():
         price = lookup(selected)["price"]
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
         db.execute("UPDATE users SET cash = ?", cash + (shares * lookup(selected)["price"]))
-        db.execute("INSERT INTO purchases (username, shares, symbol, price) VALUES (?, ?, ?, ?)", username, -shares, selected, price)
+        db.execute("INSERT INTO purchases (username, shares, symbol, price, type) VALUES (?, ?, ?, ?, "sell")", username, -shares, selected, price)
 
         return redirect("/")
 
