@@ -245,10 +245,10 @@ def sell():
         elif newShares < 0 :
             return apology("Shares owned are smaller than shares typed to sell")
 
-
+        price = lookup(selected)["price"]
         cash = db.execute("SELECT cash FROM users WHERE username = ?", username)[0]["cash"]
         db.execute("UPDATE users SET cash = ?", cash + (shares * lookup(selected)["price"]))
-        db.execute("INSERT INTO purchases (user))
+        db.execute("INSERT INTO purchases (username, shares, symbol, price) VALUES (?, ?, ?, ?)", username, shares, selected, price)
 
         return redirect("/")
 
