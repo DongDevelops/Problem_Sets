@@ -9,7 +9,7 @@
         <label for="symbol">Choose a symbol:</label>
             <select name="symbol" id="symbol">
                 {% for symbol in symbols %}
-                    <option value="{{symbol}}"></option>
+                    <option>{{ symbol["symbol"] }}</option>
                 {% endfor %}
             </select>
 
