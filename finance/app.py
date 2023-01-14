@@ -252,5 +252,5 @@ def sell():
         return redirect("/")
 
     else:
-        symbols = db.execute("SELECT * FROM users)
+        symbols = db.execute("SELECT symbol FROM purchases")
         return render_template("sell.html", symbols = symbols)
