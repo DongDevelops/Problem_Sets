@@ -239,6 +239,7 @@ def sell():
 
         totalShares = db.execute("SELECT symbol, SUM(shares) as totalShares FROM purchases WHERE username = ? GROUP BY symbol HAVING symbol = ?", username, selected)[0]["totalShares"]
         newShares = totalShares - shares
+        db.execute("UPDATE purchases SET shares = ?", newShares)
 
         if shares < 0:
             return apology("Shares must be an positive integer")
