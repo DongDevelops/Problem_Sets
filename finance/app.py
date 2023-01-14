@@ -117,7 +117,7 @@ def history():
 
     purchases = db.execute("SELECT username, shares, symbol, price, time, type FROM purchases WHERE username = ?", username)
 
-    return render_template("history.html", purchases = purchases)
+    return render_template("history.html", purchases = purchases, usd = usd)
 
 
 @app.route("/login", methods=["GET", "POST"])
