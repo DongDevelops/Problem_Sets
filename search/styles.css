@@ -93,3 +93,7 @@ a:active {
     flex-direction: row;
     align-items: center;
 }
+
+.left {
+    width: 200px;
+}
