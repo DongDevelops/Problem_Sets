@@ -1,3 +1,6 @@
 .navbar {
     list-style-type = none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
