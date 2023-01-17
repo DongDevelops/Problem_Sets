@@ -38,5 +38,15 @@ a:active {
 }
 
 .rounded-input {
-    
+    display: flex;
+    z-index: 3;
+    height: 44px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: 638px;
+    width: auto;
+    max-width: 584px;
 }
