@@ -70,5 +70,7 @@ a:active {
 }
 
 .h1-advanced {
-    
+    color: #d93025;
+    font-size: 20px;
+    margin: 25px 35px;
 }
