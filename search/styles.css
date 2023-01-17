@@ -1,6 +1,10 @@
-.navbar {
+.navbar-google {
     list-style-type = none;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.nav-item-google {
+    margin: 10px;
 }
