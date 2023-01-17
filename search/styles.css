@@ -31,3 +31,8 @@ a:hover {
 a:active {
     color: black;
 }
+
+.center-div {
+    display: flex;
+    justify-content: center;
+}
