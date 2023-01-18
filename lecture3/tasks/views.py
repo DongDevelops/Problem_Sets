@@ -18,7 +18,7 @@ def index(request):
     })
 
 def add(request):
-    if request.method == "POST":
+    if request.method == "POST": 
         form = NewTaskForm(request.POST)
         if form.is_valid():
             task = form.cleaned_data["task"]
