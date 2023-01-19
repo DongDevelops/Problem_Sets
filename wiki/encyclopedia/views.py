@@ -47,3 +47,5 @@ def search(request):
                 return render(request, "encyclopedia/search.html", {
                     "recommendation": recommendation
                 })
+
+                
