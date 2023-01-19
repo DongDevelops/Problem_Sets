@@ -28,3 +28,6 @@ def entry(request, title):
             "title": title,
             "content": html_content
         })
+
+def search(request):
+    return 
