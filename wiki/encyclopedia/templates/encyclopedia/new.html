@@ -8,6 +8,8 @@
     <h1>New Page</h1>
 
     <form action="{% url 'new_page' %}" method="POST">
-
+        <label>Title:</label>
+        <input type="text" name="title" placeholder="Enger a title">
+        <label>Markdown Content</label>
     </form>
 {% endblock %}
