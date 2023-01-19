@@ -55,3 +55,6 @@ def new_page(request):
     else:
         title = request.POST['title']
         content = request.POST['content']
+        titleExist = util.get_entry(title)
+        if titleExist is not None:
+            return render(request, "encyclopedia/error.html")
