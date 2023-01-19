@@ -48,4 +48,6 @@ def search(request):
                     "recommendation": recommendation
                 })
 
-                
+
+def new_page(request):
+    return
