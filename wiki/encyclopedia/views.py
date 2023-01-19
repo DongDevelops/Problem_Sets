@@ -50,4 +50,5 @@ def search(request):
 
 
 def new_page(request):
-    return
+    if request.method == "GET":
+        return render(request, "encyclopedia/new.html")
