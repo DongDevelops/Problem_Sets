@@ -24,4 +24,7 @@ def entry(request, title):
             "message": "This entry does not exist."
         })
     else:
-        return render(request, "encyclopedia/entry.html")
+        return render(request, "encyclopedia/entry.html", {
+            "title": title,
+            "content": html_content
+        })
