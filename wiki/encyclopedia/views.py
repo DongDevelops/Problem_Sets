@@ -17,3 +17,7 @@ def index(request):
         "entries": util.list_entries()
     })
 
+def entry(request, title):
+    html_content = convert_md_to_html(title)
+    if html_content == None:
+        return re
