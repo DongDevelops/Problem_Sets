@@ -53,4 +53,5 @@ def new_page(request):
     if request.method == "GET":
         return render(request, "encyclopedia/new.html")
     else:
-        title = request.POST
+        title = request.POST['title']
+        content = request.POST['content']
