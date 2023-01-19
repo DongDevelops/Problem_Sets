@@ -39,4 +39,4 @@ def search(request):
                 "content": html_content
             })
         else:
-            
+              
