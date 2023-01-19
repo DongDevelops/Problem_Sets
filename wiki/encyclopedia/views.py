@@ -22,4 +22,4 @@ def entry(request, title):
     if html_content == None:
         return render(request, "encyclopedia/error.html")
     else:
-        
+        return render(request, "encyclopedia/entry.html")
