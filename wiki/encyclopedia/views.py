@@ -38,3 +38,5 @@ def search(request):
                 "title": entry_search,
                 "content": html_content
             })
+        else:
+            
