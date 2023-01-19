@@ -10,7 +10,10 @@
     <form action="{% url 'new_page' %}" method="POST">
         <label>Title:</label>
         <input type="text" name="title" placeholder="Enger a title">
+        <br>
         <label>Markdown Content</label>
+        <br>
         <textarea name="Content" rows="4" cols="50"></textarea>
+        <input type="submit" value="New Page" class="btn btn-primary">
     </form>
 {% endblock %}
