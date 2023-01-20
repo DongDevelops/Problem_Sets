@@ -89,5 +89,10 @@ def save_edit(request):
         })
 
 def rand(request):
-    allEngries = util.list_entries()
-    rand_entry = random.choice(allEntires)
+    allEntries = util.list_entries()
+    rand_entry = random.choice(allEntries)
+    html_content = convert_md_to_html(rand_entry)
+    return render(request, "encyclopedia/entry.html", {
+        "title": rand_entry,
+        "content": html_content
+    })
