@@ -7,7 +7,7 @@
 {% block body %}
     <h1>Edit</h1>
 
-    <form action="{% url 'new_page' %}" method="POST">
+    <form action="{% url 'save_edit' %}" method="POST">
         {% csrf_token %}
         <label>Title:</label>
         <input type="text" name="title" placeholder="Enger a title" value="{{ title }}">
