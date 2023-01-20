@@ -61,4 +61,9 @@ def new_page(request):
                 "message": "Entry page already exist."
             })
         else:
-            
+            util.save_entry(title, content)
+            html_content = convert_md_to_html(title)
+            return render(request, "encyclopedia/entry.html", {
+                "title": title,
+                "content": html_content
+            })
