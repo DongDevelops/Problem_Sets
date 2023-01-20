@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import markdown
+import random
 from . import util
 
 
@@ -86,3 +87,7 @@ def save_edit(request):
             "title": title,
             "content": html_content
         })
+
+def rand(request):
+    allEngries = util.list_entries()
+    rand_entry = random.choice(allEntires)
