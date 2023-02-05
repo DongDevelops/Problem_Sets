@@ -2,10 +2,11 @@
     float: right;
     padding-top: 30px;
     padding-right: 30px;
-    
 }
 
-
+li {
+    display: inline;
+  }
 
 a:link {
     color: black;
@@ -22,6 +23,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.topnav-list {
-    padding-right: 10px;
+.list {
+    padding-right: 20px;
 }
