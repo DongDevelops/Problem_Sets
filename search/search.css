@@ -12,4 +12,6 @@
     line-height: 24px;
     display: inline-block;
     flex-grow: 1;
+    padding: 6px;
+    box-sizing: border-box;
 }
