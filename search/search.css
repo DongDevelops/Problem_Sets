@@ -8,4 +8,6 @@
     line-height: normal;
     padding-right: 15px;
     align-items: center;
+    display: inline-block;
+    line-height: 24px;
 }
