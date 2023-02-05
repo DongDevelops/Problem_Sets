@@ -1,7 +1,6 @@
 #NavBar {
     position: absolute;
     top: 0px;
-    visibility: hidden;
     width: 328px;
     z-index: 991;
     height: 0px;
