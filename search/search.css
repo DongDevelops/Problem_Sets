@@ -1,17 +1,5 @@
 #NavBar {
-    color: rgba(0,0,0,.87);
-    text-decoration: none;
-    padding: 0 4px;
-    -webkit-align-items: center;
-    display: flex;
-    font: 13px/27px Roboto,Arial,sans-serif;
-    line-height: normal;
-    padding-right: 15px;
-    align-items: center;
-    display: inline-block;
-    line-height: 24px;
-    display: inline-block;
-    flex-grow: 1;
-    padding: 6px;
-    box-sizing: border-box;
+    float: right;
 }
+
+
