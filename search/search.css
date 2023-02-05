@@ -1,6 +1,7 @@
 .topnav-right {
     float: right;
-    paddig:
+    padding-top: 30px;
+    padding-right: 30px;
 }
 
 .topnav a:hover {
