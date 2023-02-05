@@ -5,7 +5,22 @@
     text-decoration: underline;
 }
 
-.topnav a:hover {
-
+a:link {
+    color: red;
+    text-decoration: none;
 }
 
+a:visited {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: hotpink;
+    text-decoration: underline;
+}
+
+a:active {
+    color: black;
+    text-decoration: none;
+}
