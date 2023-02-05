@@ -1,3 +1,11 @@
 #NavBar {
-    
+    position: absolute;
+    top: 0px;
+    visibility: hidden;
+    width: 328px;
+    z-index: 991;
+    height: 0px;
+    margin-top: 57px;
+    right: 0px;
+    margin-right: 4px;
 }
