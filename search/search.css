@@ -1,6 +1,5 @@
 #NavBar {
-    float: right;
-    color: black;
+    margin-left: ($spacer * .25) !important;
 }
 
 
