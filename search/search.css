@@ -1,4 +1,4 @@
-.topnav-right {
+.topnav {
     float: right;
     padding-top: 30px;
     padding-right: 30px;
@@ -19,3 +19,6 @@ a:hover {
     text-decoration: underline;
 }
 
+.topnav-list {
+    padding-right: 10px;
+}
