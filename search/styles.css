@@ -1,5 +1,6 @@
 .topnav {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
     padding-top: 30px;
     padding-right: 30px;
 }
