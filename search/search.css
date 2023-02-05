@@ -4,8 +4,9 @@
     padding-right: 30px;
 }
 
-li {
+.list {
     display: inline;
+    padding-right: 20px;
   }
 
 a:link {
@@ -25,8 +26,4 @@ a:hover {
 
 a:active {
     color: black;
-}
-
-.list {
-    padding-right: 20px;
 }
