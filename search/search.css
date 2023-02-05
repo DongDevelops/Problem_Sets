@@ -9,21 +9,21 @@
     padding-right: 20px;
   }
 
-a:link {
+.topnav a:link {
     color: black;
     text-decoration: none;
 }
 
-a:visited {
+.topnav a:visited {
     color: black;
     text-decoration: none;
 }
 
-a:hover {
+.topnav a:hover {
     color: black;
     text-decoration: underline;
 }
 
-a:active {
+.topnav a:active {
     color: black;
 }
