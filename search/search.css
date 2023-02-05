@@ -23,6 +23,10 @@ a:hover {
     text-decoration: underline;
 }
 
+a:active {
+    color: black;
+}
+
 .list {
     padding-right: 20px;
 }
