@@ -2,6 +2,7 @@
     float: right;
     padding-top: 30px;
     padding-right: 30px;
+    text-decoration: underline;
 }
 
 .topnav a:hover {
