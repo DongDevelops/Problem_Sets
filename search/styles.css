@@ -27,3 +27,10 @@
 .topnav a:active {
     color: black;
 }
+
+
+.search-box {
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 5px;
+}
