@@ -30,7 +30,7 @@
 
 
 .search-box {
-    border: 2px solid grey;
-    border-radius: 6px;
-    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 10px;
 }
