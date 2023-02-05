@@ -1,6 +1,5 @@
-#NavBar {
-    margin-left: ($spacer * .25) !important;
-    margin-top: 
+.topnav-right {
+    float: right;
 }
 
 
