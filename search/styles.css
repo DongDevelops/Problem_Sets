@@ -76,7 +76,10 @@
 
 .heading {
     color: #d93025;
-    margin: 55px 35px;
+    margin-top: 55px;
+    margin-right:35px;
+    margin-left: 35px;
+    margin-bottom: 25px;
     font-size: 20px;
     font-family: arial,sans-serif;
 }
