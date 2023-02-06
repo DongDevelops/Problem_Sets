@@ -5,6 +5,12 @@
     padding-right: 30px;
 }
 
+.topnav2 {
+    float: right;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
 .list {
     display: inline;
     padding-right: 20px;
