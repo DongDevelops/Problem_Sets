@@ -61,7 +61,7 @@
 .image2 {
     display: flex;
     justify-content: start;
-    padding:
+    margin-left: 15px;
 }
 
 .button {
