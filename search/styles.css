@@ -70,6 +70,13 @@
     max-width: 584px;
 }
 
+.heading {
+    color: #d93025;
+    margin: 55px 35px;
+    font-size: 20px;
+    font-family: arial,sans-serif;
+}
+
 .big-logo {
     width: 272px;
     height: 92px;
