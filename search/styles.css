@@ -36,6 +36,27 @@
 }
 
 
+
+.topnav2 a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.topnav2 a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.topnav2 a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.topnav2 a:active {
+    color: black;
+}
+
+
 .search-box {
     display: flex;
     z-index: 3;
@@ -67,7 +88,8 @@
 .image2 {
     display: flex;
     justify-content: start;
-    margin-left: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
 }
 
 .button {
