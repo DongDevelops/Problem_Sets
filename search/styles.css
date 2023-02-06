@@ -181,7 +181,7 @@
 
 .button-placement {
     display: flex;
-    justify-content: start;
+    justify-content: flex-end;
 }
 
 .search-input {
