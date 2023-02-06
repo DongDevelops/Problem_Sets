@@ -69,3 +69,8 @@ img {
     cursor: pointer;
     user-select: none;
 }
+
+.search-input {
+    display: flex;
+    justify-content: center;
+}
