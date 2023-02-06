@@ -74,6 +74,11 @@
     border-bottom: 1px solid #ebebeb;
 }
 
+.class {
+    margin-top: 15px;
+    
+}
+
 .start {
     float: left;
     display: inline-block;
