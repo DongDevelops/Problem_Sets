@@ -74,9 +74,10 @@
     border-bottom: 1px solid #ebebeb;
 }
 
-.class {
+.form {
     margin-top: 15px;
     margin-left: 35px;
+    font-family: arial,sans-serif;
 }
 
 .start {
