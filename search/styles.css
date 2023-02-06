@@ -174,7 +174,6 @@
     outline: 0;
     box-shadow: none;
     background-color: #4d90fe;
-    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
 }
 
 .search-input {
