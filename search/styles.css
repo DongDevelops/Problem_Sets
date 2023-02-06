@@ -70,6 +70,10 @@
     max-width: 584px;
 }
 
+.line {
+    border-bottom: 1px solid #ebebeb;
+}
+
 .heading {
     color: #d93025;
     margin: 55px 35px;
