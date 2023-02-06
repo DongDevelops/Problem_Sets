@@ -43,9 +43,14 @@
     max-width: 584px;
 }
 
-img {
+.big-logo {
     width: 272px;
     height: 92px;
+}
+
+.small-logo {
+    height: 24px;
+    width: 74px;
 }
 
 .image {
