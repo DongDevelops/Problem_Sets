@@ -188,3 +188,7 @@
     display: flex;
     justify-content: center;
 }
+
+#find-page {
+    font-size: 15px;
+}
