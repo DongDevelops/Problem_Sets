@@ -44,8 +44,6 @@
     max-width: 584px;
 }
 
-
-
 img {
     width: 272px;
     height: 92px;
@@ -54,4 +52,8 @@ img {
 .image {
     display: flex;
     justify-content: center;
+}
+
+.button {
+    
 }
