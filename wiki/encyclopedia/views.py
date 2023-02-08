@@ -13,7 +13,7 @@ def index(request):
         "entries": util.list_entries()
     })
 
-def contents(request, title):
+def title(request, title):
     md = util.get_entry(title)
     html = mdTohtml(md)
 
