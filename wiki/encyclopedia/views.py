@@ -12,7 +12,7 @@ def contents(request):
     title = request.get.title
     if title not in util.list_entries():
         return render(request, "encyclopedia/error.html", {
-            "message": ${title} doesn't exist in the entry.
+            "message": "${title} does not exist in the entry."
         })
     else:
         return render(request, "encyclopedia/contents.html", {
