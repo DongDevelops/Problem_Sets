@@ -14,7 +14,7 @@ def index(request):
     })
 
 def contents(request, title):
-
+    html = mdTohtml(title.md)
 
     if title not in util.list_entries():
         return render(request, "encyclopedia/error.html", {
