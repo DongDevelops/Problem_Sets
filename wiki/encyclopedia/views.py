@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 from . import util
+from markdown2 import Markdown
+
 
 
 def index(request):
@@ -9,7 +11,7 @@ def index(request):
     })
 
 def contents(request, title):
-    
+
 
     if title not in util.list_entries():
         return render(request, "encyclopedia/error.html", {
