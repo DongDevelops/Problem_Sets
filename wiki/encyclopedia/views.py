@@ -17,4 +17,4 @@ def contents(request):
     else:
         return render(request, "encyclopedia/contents.html", {
         "contents": util.get_entry()
-    })
+        })
