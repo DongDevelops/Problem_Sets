@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CSRF_TRUSTED_ORIGINS = ['https://CODESPACE-URL-8000.preview.app.github.dev']
+CSRF_TRUSTED_ORIGINS = ['https://whatsoever22-legendary-rotary-phone-v4pxwjx4gx73w74-8000.preview.app.github.dev']
