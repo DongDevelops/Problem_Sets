@@ -8,11 +8,11 @@ def index(request):
         "entries": util.list_entries()
     })
 
-def contents(request):
+def contents(request, title):
     title = request.get.title
     if title not in util.list_entries():
         return render(request, "encyclopedia/error.html", {
-            "message": "${title} does not exist in the entry."
+            "message": "f{title} does not exist in the entry."
         })
     else:
         return render(request, "encyclopedia/contents.html", {
