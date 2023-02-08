@@ -5,7 +5,8 @@ from markdown2 import Markdown
 
 def mdTohtml(md):
     markdowner = Markdown()
-    markdowner.convert(md)
+    html = markdowner.convert(md)
+    return html
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
