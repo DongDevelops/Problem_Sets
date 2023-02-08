@@ -9,7 +9,10 @@ def index(request):
     })
 
 def contents(request):
-    if not in 
+    if not in:
+        return render(request, "encyclopedia/error.html", {
+            "message": Entry doesn't exist.
+        })
     return render(request, "encyclopedia/contents.html", {
         "contents": util.get_entry()
     })
