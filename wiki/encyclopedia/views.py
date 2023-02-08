@@ -3,8 +3,9 @@ from django.shortcuts import render
 from . import util
 from markdown2 import Markdown
 
-def convert():
-    
+def mdTohtml(md):
+    markdowner = Markdown()
+    markdowner.convert(md)
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
