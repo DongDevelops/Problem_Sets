@@ -9,6 +9,7 @@ def index(request):
     })
 
 def contents(request):
+    if not in 
     return render(request, "encyclopedia/contents.html", {
         "contents": util.get_entry()
     })
