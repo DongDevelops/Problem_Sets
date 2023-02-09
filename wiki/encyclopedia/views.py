@@ -62,8 +62,8 @@ def create(request):
         else:
             util.save_entry(title, contents)
             return render(request, "encyclopedia/contents.html", {
-                "contents": contents
+                "contents": contents,
                 "title": title
             })
     else:
-        
+        return httpRedirect("encyclopedia/index.html")
