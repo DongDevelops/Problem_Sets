@@ -38,11 +38,8 @@ def search(request):
             for entry in allEntries:
                 if title in entry:
                     recommendations.append(entry)
-
-
-
-            return render(request, "encyclopedia/error.html", {
-                "message": f"{title} does not exist in the entry."
+            return render(request, "encyclopedia/search.html", {
+                "recommendations" = recommendations
             })
         else:
             return render(request, "encyclopedia/contents.html", {
