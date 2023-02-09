@@ -34,7 +34,7 @@ def search(request):
         html = mdTohtml(title)
         if html == None:
             recommendations = []
-            allEntries = util.inst_entries()
+            allEntries = util.list_entries()
             for entry in allEntries:
                 if title in entry:
                     recommendations.append(entry)
