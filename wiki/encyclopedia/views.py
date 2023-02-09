@@ -30,4 +30,14 @@ def title(request, title):
 
 def search(request):
     if request.method == 'POST':
-        search = request.get("q")
+        title = request.get("q")
+        html = mdTohtml(title)
+        if html == None:
+            return render(request, "encyclopedia/error.html", {
+                "message": f"{title} does not exist in the entry."
+            })
+        else:
+        return render(request, "encyclopedia/contents.html", {
+            "contents": html,
+            "title": title
+        })
