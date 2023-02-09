@@ -20,7 +20,7 @@ def title(request, title):
     html = mdTohtml(title)
     if html == None:
         return render("encyclopedia/error.html", {
-            "message": "f{title} does not exist in the entry."
+            "message": " does not exist in the entry."
         })
     else:
         return render(request, "encyclopedia/contents.html", {
