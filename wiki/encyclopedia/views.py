@@ -48,3 +48,7 @@ def search(request):
             })
     else:
         return httpRedirect("encyclopedia/index.html")
+
+
+def create(request):
+    
