@@ -80,6 +80,7 @@ def edit(request):
 
 def save(request):
     if request.method == 'POST':
+        title = request.POST['title']
         NewPost = request.POST['NewPost']
         util.save_entry(title, NewPost)
         return render(request, "encyclopedia/contents.html", {
