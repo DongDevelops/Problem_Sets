@@ -7,10 +7,10 @@
 {% block body %}
     <h1>Create New Page</h1>
 
-    <ul>
-        {% for recommendation in recommendations %}
-            <li><a href="{% url 'title' recommendation %}">{{ recommendation }}</a></li>
-        {% endfor %}
-    </ul>
+    <label for="New">Review of W3Schools:</label>
 
+    <textarea id="New" name="New" rows="4" cols="50">
+
+    </textarea>
+    
 {% endblock %}
