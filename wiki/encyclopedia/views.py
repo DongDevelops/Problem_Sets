@@ -51,4 +51,9 @@ def search(request):
 
 
 def create(request):
-    
+    if request.method == 'POST':
+        title = request.POST['title']
+        contents = request.POST['new']
+        return render(request, "encyclopedia/error.html", {
+            "message": f"{title} already exists."
+        })
