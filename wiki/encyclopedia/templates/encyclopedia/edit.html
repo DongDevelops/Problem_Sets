@@ -12,7 +12,7 @@
         <label for="NewPost"><input type="text" value="{{ title }}" name="title"></label>
 
         <textarea id="NewPost" name="NewPost" rows="4" cols="4">
-            {{ contents }}
+            {{ contents |safe }}
         </textarea>
         </br>
         <input type="submit" value="Save">
