@@ -78,3 +78,8 @@ def edit(request, title):
             "title": title
         })
     else:
+        
+        return render(request, "encyclopedia/edit.html", {
+            "content": contents,
+            "title": title
+        })

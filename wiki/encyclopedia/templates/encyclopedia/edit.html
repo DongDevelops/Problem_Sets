@@ -9,10 +9,10 @@
 
     <form action="{% url 'edit' %}" method="POST">
     {% csrf_token %}
-        <label for="NewPost"><input type="text" name="title" placeholder="{{ title }}"></label>
+        <label for="NewPost"><input type="text" name="title">{{ title }}</label>
 
         <textarea id="NewPost" name="NewPost" rows="4" cols="4">
-            Enter the description here.
+            {{ contents }}
         </textarea>
         </br>
         <input type="submit" value="Save">
