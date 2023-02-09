@@ -5,6 +5,8 @@ from markdown2 import Markdown
 
 def mdTohtml(title):
     contents = util.get_entry(title)
+    if 
+
     markdowner = Markdown()
     return markdowner.convert(contents)
 
