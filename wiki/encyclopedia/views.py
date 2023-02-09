@@ -61,6 +61,7 @@ def create(request):
             })
         else:
             util.save_entry(title, contents)
+            html = mdTohtml(entry)
             return render(request, "encyclopedia/contents.html", {
                 "contents": contents,
                 "title": title
