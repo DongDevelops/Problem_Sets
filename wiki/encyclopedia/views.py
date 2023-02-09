@@ -89,4 +89,6 @@ def save(request):
         })
 
 def random(request):
-    
+    allEntries = util.list_entries()
+    random_title = random.choice(allEntries)
+    contents = 
