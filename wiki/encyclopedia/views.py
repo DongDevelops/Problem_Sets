@@ -30,7 +30,7 @@ def title(request, title):
 
 def search(request):
     if request.method == 'POST':
-        title = request.get("q")
+        title = request.POST['q']
         html = mdTohtml(title)
         if html == None:
             return render(request, "encyclopedia/error.html", {
