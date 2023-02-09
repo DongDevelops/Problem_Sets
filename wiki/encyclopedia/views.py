@@ -42,4 +42,4 @@ def search(request):
                 "title": title
             })
     else:
-        return ("encyclopedia/index.html")
+        return httpRedirect("encyclopedia/index.html")
