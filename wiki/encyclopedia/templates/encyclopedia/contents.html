@@ -7,7 +7,7 @@
 {% block body %}
 
     <p>
-        {{ contents | safe }}
+        {{ contents |safe }}
     </p>
     <form action="{% url 'edit' %}" method="POST">
         {% csrf_token %}
