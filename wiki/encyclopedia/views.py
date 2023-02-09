@@ -35,8 +35,8 @@ def search(request):
         if html == None:
             recommendations = []
             allEntries = util.list_entries()
-            for entry in allEntries:
-                if title.lower in entry.lower:
+            for entry.lower() in allEntries.lower():
+                if title in entry:
                     recommendations.append(entry)
             return render(request, "encyclopedia/search.html", {
                 "recommendations": recommendations
