@@ -91,4 +91,8 @@ def save(request):
 def random(request):
     allEntries = util.list_entries()
     random_title = random.choice(allEntries)
-    contents = 
+    contents = util.get_entry(random_title)
+    return render(request, "encyclopedia/contents.html", {
+        "contents": contents,
+        "title": random_title
+    })
