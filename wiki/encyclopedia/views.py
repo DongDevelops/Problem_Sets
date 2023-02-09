@@ -87,3 +87,6 @@ def save(request):
             "contents": NewPost,
             "title": title
         })
+
+def random(request):
+    
