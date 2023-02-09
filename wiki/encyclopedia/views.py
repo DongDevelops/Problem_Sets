@@ -67,3 +67,7 @@ def create(request):
             })
     else:
         return render(request, "encyclopedia/create.html")
+
+
+def edit(request):
+    
