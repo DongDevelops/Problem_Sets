@@ -5,12 +5,13 @@ import markdown
 
 def mdTohtml(title):
     content = util.get_entry(title)
+    markdowner = markdown.Markdown()
     if content == None:
         return render("encyclopedia/error.html", {
             "message": "f{title} does not exist in the entry."
         })
     else:
-        markdowner = markdown.Markdown()
+
         return markdowner.convert(contents)
 
 def index(request):
