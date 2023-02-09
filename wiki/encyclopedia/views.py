@@ -54,12 +54,11 @@ def create(request):
     if request.method == 'POST':
         title = request.POST['title']
         contents = request.POST['new']
-        allEntries = util.list_entries()
-        for entry in allEntries:
-            if title.lower() in allEntries.lower():
-                return render(request, "encyclopedia/error.html", {
-                    "message": f"{title} already exists."
-                })
+        entryExist = util.get_entry(title)
+        if entryExist:
+            return render(request, "encyclopedia/error.html", {
+                "message": f"{title} already exists."
+            })
         else:
             util.save_entry(title, contents)
             return render(request, "encyclopedia/contents.html", {
