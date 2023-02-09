@@ -69,9 +69,12 @@ def create(request):
         return render(request, "encyclopedia/create.html")
 
 
-def edit(request):
+def edit(request, title):
     if request.method == 'POST':
         NewPost = request.POST['NewPost']
         return render(request, "encyclopedia/contents.html", {
-            "contents": NewPost
+            "contents": NewPost,
+            "title": title
         })
+    else:
+        
