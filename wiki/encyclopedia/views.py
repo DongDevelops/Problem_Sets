@@ -71,12 +71,12 @@ def create(request):
 
 def edit(request):
     if request.method == 'POST':
-        
-    contents = mdTohtml(title)
-    return render(request, "encyclopedia/edit.html", {
-        "contents": contents,
-        "title": title
-    })
+        title = request.POST['title']
+        contents = mdTohtml(title)
+        return render(request, "encyclopedia/edit.html", {
+            "contents": contents,
+            "title": title
+        })
 
 def save(request):
     if request.method == 'POST':
