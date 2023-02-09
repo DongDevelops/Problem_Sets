@@ -17,7 +17,7 @@ def title(request, title):
 
     html = mdTohtml(title)
 
-    if title not in util.list_entries():
+    if html == None:
         return render(request, "encyclopedia/error.html", {
             "message": "f{title} does not exist in the entry."
         })
