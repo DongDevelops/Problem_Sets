@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Page
+{% endblock %}
+
+{% block body %}
+    <h1>Create New Page</h1>
+
+    <ul>
+        {% for recommendation in recommendations %}
+            <li><a href="{% url 'title' recommendation %}">{{ recommendation }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
