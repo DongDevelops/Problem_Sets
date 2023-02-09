@@ -4,14 +4,14 @@ from . import util
 from markdown2 import Markdown
 
 def mdTohtml(title):
-    if title is in util.list_entries():
-        contents = util.get_entry(title)
-        markdowner = Markdown()
-        return markdowner.convert(contents)
-    else:
+    contents = util.get_entry(title)
+    if contents == None:
         return render("encyclopedia/error.html", {
             "message": "f{title} does not exist in the entry."
         })
+    else:
+        markdowner = Markdown()
+        return markdowner.convert(contents)
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
