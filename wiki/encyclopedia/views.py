@@ -71,4 +71,5 @@ def create(request):
 
 def edit(request):
     if request.method == 'POST':
+        NewPost = request.POST['NewPost']
         
