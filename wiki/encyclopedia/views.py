@@ -78,7 +78,7 @@ def edit(request, title):
             "title": title
         })
     else:
-        
+        contents = util.get_entry(title)
         return render(request, "encyclopedia/edit.html", {
             "content": contents,
             "title": title
