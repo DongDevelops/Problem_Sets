@@ -1,16 +1,16 @@
 from django.shortcuts import render
 
 from . import util
-from markdown2 import Markdown
+import markdown
 
 def mdTohtml(title):
-    contents = util.get_entry(title)
-    if contents == None:
+    content = util.get_entry(title)
+    if content == None:
         return render("encyclopedia/error.html", {
             "message": "f{title} does not exist in the entry."
         })
     else:
-        markdowner = Markdown()
+        markdowner = markdown.Markdown()
         return markdowner.convert(contents)
 
 def index(request):
