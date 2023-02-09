@@ -62,6 +62,6 @@ def create(request):
         else:
             util.save_entry(title, contents)
             return render(request, "encyclopedia/contents.html", {
-                "contents": html,
+                "contents": contents
                 "title": title
             })
