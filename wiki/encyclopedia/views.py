@@ -70,6 +70,8 @@ def create(request):
 
 
 def edit(request):
+    if request.method == 'POST':
+        
     contents = mdTohtml(title)
     return render(request, "encyclopedia/edit.html", {
         "contents": contents,
