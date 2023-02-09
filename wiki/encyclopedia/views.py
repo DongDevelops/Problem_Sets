@@ -66,4 +66,4 @@ def create(request):
                 "title": title
             })
     else:
-        return render(request, "encyclopedia/index.html")
+        return render(request, "encyclopedia/create.html")
