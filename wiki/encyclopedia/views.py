@@ -55,7 +55,7 @@ def create(request):
         title = request.POST['title']
         contents = request.POST['new']
         allEntries = util.list_entries()
-        if title.lower() in allEntries():
+        if title.lower() in allEntries.lower():
             return render(request, "encyclopedia/error.html", {
                 "message": f"{title} already exists."
             })
