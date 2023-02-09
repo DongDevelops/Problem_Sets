@@ -7,10 +7,13 @@
 {% block body %}
     <h1>Create New Page</h1>
 
+    <form action="{% url 'create' %}"
     <label for="New">Title:</label>
 
     <textarea id="New" name="New" rows="4" cols="50">
-
+        Enter the description here.
     </textarea>
+    </br>
+    <input type="submit" value="Submit">
 
 {% endblock %}
