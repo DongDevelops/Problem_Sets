@@ -88,11 +88,11 @@ def save(request):
             "title": title
         })
 
-def random(request):
+def rand(request):
     allEntries = util.list_entries()
-    random_title = random.choice(allEntries)
-    contents = util.get_entry(random_title)
+    rand_title = random.choice(allEntries)
+    contents = util.get_entry(rand_title)
     return render(request, "encyclopedia/contents.html", {
         "contents": contents,
-        "title": random_title
+        "title": rand_title
     })
