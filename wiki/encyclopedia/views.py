@@ -27,3 +27,6 @@ def title(request, title):
             "contents": html,
             "title": title
         })
+
+def search(request):
+    if request.get.method = post:
