@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import random
 from . import util
 from markdown2 import Markdown
 
