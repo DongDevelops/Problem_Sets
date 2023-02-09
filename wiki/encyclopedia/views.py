@@ -70,4 +70,5 @@ def create(request):
 
 
 def edit(request):
-    
+    if request.method == 'POST':
+        
