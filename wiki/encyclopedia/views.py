@@ -69,7 +69,7 @@ def create(request):
         return render(request, "encyclopedia/create.html")
 
 
-def edit(request, title):
+def edit(request):
     if request.method == 'POST':
         NewPost = request.POST['NewPost']
         util.save_entry(title, NewPost)
