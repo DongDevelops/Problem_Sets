@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import HttpRedirect
+
 from . import util
 from markdown2 import Markdown
 
@@ -47,7 +47,7 @@ def search(request):
                 "title": title
             })
     else:
-        return HttpRedirect("encyclopedia/index.html")
+        return HttpResponseRedirect(reverse('encyclopedia/index.html'))
 
 
 def create(request):
@@ -66,4 +66,4 @@ def create(request):
                 "title": title
             })
     else:
-        return HttpRedirect("encyclopedia/create.html")
+        return HttpResponseRedirect(reverse('encyclopedia/index.html'))
