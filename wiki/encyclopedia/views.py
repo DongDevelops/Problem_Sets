@@ -47,7 +47,7 @@ def search(request):
                 "title": title
             })
     else:
-        return HttpResponseRedirect(reverse('encyclopedia/index.html'))
+        return render(request, "encyclopedia/index.html")
 
 
 def create(request):
@@ -66,4 +66,4 @@ def create(request):
                 "title": title
             })
     else:
-        return HttpResponseRedirect(reverse('encyclopedia/index.html'))
+        return render(request, "encyclopedia/index.html")
