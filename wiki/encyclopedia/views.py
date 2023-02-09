@@ -65,3 +65,5 @@ def create(request):
                 "contents": contents
                 "title": title
             })
+    else:
+        
