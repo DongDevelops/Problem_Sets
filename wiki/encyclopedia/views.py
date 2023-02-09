@@ -69,17 +69,18 @@ def create(request):
         return render(request, "encyclopedia/create.html")
 
 
-def edit(request, title):
+def edit(request):
+    contents = mdTohtml(title)
+    return render(request, "encyclopedia/edit.html", {
+        "contents": contents,
+        "title": title
+    })
+
+def save(request):
     if request.method == 'POST':
         NewPost = request.POST['NewPost']
         util.save_entry(title, NewPost)
         return render(request, "encyclopedia/contents.html", {
             "contents": NewPost,
-            "title": title
-        })
-    else:
-        contents = mdTohtml(title)
-        return render(request, "encyclopedia/edit.html", {
-            "contents": contents,
             "title": title
         })

@@ -9,5 +9,8 @@
     <p>
         {{ contents | safe }}
     </p>
-    <a href="{% url 'edit' %}">Edit</a>
+    <form action="{% url 'edit %}" method="POST">
+        <input type="hidden" name="title" value="{{ title }}">
+        <button class="btn btn-primary" value="Edit">
+    </form>
 {% endblock %}
