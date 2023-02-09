@@ -79,6 +79,7 @@ def edit(request, title):
             "title": title
         })
     else:
+        title = request.GET['title']
         contents = mdTohtml(title)
         return render(request, "encyclopedia/edit.html", {
             "content": contents,
