@@ -3,9 +3,10 @@ from django.shortcuts import render
 from . import util
 from markdown2 import Markdown
 
-def mdTohtml(md):
+def mdTohtml(title):
+    contents = util.get_entry(title)
     markdowner = Markdown()
-    html = markdowner.convert(md)
+    html = markdowner.convert(contents)
     return html
 
 def index(request):
@@ -14,8 +15,8 @@ def index(request):
     })
 
 def title(request, title):
-    md = util.get_entry(title)
-    html = mdTohtml(md)
+
+    html = mdTohtml(title)
 
     if title not in util.list_entries():
         return render(request, "encyclopedia/error.html", {
