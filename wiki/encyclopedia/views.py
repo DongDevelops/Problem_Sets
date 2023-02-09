@@ -19,8 +19,8 @@ def index(request):
 def title(request, title):
     html = mdTohtml(title)
     if html == None:
-        return render("encyclopedia/error.html", {
-            "message": " does not exist in the entry."
+        return render(request, "encyclopedia/error.html", {
+            "message": "${title} does not exist in the entry."
         })
     else:
         return render(request, "encyclopedia/contents.html", {
