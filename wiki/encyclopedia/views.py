@@ -66,4 +66,4 @@ def create(request):
                 "title": title
             })
     else:
-        return httpRedirect("encyclopedia/index.html")
+        return httpRedirect("encyclopedia/create.html")
