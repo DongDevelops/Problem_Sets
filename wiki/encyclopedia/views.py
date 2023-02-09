@@ -39,7 +39,7 @@ def search(request):
                 if title in entry:
                     recommendations.append(entry)
             return render(request, "encyclopedia/search.html", {
-                "recommendations" = recommendations
+                "recommendations": recommendations
             })
         else:
             return render(request, "encyclopedia/contents.html", {
