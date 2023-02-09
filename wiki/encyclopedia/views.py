@@ -72,7 +72,6 @@ def create(request):
 def edit(request, title):
     if request.method == 'POST':
         NewPost = request.POST['NewPost']
-        title = request.POST['title']
         util.save_entry(title, NewPost)
         return render(request, "encyclopedia/contents.html", {
             "contents": NewPost,
