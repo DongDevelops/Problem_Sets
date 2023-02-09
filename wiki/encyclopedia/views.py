@@ -81,6 +81,6 @@ def edit(request, title):
     else:
         contents = mdTohtml(title)
         return render(request, "encyclopedia/edit.html", {
-            "content": contents,
+            "contents": contents,
             "title": title
         })
