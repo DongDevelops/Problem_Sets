@@ -37,7 +37,9 @@ def search(request):
                 "message": f"{title} does not exist in the entry."
             })
         else:
-        return render(request, "encyclopedia/contents.html", {
-            "contents": html,
-            "title": title
-        })
+            return render(request, "encyclopedia/contents.html", {
+                "contents": html,
+                "title": title
+            })
+    else:
+        return 
