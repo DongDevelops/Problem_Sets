@@ -33,6 +33,8 @@ def search(request):
         title = request.POST['q']
         html = mdTohtml(title)
         if html == None:
+            
+
             return render(request, "encyclopedia/error.html", {
                 "message": f"{title} does not exist in the entry."
             })
