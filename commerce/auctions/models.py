@@ -11,7 +11,7 @@ class Listings(models.Model):
     start_bid = models.IntegerField(min_value=10)
 
     def __str__(self):
-        return f"{self.id}
+        return f"{self.id}: {self.title}"
 
 class Bids:
     pass
