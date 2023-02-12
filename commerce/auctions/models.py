@@ -6,6 +6,9 @@ class User(AbstractUser):
     pass
 
 class Listings:
+    title =
+    description =
+    
     pass
 
 class Bids:
