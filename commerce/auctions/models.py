@@ -8,9 +8,10 @@ class User(AbstractUser):
 class Listings(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField()
-    start_bid = models.IntegerField()
+    start_bid = models.IntegerField(min_value=10)
 
-    pass
+    def __str__(self):
+        return f"{self.id}
 
 class Bids:
     pass
