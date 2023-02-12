@@ -5,10 +5,10 @@ from django.db import models
 class User(AbstractUser):
     pass
 
-class Listings:
-    title =
-    description =
-    
+class Listings(models.Model):
+    title = models.CharField(max_length=64)
+    description = 
+
     pass
 
 class Bids:
