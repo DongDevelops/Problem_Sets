@@ -7,8 +7,8 @@ class User(AbstractUser):
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
-    description = models.CharField
-    
+    description = models.CharField()
+    start_bid = models.IntegerField()
 
     pass
 
