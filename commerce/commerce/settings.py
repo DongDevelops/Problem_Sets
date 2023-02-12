@@ -120,3 +120,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CSRF_TRUSTED_ORIGINS = ['https://whatsoever22-ideal-winner-x554g759gx92944-8000.preview.app.github.dev']
