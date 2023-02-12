@@ -7,7 +7,8 @@ class User(AbstractUser):
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
-    description = models.CharField(max_length=)
+    description = models.CharField
+    
 
     pass
 
