@@ -14,8 +14,8 @@ class Listings(models.Model):
         return f"{self.id}: {self.title}"
 
 class Bids:
-    time = 
-    amount =
+    time = models.DateTimeField()
+    amount = 
 
     def __str__(self):
         return
