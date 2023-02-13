@@ -13,7 +13,7 @@ class Bids(models.Model):
         return f"{self.amount} at {self.time}"
 
 class Listings(models.Model):
-    title = models.CharField(max_length=64)
+    title = models.CharField(max_length=64, unique=False)
     description = models.CharField(max_length=500)
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
 
