@@ -13,7 +13,7 @@ class Bids(models.Model):
         return f"{self.amount} at {self.time}"
 
 class Listings(models.Model):
-    title = models.CharField(max_length=64, unique=True)
+    title = models.CharField(max_length=64)
     description = models.CharField(max_length=500)
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
     image_url = models.URLField(null=True, blank=True)
