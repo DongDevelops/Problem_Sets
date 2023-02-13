@@ -109,6 +109,7 @@ def item(request, id):
     else:
         return render(request, "auctions/index.html")
 
+@login_required
 def place_bid(request):
     if request.method == "POST":
         new_bid = request.POST["place_bid"]
@@ -118,4 +119,3 @@ def place_bid(request):
             New = Listings.bid(time=now, amount=new_bid)
             New.save()
         else:
-            
