@@ -69,7 +69,7 @@ def create(request):
     if request.method == "POST":
         title = request.POST["title"]
         description = request.POST["description"]
-        bid = request.POST["bid"]
+        bid = request.POST["starting_bid"]
 
         try:
             new_listing = Listings.objects.create_listing(title, description, bid)
