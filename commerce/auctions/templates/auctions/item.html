@@ -4,7 +4,7 @@
     <h2>Listing: {{ title }}</h2>
     <img src="{{ image }}" alt="image" width="150" height="150">
     <h3>Price: ${{ amount }}.00</h3>
-    <form action="{% url 'place_bid'}" method="POST">
+    <form action="{% url 'place_bid' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ amount }}" name="amount" id="amount">
         <input type="number" placeholder="Bid" min="10" name="place_bid">
