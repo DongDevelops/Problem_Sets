@@ -14,14 +14,14 @@ class Bids(models.Model):
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
-    description = models.CharField()
+    description = models.CharField(max_length=500)
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
 
     def __str__(self):
         return f"{self.id}: {self.title}"
 
 class Comments(models.Model):
-    comments = models.CharField()
+    comments = models.CharField(max_length=500)
     time = models.DateTimeField()
 
     def __str__(self):
