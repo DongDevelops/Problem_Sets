@@ -89,7 +89,7 @@ def create(request):
         return render(request, "auctions/create.html")
 
 
-def item(request):
+def item(request, id):
     if request.method == "POST":
         title = request.POST["title"]
         description = request.POST["description"]
