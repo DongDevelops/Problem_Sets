@@ -5,6 +5,13 @@ from django.db import models
 class User(AbstractUser):
     pass
 
+class Bids(models.Model):
+    time = models.DateTimeField()
+    amount = models.IntegerField(min_value=10)
+
+    def __str__(self):
+        return f"{self.amount} at {self.time}"
+
 class Listings(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField()
@@ -12,13 +19,6 @@ class Listings(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.title}"
-
-class Bids(models.Model):
-    time = models.DateTimeField()
-    amount = models.IntegerField(min_value=10)
-
-    def __str__(self):
-        return f"{self.amount} at {self.time}"
 
 class Comments(models.Model):
     comments = models.CharField()
