@@ -10,8 +10,9 @@ from .models import User, Comments, Bids, Listings
 
 
 def index(request):
-    return render(request, "auctions/index.html")
-
+    return render(request, "auctions/index.html", {
+            "listings": Listings.objects.all()
+        })
 
 def login_view(request):
     if request.method == "POST":
