@@ -7,7 +7,7 @@ class User(AbstractUser):
 
 class Bids(models.Model):
     time = models.DateTimeField()
-    amount = models.IntegerField(min_value=10)
+    amount = models.IntegerField()
 
     def __str__(self):
         return f"{self.amount} at {self.time}"
