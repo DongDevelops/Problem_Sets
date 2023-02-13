@@ -21,4 +21,8 @@ class Bids:
         return f"{self.amount} at {self.time}"
 
 class Comments:
-    pass
+    comments = models.CharField()
+    time = models.DateTimeField()
+
+    def __str__(self):
+        return f"{}
