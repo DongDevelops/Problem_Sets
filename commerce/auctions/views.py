@@ -125,3 +125,6 @@ def place_bid(request):
             return render(request, "auctions/message.html", {
                 "message": f"{new_bid} should be greater than {original_bid}."
             })
+
+    else:
+        return render(request, "auctions/index.html")
