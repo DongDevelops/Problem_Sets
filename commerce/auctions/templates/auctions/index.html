@@ -7,8 +7,8 @@
         {% for listing in listings %}
             <li>Title: {{ listing.title }}</li>
             <li>Description: {{ listing.description }}</li>
-            <li>Price: ${{ listing.bid }}.00</li>
-            <li>Created {{ listing.time }}</li>
+            <li>Price: ${{ listing.bid.amount }}.00</li>
+            <li>Created {{ listing.bid.time }}</li>
             {% if listing.image %}
             <li>Image: </br><img src="{{ listing.image }}" alt="image"></li>
             {% else %}
