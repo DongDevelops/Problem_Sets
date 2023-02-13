@@ -90,4 +90,6 @@ def create(request):
 
 
 def item(request, id):
-    
+    return render(request, "auctions/item.html", {
+        
+    })
