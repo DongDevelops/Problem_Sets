@@ -117,3 +117,5 @@ def place_bid(request):
         if new_bid > original_bid:
             New = Listings.bid(time=now, amount=new_bid)
             New.save()
+        else:
+            
