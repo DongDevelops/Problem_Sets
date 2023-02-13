@@ -96,7 +96,13 @@ def item(request, id):
         amount = request.POST["amount"]
         time = request.POST["time"]
         image = request.POST["image"]
-    return render(request, "auctions/item.html", {
-        "title": title,
-        "
-    })
+        return render(request, "auctions/item.html", {
+            "title": title,
+            "description": description,
+            "amount": amount,
+            "time": time,
+            "image": image
+        })
+
+    else:
+        return render(request, "auctions/index.html")
