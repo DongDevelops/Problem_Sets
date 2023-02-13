@@ -3,33 +3,13 @@
 {% block body %}
     <h2>Create Listings</h2>
 
-    <div>
-        <form action="{% url 'create' %}" method="POST">
-            {% csrf_token %}
-            <label for="title">Title</label>
-            <div class="input">
-            <input type="text" id="title" name="title" placeholder="Enter the title">
-            </div>
-            </br>
-
-            <label for="description">Description</label></br>
-            <textarea id="description" name="description" rows="5" cols="33"></textarea>
-            </br></br>
-
-            <label for="image">Image(optional)</label>
-            <div class="input">
-            <input type="url" id="image" name="image" placeholder="Enter the url of image">
-            </div>
-            </br>
-
-            <label for="starting_bid">Starting Bid</label>
-            <div class="input">
-            <input type="number" id="starting_bid" name="starting_bid" min="10">
-            </div>
-            </br>
-
-            <input type="submit" value="Create">
-        </form>
-    </div>
-
+    <ul>
+        {% for listing in listings %}
+            <li>Title: {{ listing.title }}</li>
+            <li>Description: {{ listing.description }}</li>
+            <li>Price: ${{ listing.bid.amount }}.00</li>
+            <li>Created {{ listing.bid.time }}</li>
+            {% if listing.image %}
+            <li>Image: </br></br><img src="{{ listing.image }}" alt="image" width="150" height="150"></li></br>
+    </ul>
 {% endblock %}
