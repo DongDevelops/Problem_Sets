@@ -3,7 +3,12 @@
 {% block body %}
     <h2>Active Listings</h2>
 
-    TODO
+    {% for listing in listings %}
+        {listing.title}
+        {listing.description}
+        {listing.bid}
+
+    {% endfor %}
 
 
 
