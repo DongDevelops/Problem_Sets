@@ -82,7 +82,9 @@ def create(request):
             new_listing.save()
 
         except IntegrityError:
-
+            return render(request, "auctions/create.html", {
+                "message": "Title already exists."
+            })
 
         return render(request, "auctions/index.html", {
             "listings": Listings.objects.all()
