@@ -113,6 +113,5 @@ def place_bid(request):
     if request.method == "POST":
         new_bid = request.POST["place_bid"]
         id = request.POST["id"]
-        original_bid = Listings.objects.get(id=id)
+        original_bid = Listings.objects.get(id=id).bid.amount
         if new_bid > original_bid:
-            
