@@ -77,14 +77,8 @@ def create(request):
         bid = Bids(time=now, amount=amount)
         bid.save()
 
-        try:
-            new_listing = Listings(title=title, image_url=image_url, description=description, bid=bid)
-            new_listing.save()
-
-        except IntegrityError:
-            return render(request, "auctions/create.html", {
-                "message": "Title already exists."
-            })
+        new_listing = Listings(title=title, image_url=image_url, description=description, bid=bid)
+        new_listing.save()
 
         return render(request, "auctions/index.html", {
             "listings": Listings.objects.all()
