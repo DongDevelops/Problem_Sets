@@ -87,3 +87,7 @@ def create(request):
 
     else:
         return render(request, "auctions/create.html")
+
+
+def item(request, id):
+    
