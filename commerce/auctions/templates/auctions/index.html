@@ -14,7 +14,7 @@
             {% else %}
             <li>Image: Not-provided
             {% endif %}
-            <a href="{% url 'item' %}" role="button" class="btn btn-success">Go</a>
+            <a href="{% url 'item' listing.id %}" role="button" class="btn btn-success">Go</a>
     </br></br>
         {% endfor %}
     </ul>
