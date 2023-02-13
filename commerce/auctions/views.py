@@ -77,8 +77,11 @@ def create(request):
         bid = Bids(time=now, amount=amount)
         bid.save()
 
-        new_listing = Listings(title=title, image_url=image_url, description=description, bid=bid)
-        new_listing.save()
+        try:
+            new_listing = Listings(title=title, image_url=image_url, description=description, bid=bid)
+            new_listing.save()
+
+        except IntegrityError:
 
 
         return render(request, "auctions/index.html", {
