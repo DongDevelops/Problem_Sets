@@ -72,7 +72,7 @@ def create(request):
         bid = request.POST["starting_bid"]
 
         try:
-            new_listing = Listings.objects.create_listing(title, description, bid)
+            new_listing = Listings(title=title, description=description, bid=bid)
             new_listing.save()
         except IntegrityError:
             return render(request, "auctions/create.html", {
