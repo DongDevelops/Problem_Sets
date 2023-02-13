@@ -20,7 +20,7 @@ div {
     box-sizing: border-box;
   }
 
-  .image {
-    width: 30px;
-    height: 30px;
+image {
+    max-width: 30%;
+    height: auto;
   }
