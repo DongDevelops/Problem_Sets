@@ -70,14 +70,14 @@ def create(request):
     if request.method == "POST":
         title = request.POST["title"]
         description = request.POST["description"]
-
+        image = request.POST["image"]
 
         amount = request.POST["starting_bid"]
         now = datetime.now()
         bid = Bids(time=now, amount=amount)
         bid.save()
 
-        new_listing = Listings(title=title, description=description, bid=bid)
+        new_listing = Listings(title=title, image=image, description=description, bid=bid)
         new_listing.save()
 
         return render(request, "auctions/index.html", {
