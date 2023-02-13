@@ -91,12 +91,14 @@ def create(request):
 
 def item(request, id):
     if request.method == "POST":
+        id = request.POST["id"]
         title = request.POST["title"]
         description = request.POST["description"]
         amount = request.POST["amount"]
         time = request.POST["time"]
         image = request.POST["image"]
         return render(request, "auctions/item.html", {
+            "id": id,
             "title": title,
             "description": description,
             "amount": amount,
@@ -110,5 +112,6 @@ def item(request, id):
 def place_bid(request):
     if request.method == "POST":
         new_bid = request.POST["place_bid"]
-        Listings.object.get()
+        id = request.POST["id"]
+        Listings.object.get(id=id)
         if new_bid >
