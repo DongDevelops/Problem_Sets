@@ -1,15 +1,9 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-    <h2>Create Listings</h2>
-
-    <ul>
-        {% for listing in listings %}
-            <li>Title: {{ title }}</li>
-            <li>Description: {{ description }}</li>
-            <li>Price: ${{ amount }}.00</li>
-            <li>Created {{ time }}</li>
-            <li>Image: </br></br><img src="{{ image }}" alt="image" width="150" height="150"></li></br>
-        {% endfor %}
-    </ul>
+    <h2>Listing: {{ title }}</h2>
+    <img src="{{ image }}" alt="image" width="150" height="150">
+    <h3>Price: ${{ amount }}.00</h3>
+    <li>Created {{ time }}</li>
+    <h3>Description: {{ description }}</h3>
 {% endblock %}
