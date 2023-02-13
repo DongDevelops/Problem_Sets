@@ -99,7 +99,7 @@ def item(request):
         return render(request, "auctions/item.html", {
             "title": title,
             "description": description,
-            "amount": amount,+
+            "amount": amount,
             "time": time,
             "image": image
         })
