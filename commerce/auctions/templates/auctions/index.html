@@ -8,7 +8,11 @@
             <li>Title: {{ listing.title }}</li>
             <li>Description: {{ listing.description }}</li>
             <li>Bid & Time: {{ listing.bid }}</li>
+            {% if listing.image %}
             <li>Image: <img src="{{ listing.image }}" alt="image"></li>
+            {% else %}
+            {% endif %}
+
     </br></br>
         {% endfor %}
     </ul>
