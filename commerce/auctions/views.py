@@ -90,6 +90,13 @@ def create(request):
 
 
 def item(request, id):
+    if request.method == "POST":
+        title = request.POST["title"]
+        description = request.POST["description"]
+        amount = request.POST["amount"]
+        time = request.POST["time"]
+        image = request.POST["image"]
     return render(request, "auctions/item.html", {
-        
+        "title": title,
+        "
     })
