@@ -106,3 +106,7 @@ def item(request, id):
 
     else:
         return render(request, "auctions/index.html")
+
+def place_bid(request):
+    if request.method == "POST":
+        
