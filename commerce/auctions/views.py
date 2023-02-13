@@ -64,6 +64,13 @@ def register(request):
 
 
 def create(request):
+    @login_required
     if request.method == "POST":
-        
-    return render(request, "auctions/create.html")
+        request.POST["title"]
+
+        return render(request, "auctions/create.html", {
+            "listings": listings
+        })
+
+    else:
+        return render(request, "auctions/create.html")
