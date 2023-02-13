@@ -16,7 +16,7 @@ class Listings(models.Model):
     title = models.CharField(max_length=64, unique=True)
     description = models.CharField(max_length=500)
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
-    image_url = models.URLField()
+    image_url = models.URLField(null=Ture, blank=True)
 
     def __str__(self):
         return f"{self.id}: {self.title}"
