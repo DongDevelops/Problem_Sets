@@ -109,4 +109,5 @@ def item(request, id):
 
 def place_bid(request):
     if request.method == "POST":
-        
+        new_bid = request.POST["place_bid"]
+        if new_bid > 
