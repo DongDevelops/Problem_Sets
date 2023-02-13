@@ -14,7 +14,7 @@
             {% else %}
             <li>Image: Not-provided </li></br>
             {% endif %}
-            <a href="{% url 'item' listing.id %}" role="button" class="btn btn-success">Go</a>
+            <form action="{% url 'item' listing.id %}" method="POST" role="button" class="btn btn-success">Go</a>
     </br></br>
         {% endfor %}
     </ul>
