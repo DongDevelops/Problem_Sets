@@ -73,6 +73,7 @@ def create(request):
         amount = request.POST["starting_bid"]
         now = datetime.now()
         bid = Bids(time=now, amount=amount)
+        bid.save()
 
         try:
             new_listing = Listings(title=title, description=description, bid=bid)
