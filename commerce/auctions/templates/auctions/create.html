@@ -3,7 +3,7 @@
 {% block body %}
     <h2>Create Listings</h2>
     <div>
-        <form action="">
+        <form action="{% url 'create' %}">
             <label for="title">Title</label>
             <input type="text" id="title" name="title" placeholder="Enter the title">
 
@@ -12,6 +12,8 @@
 
             <label for="starting_bid">Starting Bid</label>
             <input type="number" id="starting_bid" name="starting_bid" min="10">
+
+            <input type="submit" value="Create">
         </form>
     </div>
 

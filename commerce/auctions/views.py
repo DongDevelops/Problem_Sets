@@ -64,5 +64,6 @@ def register(request):
 
 
 def create(request):
-    
+    if request.method == "POST":
+        
     return render(request, "auctions/create.html")
