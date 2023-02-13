@@ -118,4 +118,10 @@ def place_bid(request):
         if new_bid > original_bid:
             New = Listings.bid(time=now, amount=new_bid)
             New.save()
+            return render(request, "auctions/message.html", {
+                "message": "Succeffully bidded."
+            })
         else:
+            return render(request, "auctions/message.html", {
+                "message": f"{new_bid} should be greater than {original_bid}."
+            })
