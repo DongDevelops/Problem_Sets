@@ -15,7 +15,7 @@
             <li>Image: Not-provided </li></br>
             {% endif %}
             <form action="{% url 'item' listing.id %}" method="POST">
-                <input type="hidden" 
+                <input type="hidden" name="title" id="title" value="{{ listing.title }}">
                 <input type="submit" value="Go" class="btn btn-success">
             </form>
     </br></br>
