@@ -13,14 +13,14 @@ class Listings(models.Model):
     def __str__(self):
         return f"{self.id}: {self.title}"
 
-class Bids:
+class Bids(models.Model):
     time = models.DateTimeField()
     amount = models.IntegerField(min_value=10)
 
     def __str__(self):
         return f"{self.amount} at {self.time}"
 
-class Comments:
+class Comments(models.Model):
     comments = models.CharField()
     time = models.DateTimeField()
 
