@@ -5,11 +5,10 @@
 
     <ul>
         {% for listing in listings %}
-            <li>Title: {{ listing.title }}</li>
-            <li>Description: {{ listing.description }}</li>
-            <li>Price: ${{ listing.bid.amount }}.00</li>
-            <li>Created {{ listing.bid.time }}</li>
-            {% if listing.image %}
-            <li>Image: </br></br><img src="{{ listing.image }}" alt="image" width="150" height="150"></li></br>
+            <li>Title: {{ title }}</li>
+            <li>Description: {{ description }}</li>
+            <li>Price: ${{ amount }}.00</li>
+            <li>Created {{ time }}</li>
+            <li>Image: </br></br><img src="{{ image }}" alt="image" width="150" height="150"></li></br>
     </ul>
 {% endblock %}
