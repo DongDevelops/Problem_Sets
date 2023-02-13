@@ -25,4 +25,4 @@ class Comments:
     time = models.DateTimeField()
 
     def __str__(self):
-        return f"{}
+        return f"{self.comments} at {self.time}"
