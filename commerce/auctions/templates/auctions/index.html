@@ -14,11 +14,11 @@
             {% else %}
             <li>Image: Not-provided
             {% endif %}
-            <button type="button" class="btn btn-success">Go</button>
+            <a href="{% url 'item' %}" role="button" class="btn btn-success">Go</a>
     </br></br>
         {% endfor %}
     </ul>
 
-    <a href="{% url 'create' %}"><button class="btn btn-primary">Create Listing</button></a>
+    <a href="{% url 'create' %}" role="button" class="btn btn-primary">Create Listing</a>
 
 {% endblock %}
