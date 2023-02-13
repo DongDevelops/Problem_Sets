@@ -115,3 +115,5 @@ def place_bid(request):
         original_bid = request.POST["amount"]
         now = datetime.now()
         if new_bid > original_bid:
+            New = Listings.bid(time=now, amount=new_bid)
+            New.save()
