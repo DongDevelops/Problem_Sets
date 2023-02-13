@@ -3,6 +3,7 @@ from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 from .models import User, Comments, Bids, Listings
 
@@ -63,8 +64,8 @@ def register(request):
         return render(request, "auctions/register.html")
 
 
+@login_required
 def create(request):
-    @login_required
     if request.method == "POST":
         title = request.POST["title"]
         description = request.POST["description"]
