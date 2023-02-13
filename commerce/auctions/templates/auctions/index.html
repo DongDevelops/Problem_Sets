@@ -9,8 +9,9 @@
             <li>Description: {{ listing.description }}</li>
             <li>Bid & Time: {{ listing.bid }}</li>
             {% if listing.image %}
-            <li>Image: <img src="{{ listing.image }}" alt="image"></li>
+            <li>Image: </br><img src="{{ listing.image }}" alt="image"></li>
             {% else %}
+            <li>Image: Not-provided
             {% endif %}
 
     </br></br>
