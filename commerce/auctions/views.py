@@ -158,7 +158,11 @@ def watchlist(request):
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
-    return render(request, "auctions/index.html")
+    else:
+        watchlist_items = Listings.objects.filter(watchlist=True)
+        return render(request, "auctions/watchlist.html", {
+            "items": watchlist_items
+        })
 
 
 @login_required
@@ -172,4 +176,8 @@ def remove(request):
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
-    return render(request, "auctions/index.html")
+    else:
+        watchlist_items = Listings.objects.filter(watchlist=True)
+        return render(request, "auctions/watchlist.html", {
+            "items": watchlist_items
+        })
