@@ -113,6 +113,7 @@ def place_bid(request):
     if request.method == "POST":
         new_bid = int(request.POST["place_bid"])
         original_bid = int(request.POST["amount"])
+        id = request.POST["id"]
         now = datetime.now()
         if new_bid > original_bid:
             New = Bids(time=now, amount=new_bid)
