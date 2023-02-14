@@ -181,3 +181,7 @@ def remove(request):
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
+
+
+def close(request):
+    pass 

@@ -30,7 +30,7 @@
         <input type="submit" value="Place Bid" class="btn btn-primary">
     </form>
     <h3>Created {{ time }}</h3>
-    <h3>Description: {{ description }}</h3>
+    <h3>Description: {{ description }}</h3></br>
 
     {% if creator %}
     <form action="{% url 'close' %}" method="POST">
