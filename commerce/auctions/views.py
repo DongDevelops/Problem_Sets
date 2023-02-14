@@ -116,8 +116,10 @@ def place_bid(request):
         now = datetime.now()
         if new_bid > original_bid:
             New = Bids(time=now, amount=new_bid)
-            New_listing = Listings(bid=New)
-            New_listing.save()
+            Update = Listings.objects.get(id=id)
+            Update.bid = New
+            Update.save()
+
             return render(request, "auctions/message.html", {
                 "message": "Succeffully bidded."
             })
