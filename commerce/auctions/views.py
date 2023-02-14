@@ -117,7 +117,6 @@ def item(request, id):
                 "amount": amount,
                 "time": time,
                 "image": image,
-                "watchlist": watchlist
             })
 
     else:
