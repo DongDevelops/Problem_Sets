@@ -105,7 +105,18 @@ def item(request, id):
                 "description": description,
                 "amount": amount,
                 "time": time,
-                "image": image
+                "image": image,
+                "watchlist": watchlist
+            })
+
+        else:
+            return render(request, "auctions/item.html", {
+                "id": id,
+                "title": title,
+                "description": description,
+                "amount": amount,
+                "time": time,
+                "image": image,
                 "watchlist": watchlist
             })
 
