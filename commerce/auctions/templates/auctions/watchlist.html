@@ -14,12 +14,11 @@
             {% else %}
             <li>Image: Not-provided </li></br>
             {% endif %}
+            <form action="{% url 'remove' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{ item.id }}" name="id" id="id">
+                <input type="submit" class="btn btn-danger btn-sm" value="Remove from the Watchlist">
+            </form>
         {% endfor %}
-
-        <form action="{% url 'remove' %}" method="POST">
-            {% csrf_token %}
-            <input type="hidden" value="{{ item.id }}" name="id" id="id">
-            <input type="submit" class="btn btn-danger btn-sm" value="Remove from the Watchlist">
-        </form>
     </ul>
 {% endblock %}
