@@ -117,9 +117,9 @@ def item(request, id):
                 "time": time,
                 "image": image,
             })
-
     else:
         return render(request, "auctions/index.html")
+
 
 @login_required
 def place_bid(request):
