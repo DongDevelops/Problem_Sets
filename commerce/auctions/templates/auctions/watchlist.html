@@ -10,7 +10,7 @@
             <li>Price: ${{ item.bid.amount }}.00</li>
             <li>Created {{ item.bid.time }}</li>
             {% if item.image %}
-            <li>Image: </br></br><img src="{{ listing.image }}" alt="image" width="150" height="150"></li></br>
+            <li>Image: </br></br><img src="{{ item.image }}" alt="image" width="150" height="150"></li></br>
             {% else %}
             <li>Image: Not-provided </li></br>
             {% endif %}
