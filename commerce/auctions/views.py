@@ -108,7 +108,6 @@ def item(request, id):
                 "image": image,
                 "watchlist": watchlist
             })
-
         else:
             return render(request, "auctions/item.html", {
                 "id": id,
