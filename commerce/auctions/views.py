@@ -149,4 +149,11 @@ def place_bid(request):
 
 @login_required
 def watchlist(request):
+    if request.method == "POST":
+        id = request.POST["id"]
+        item = Listings.objects.get(id=id)
+        Listings.objects.filter(watchlist=True)
+        return render(request, "auctions/watchlist.html", {
+            "item": item
+        })
     return render
