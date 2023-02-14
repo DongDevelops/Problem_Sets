@@ -18,9 +18,14 @@
         </form>
     {% endif %}
 
-
+    
     </br>
-    <img src="{{ image }}" alt="image" width="150" height="150">
+    {% if image %}
+        Image: </br></br><img src="{{ image }}" alt="image" width="150" height="150"></br>
+    {% else %}
+        Image: Not-provided </li></br>
+    {% endif %}
+
     <h3>Price: ${{ amount }}.00</h3>
     <form action="{% url 'place_bid' %}" method="POST">
         {% csrf_token %}
