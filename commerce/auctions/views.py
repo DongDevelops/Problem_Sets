@@ -132,3 +132,8 @@ def place_bid(request):
 
     else:
         return render(request, "auctions/index.html")
+
+
+@login_required
+def watchlist(request):
+    return render
