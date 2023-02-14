@@ -2,6 +2,8 @@
 
 {% block body %}
     <h2>Listing: {{ title }}</h2>
+
+
     {% if item in watchlist %}
         <form action="{% url 'watchlist' %}" method="POST">
             {% csrf_token %}
@@ -15,6 +17,8 @@
             <input type="submit" class="btn btn-danger btn-sm" value="Remove from the Watchlist">
         </form>
     {% endif %}
+
+    
     </br>
     <img src="{{ image }}" alt="image" width="150" height="150">
     <h3>Price: ${{ amount }}.00</h3>
