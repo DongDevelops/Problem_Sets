@@ -4,12 +4,12 @@
     <h2>Watchlist</h2>
 
     <ul>
-        {% for listing in listings %}
-            <li>Title: {{ listing.title }}</li>
-            <li>Description: {{ listing.description }}</li>
-            <li>Price: ${{ listing.bid.amount }}.00</li>
-            <li>Created {{ listing.bid.time }}</li>
-            {% if listing.image %}
+        {% for item in items %}
+            <li>Title: {{ item.title }}</li>
+            <li>Description: {{ item.description }}</li>
+            <li>Price: ${{ item.bid.amount }}.00</li>
+            <li>Created {{ item.bid.time }}</li>
+            {% if item.image %}
             <li>Image: </br></br><img src="{{ listing.image }}" alt="image" width="150" height="150"></li></br>
             {% else %}
             <li>Image: Not-provided </li></br>
