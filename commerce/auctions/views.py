@@ -158,4 +158,18 @@ def watchlist(request):
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
-    return render
+    return render(request, "auctions/index.html")
+
+
+@login_required
+def remove(request):
+    if request.method == "POST":
+        id = request.POST["id"]
+        item = Listings.objects.get(id=id)
+        item.watchlist = False
+        item.save()
+        watchlist_items = Listings.objects.filter(watchlist=True)
+        return render(request, "auctions/watchlist.html", {
+            "items": watchlist_items
+        })
+    return render(request, "auctions/index.html")
