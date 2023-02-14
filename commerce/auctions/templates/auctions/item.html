@@ -4,10 +4,12 @@
     <h2>Listing: {{ title }}</h2>
     {% if item in watchlist %}
         <form action="{% url 'watchlist' %}" method="POST">
+            <input type="hidden" value="{{ id }}" name="id" id="id">
             <input type="submit" class="btn btn-success btn-sm" value="Add to the Watchlist">
         </form>
     {% else %}
         <form action="{% url 'watchlist' %}" method="POST">
+            <input type="hidden" value="{{ id }}" name="id" id="id">
             <input type="submit" class="btn btn-danger btn-sm" value="Remove from the Watchlist">
         </form>
     {% endif %}
