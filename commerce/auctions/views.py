@@ -96,7 +96,9 @@ def item(request, id):
         amount = request.POST["amount"]
         time = request.POST["time"]
         image = request.POST["image"]
-
+        update = Listings.objects.get(id=id)
+        if update.watchlist == True:
+            
         # check if the item's watchlist is True
         # render watchlist
         return render(request, "auctions/item.html", {
