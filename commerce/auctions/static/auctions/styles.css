@@ -24,3 +24,8 @@ img {
     max-width: 30%;
     height: auto;
   }
+
+
+.line {
+    border-bottom: 1px solid #ebebeb;
+}
