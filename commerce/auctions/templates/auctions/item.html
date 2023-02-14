@@ -2,8 +2,8 @@
 
 {% block body %}
     <h2>Listing: {{ title }}</h2>
-    <a href="{% url 'watchlist' %}" role="button" class="btn btn-light">Add to the Watchlist</a>
-    <h4>Remove from the Watchlist</h4>
+    <a href="{% url 'watchlist' %}" role="button" class="btn btn-success">Add to the Watchlist</a>
+    <a href="{% url 'watchlist' %}" role="button" class="btn btn-danger">Remove from the Watchlist</a>
     <img src="{{ image }}" alt="image" width="150" height="150">
     <h3>Price: ${{ amount }}.00</h3>
     <form action="{% url 'place_bid' %}" method="POST">
