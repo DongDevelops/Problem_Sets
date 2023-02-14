@@ -17,7 +17,7 @@ class Listings(models.Model):
     description = models.CharField(max_length=500)
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
     image = models.URLField(null=True, blank=True)
-    watchlist = models.BooleanField(default=True)
+    watchlist = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.id}: {self.title}"
