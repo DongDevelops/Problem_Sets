@@ -21,7 +21,11 @@
                 <input type="hidden" name="description" id="description" value="{{ listing.description }}">
                 <input type="hidden" name="amount" id="amount" value="{{ listing.bid.amount }}">
                 <input type="hidden" name="time" id="time" value="{{ listing.bid.time }}">
+                {% if listing.image %}
                 <input type="hidden" name="image" id="image" value="{{ listing.image }}">
+                {% else %}
+                
+                {% endif %}
                 <input type="submit" value="Go" class="btn btn-success">
             </form>
     </br></br>
