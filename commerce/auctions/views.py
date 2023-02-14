@@ -96,6 +96,9 @@ def item(request, id):
         amount = request.POST["amount"]
         time = request.POST["time"]
         image = request.POST["image"]
+
+        # check if the item's watchlist is True
+        # render watchlist
         return render(request, "auctions/item.html", {
             "id": id,
             "title": title,
@@ -103,6 +106,7 @@ def item(request, id):
             "amount": amount,
             "time": time,
             "image": image
+            "watchlist": watchlist
         })
 
     else:

@@ -4,7 +4,7 @@
     <h2>Listing: {{ title }}</h2>
 
 
-    {% if item in watchlist %}
+    {% if watchlist %}
         <form action="{% url 'watchlist' %}" method="POST">
             {% csrf_token %}
             <input type="hidden" value="{{ id }}" name="id" id="id">
@@ -18,7 +18,7 @@
         </form>
     {% endif %}
 
-    
+
     </br>
     <img src="{{ image }}" alt="image" width="150" height="150">
     <h3>Price: ${{ amount }}.00</h3>
