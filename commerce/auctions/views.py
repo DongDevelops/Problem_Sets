@@ -112,8 +112,8 @@ def item(request, id):
 @login_required
 def place_bid(request):
     if request.method == "POST":
-        new_bid = request.POST["place_bid"]
-        original_bid = request.POST["amount"]
+        new_bid = int(request.POST["place_bid"])
+        original_bid = int(request.POST["amount"])
         now = datetime.now()
         if new_bid > original_bid:
             New = Bids(time=now, amount=new_bid)
