@@ -6,6 +6,9 @@
     <div>
         <form action="{% url 'create' %}" method="POST">
             {% csrf_token %}
+            {% if user.is_authenticated %}
+            <input type="hidden" name="username" id="username" value="{{ user.username }}">
+            {% endif %}
             <label for="title">Title</label>
             <div class="input">
             <input type="text" id="title" name="title" placeholder="Enter the title">
