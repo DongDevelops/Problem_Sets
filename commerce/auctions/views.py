@@ -100,6 +100,7 @@ def item(request, id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         user = User.objects.get(username=username)
+        user.listings.get()
         item = Listings.objects.get(id=item_id)
 
         if username == creator:
