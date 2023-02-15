@@ -8,6 +8,9 @@ class Bids(models.Model):
     def __str__(self):
         return f"{self.amount} at {self.time}"
 
+class User(AbstractUser):
+    pass
+
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
@@ -19,10 +22,6 @@ class Listings(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.title}"
-
-
-class User(AbstractUser):
-    bidders = models.ManyToManyField(Listings, blank=True, related_name="bidders")
 
 
 class Comments(models.Model):
