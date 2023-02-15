@@ -87,7 +87,7 @@ def create(request):
     else:
         return render(request, "auctions/create.html")
 
-
+@login_required
 def item(request, id):
     if request.method == "POST":
         id = request.POST["id"]
@@ -185,5 +185,5 @@ def remove(request):
 
 @login_required
 def close(request):
-    
+
     pass
