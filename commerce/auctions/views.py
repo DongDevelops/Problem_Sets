@@ -101,9 +101,9 @@ def item(request, id):
         creator = request.POST["creator"]
         user = User.objects.get(username=username)
         item = Listings.objects.get(id=item_id)
-
+        
         if username == creator:
-            if user.listings.item.watchlist == False:
+            if item.watchlist == False:
                 watchlist = Y
                 return render(request, "auctions/item.html", {
                     "id": id,
@@ -125,7 +125,7 @@ def item(request, id):
                 })
         else:
             close = Y
-            if user.listings.item.watchlist == False:
+            if item.watchlist == False:
                 watchlist = Y
                 return render(request, "auctions/item.html", {
                     "id": id,
