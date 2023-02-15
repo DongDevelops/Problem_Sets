@@ -103,7 +103,7 @@ def item(request, id):
 
 
         if update.watchlist == False:
-            watchlist = id
+            watchlist = Y
             return render(request, "auctions/item.html", {
                 "id": id,
                 "title": title,
