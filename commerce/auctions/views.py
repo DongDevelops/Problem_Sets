@@ -97,8 +97,9 @@ def item(request, id):
         amount = request.POST["amount"]
         time = request.POST["time"]
         image = request.POST["image"]
+        username = request.POST["username"]
         creator = request.POST["creator"]
-        creator.username
+        user = User.objects.get(username=creator)
         update = Listings.objects.get(id=id)
         if update.watchlist == False:
             watchlist = update
