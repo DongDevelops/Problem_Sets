@@ -73,6 +73,8 @@ def create(request):
         description = request.POST["description"]
         image = request.POST["image"]
         username = request.POST["username"]
+        user = User.objects.get(username=username)
+        
         amount = request.POST["starting_bid"]
         now = datetime.now()
         bid = Bids(time=now, amount=amount)
