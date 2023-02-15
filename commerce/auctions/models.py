@@ -1,15 +1,18 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
+class User(AbstractUser):
+    pass
+
+
 class Bids(models.Model):
     time = models.DateTimeField()
     amount = models.IntegerField()
+    bidders = models.ManyToManyField(User, blank=True, related_name="bidders")
 
     def __str__(self):
         return f"{self.amount} at {self.time}"
-
-class User(AbstractUser):
-    bidders = models.ManyToManyField(Bids, blank=True, related_name="bidders")
 
 
 class Listings(models.Model):
