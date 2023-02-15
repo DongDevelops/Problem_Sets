@@ -99,9 +99,7 @@ def item(request, id):
         image = request.POST["image"]
         username = request.POST["username"]
         creator = request.POST["creator"]
-        user = User.objects.get(username=username)
         item = Listings.objects.get(id=item_id)
-
         if username != creator:
             if item.watchlist == False:
                 return render(request, "auctions/item.html", {
