@@ -183,5 +183,7 @@ def remove(request):
         })
 
 
+@login_required
 def close(request):
-    pass 
+    
+    pass
