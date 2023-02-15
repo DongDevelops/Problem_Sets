@@ -9,7 +9,7 @@ class Bids(models.Model):
         return f"{self.amount} at {self.time}"
 
 class User(AbstractUser):
-    pass
+    bidders = models.ManyToManyField(Bids, blank=True, related_name="bidders")
 
 
 class Listings(models.Model):
