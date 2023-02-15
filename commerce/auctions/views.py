@@ -100,7 +100,7 @@ def item(request, id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         user = User.objects.get(username=username)
-        user.listings
+        user.listings.watchlist
         item = Listings.objects.get(id=id)
         if username == creator:
             if item.watchlist == False:
