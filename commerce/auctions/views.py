@@ -120,7 +120,7 @@ def item(request, id):
                     "description": description,
                     "amount": amount,
                     "time": time,
-                    "image": image,
+                    "image": image
                 })
         else:
             if item.watchlist == False:
