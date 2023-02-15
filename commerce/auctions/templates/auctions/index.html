@@ -9,6 +9,7 @@
             <li>Description: {{ listing.description }}</li>
             <li>Price: ${{ listing.bid.amount }}.00</li>
             <li>Created {{ listing.bid.time }}</li>
+            <li>By {{ listing.creator.username }}</li>
             {% if listing.image %}
             <li>Image: </br></br><img src="{{ listing.image }}" alt="image" width="150" height="150"></li></br>
             {% else %}
@@ -22,6 +23,7 @@
                 <input type="hidden" name="amount" id="amount" value="{{ listing.bid.amount }}">
                 <input type="hidden" name="time" id="time" value="{{ listing.bid.time }}">
                 <input type="hidden" name="image" id="image" value="{{ listing.image }}">
+                <input type="hidden" name="creator" id="creator" value="{{ listing.creator.username }}">
                 <input type="submit" value="Go" class="btn btn-success">
             </form>
     </br></br>
