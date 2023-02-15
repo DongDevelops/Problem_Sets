@@ -132,7 +132,7 @@ def item(request, id):
                     "amount": amount,
                     "time": time,
                     "image": image,
-                    "watchlist": watchlist
+                    "watchlist": watchlist,
                     "close": close
                 })
             else:
@@ -143,6 +143,7 @@ def item(request, id):
                     "amount": amount,
                     "time": time,
                     "image": image,
+                    "close": close
                 })
     else:
         return render(request, "auctions/index.html")
