@@ -20,7 +20,7 @@ class Listings(models.Model):
 
 class User(AbstractUser):
     listing = models.ManyToManyField(Listings, blank=True, related_name="listing")
-    pass
+    
 
 class Comments(models.Model):
     comments = models.CharField(max_length=500)
