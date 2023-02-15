@@ -21,6 +21,7 @@ class Listings(models.Model):
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
     image = models.URLField(null=True, blank=True)
     watchlist = models.BooleanField(default=False)
+    username = models.
     listings = models.ManyToManyField(User, blank=True, related_name="listings")
 
     def __str__(self):
