@@ -9,7 +9,7 @@ class User(AbstractUser):
 class Bids(models.Model):
     time = models.DateTimeField()
     amount = models.IntegerField()
-    bidders = models.ManyToManyField(User, blank=True, related_name="bidders")
+    biddings = models.ManyToManyField(User, blank=True, related_name="biddings")
 
     def __str__(self):
         return f"{self.amount} at {self.time}"
