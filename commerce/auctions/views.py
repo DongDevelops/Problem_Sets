@@ -91,7 +91,7 @@ def create(request):
 
 def item(request, id):
     if request.method == "POST":
-        id = request.POST["id"]
+        item_id = request.POST["id"]
         title = request.POST["title"]
         description = request.POST["description"]
         amount = request.POST["amount"]
@@ -100,8 +100,8 @@ def item(request, id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         user = User.objects.get(username=username)
-        
-        item = Listings.objects.get(id=id)
+
+        item = Listings.objects.get(id=item_id)
         if username == creator:
             if item.watchlist == False:
                 watchlist = Y
