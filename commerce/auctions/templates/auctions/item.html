@@ -32,7 +32,7 @@
     <h3>Created {{ time }}</h3>
     <h3>Description: {{ description }}</h3></br>
 
-    {% if creator %}
+    {% if close %}
     <form action="{% url 'close' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ id }}" name="id" id="id">
