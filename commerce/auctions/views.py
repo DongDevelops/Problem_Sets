@@ -100,7 +100,7 @@ def item(request, id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         if username == creator:
-
+            close = Y
 
         if update.watchlist == False:
             watchlist = Y
