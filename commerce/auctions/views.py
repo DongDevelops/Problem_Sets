@@ -102,7 +102,7 @@ def item(request, id):
         user = User.objects.get(username=username)
         item = Listings.objects.get(id=item_id)
 
-        if username == creator:
+        if username != creator:
             if item.watchlist == False:
                 return render(request, "auctions/item.html", {
                     "id": id,
