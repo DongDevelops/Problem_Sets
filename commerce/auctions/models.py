@@ -1,10 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-
-class User(AbstractUser):
-    pass
-
 class Bids(models.Model):
     time = models.DateTimeField()
     amount = models.IntegerField()
@@ -21,6 +17,10 @@ class Listings(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.title}"
+
+class User(AbstractUser):
+    listing = models.ManyToManyField(Listings, blank=True, related_name="listing")
+    pass
 
 class Comments(models.Model):
     comments = models.CharField(max_length=500)
