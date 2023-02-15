@@ -100,10 +100,10 @@ def item(request, id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         if username == creator:
-            
-        update = Listings.objects.get(id=id)
+
+
         if update.watchlist == False:
-            watchlist = update
+            watchlist = id
             return render(request, "auctions/item.html", {
                 "id": id,
                 "title": title,
