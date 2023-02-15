@@ -17,7 +17,7 @@ class Listings(models.Model):
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
     image = models.URLField(null=True, blank=True)
     watchlist = models.BooleanField(default=False)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="creator")
+    creator = models.ForeignKey(User.username, on_delete=models.CASCADE, related_name="creator")
 
     def __str__(self):
         return f"{self.id}: {self.title}"
