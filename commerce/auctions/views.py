@@ -100,18 +100,17 @@ def item(request, id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         item = Listings.objects.get(id=item_id)
-        if username != creator:
-            if item.watchlist == False:
-                return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
-                    "watchlist": watchlist
-                })
-            else:
+        if username != creator & item.watchlist == False:
+            return render(request, "auctions/item.html", {
+                "id": id,
+                "title": title,
+                "description": description,
+                "amount": amount,
+                "time": time,
+                "image": image,
+                "watchlist": watchlist
+            })
+        elif username != creator & item.watchlist == True:
                 return render(request, "auctions/item.html", {
                     "id": id,
                     "title": title,
