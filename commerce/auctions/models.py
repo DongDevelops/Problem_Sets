@@ -9,6 +9,7 @@ class Bids(models.Model):
         return f"{self.amount} at {self.time}"
 
 class User(AbstractUser):
+    bidders = models.ManyToManyField(Listings, blank=True, related_name="bidders")
     pass
 
 class Listings(models.Model):
@@ -17,7 +18,7 @@ class Listings(models.Model):
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
     image = models.URLField(null=True, blank=True)
     watchlist = models.BooleanField(default=False)
-    creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name="creator")
+    creator = models.ManyToManyField(User, blank=True, related_name="creator")
 
     def __str__(self):
         return f"{self.id}: {self.title}"
