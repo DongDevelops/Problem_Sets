@@ -21,7 +21,7 @@ class Listings(models.Model):
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
     image = models.URLField(null=True, blank=True)
     watchlist = models.BooleanField(default=False)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="creator")
+    creator = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name="creator")
     listings = models.ManyToManyField(User, blank=True, related_name="listings")
 
     def __str__(self):

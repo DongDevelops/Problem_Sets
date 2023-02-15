@@ -74,12 +74,11 @@ def create(request):
         image = request.POST["image"]
         username = request.POST["username"]
         user = User.objects.get(username=username)
-        
         amount = request.POST["starting_bid"]
         now = datetime.now()
         bid = Bids(time=now, amount=amount)
         bid.save()
-        new_listing = Listings(title=title, image=image, description=description, bid=bid)
+        new_listing = Listings(title=title, creator=user, image=image, description=description, bid=bid)
         new_listing.save()
 
         return render(request, "auctions/index.html", {
