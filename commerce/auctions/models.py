@@ -19,8 +19,8 @@ class Listings(models.Model):
         return f"{self.id}: {self.title}"
 
 class User(AbstractUser):
-    listing = models.ManyToManyField(Listings, blank=True, related_name="listing")
-    
+    information = models.ManyToManyField(Listings, blank=True, related_name="information")
+
 
 class Comments(models.Model):
     comments = models.CharField(max_length=500)
