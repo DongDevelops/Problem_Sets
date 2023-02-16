@@ -34,7 +34,7 @@
     <form action="{% url 'place_bid' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ listing.id }}" name="id" id="id">
-        <input type="hidden" value="{{ user.username }}" name="username" id="username">
+        <input type="hidden" value="{{ username }}" name="username" id="username">
         <input type="hidden" value="{{ listing.bid.amount }}" name="amount" id="amount">
         <input type="number" placeholder="Bid" min="10" name="place_bid">
 
