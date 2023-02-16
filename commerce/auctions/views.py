@@ -258,6 +258,7 @@ def closed_item(request, id):
 
 def comments(request):
     
+    comments = Comments.objects.all()
 
     return render(request, "auctions/comments.html", {
         "comments": comments
