@@ -101,8 +101,6 @@ def item(request, listing_id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         listing = Listings.objects.get(id=listing_id)
-
-
         close = listing
         watchlist = listing
         if username != creator and listing.watchlist == False:
