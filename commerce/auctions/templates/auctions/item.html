@@ -27,6 +27,8 @@
     </br>
     <img src="{{ image }}" alt="image" width="150" height="150"></br>
     <h3>Price: ${{ amount }}.00</h3>
+
+
     <form action="{% url 'place_bid' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ id }}" name="id" id="id">
@@ -34,6 +36,8 @@
         <input type="number" placeholder="Bid" min="10" name="place_bid">
         <input type="submit" value="Place Bid" class="btn btn-primary">
     </form>
+
+
     <h3>Created {{ time }}</h3>
     <h3>Description: {{ description }}</h3></br>
 
