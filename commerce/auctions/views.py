@@ -217,7 +217,8 @@ def close(request):
         item = Listings.objects.get(id=item_id)
         item.active = False
         item.save()
-        winner = item.bid.highest_bidder.username
+        winning_user = item.bid.highest_bidder
+        winner = winning_user.username
         return render(request, "auctions/idex.html", {
             "message": f"This listing is closed, the winner is {winner}."
         })
