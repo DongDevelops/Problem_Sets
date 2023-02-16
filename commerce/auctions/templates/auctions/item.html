@@ -62,7 +62,7 @@
     </br>
     {% endfor %}
 
-    <form action="{% url 'comments' item.id %}" method="POST">
+    <form action="{% url 'comments' listing.id %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ id }}" name="id" id="id">
         <input type="hidden" value="{{ user.username }}" name="username" id="username">
