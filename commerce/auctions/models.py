@@ -16,6 +16,14 @@ class Bids(models.Model):
         return f"{self.amount} at {self.time}"
 
 
+class Comments(models.Model):
+    comments = models.CharField(max_length=500)
+    time = models.DateTimeField()
+
+    def __str__(self):
+        return f"{self.comments} at {self.time}"
+
+
 class Listings(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=500)
@@ -25,15 +33,9 @@ class Listings(models.Model):
     active = models.BooleanField(default=True)
     creator = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name="creator")
     listings = models.ManyToManyField(User, blank=True, related_name="listings")
-    comments = 
+    comments = models.ForeignKey(Comments,on_delete=models.CASCADE, related_name="comments")
 
     def __str__(self):
         return f"{self.id}: {self.title}"
 
 
-class Comments(models.Model):
-    comments = models.CharField(max_length=500)
-    time = models.DateTimeField()
-
-    def __str__(self):
-        return f"{self.comments} at {self.time}"
