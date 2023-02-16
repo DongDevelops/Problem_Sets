@@ -35,7 +35,11 @@
         <input type="hidden" value="{{ user.username }}" name="username" id="username">
         <input type="hidden" value="{{ amount }}" name="amount" id="amount">
         <input type="number" placeholder="Bid" min="10" name="place_bid">
+        {% if message %}
+
+        {% else %}
         <input type="submit" value="Place Bid" class="btn btn-primary">
+        {% endif %}
     </form>
 
 
