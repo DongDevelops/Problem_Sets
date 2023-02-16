@@ -80,6 +80,7 @@ def create(request):
         bid = Bids(time=now, amount=amount)
         bid.save()
         new_listing = Listings(title=title, creator=user, image=image, description=description, bid=bid)
+        new_listing.listings.add(user)
         new_listing.save()
 
         return render(request, "auctions/index.html", {
