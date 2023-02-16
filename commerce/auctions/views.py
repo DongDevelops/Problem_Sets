@@ -256,7 +256,7 @@ def closed_item(request, id):
         return render(request, "auctions/index.html")
 
 @login_required
-def comments(request, listing_id):
+def comments(request):
     if request.method == "POST":
         comment = request.POST["comment"]
         current_time = datetime.now()
@@ -266,60 +266,9 @@ def comments(request, listing_id):
         new_comment.save()
         comments = Comments.objects.all()
 
-        id = request.POST["id"]
-        title = request.POST["title"]
-        description = request.POST["description"]
-        amount = request.POST["amount"]
-        time = request.POST["time"]
-        image = request.POST["image"]
-        creator = request.POST["creator"]
-        item = Listings.objects.get(id=id)
-        close = item
-        watchlist = item
-        if username != creator and item.watchlist == False:
-            return render(request, "auctions/item.html", {
-                "id": id,
-                "title": title,
-                "description": description,
-                "amount": amount,
-                "time": time,
-                "image": image,
-                "watchlist": watchlist,
-                "comments": comments
-            })
-        elif username != creator and item.watchlist == True:
-                return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
-                    "comments": comments
-                })
-        elif username == creator and item.watchlist == False:
-                return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
-                    "watchlist": watchlist,
-                    "close": close,
-                    "comments": comments
-                })
-        elif username == creator and item.watchlist == False:
-                return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
-                    "close": close,
-                    "comments": comments
-                })
+        return render(request, "auctions/index.html", {
+            "comments": comments
+        })
 
     else:
         return render(request, "auctions/index.html")
