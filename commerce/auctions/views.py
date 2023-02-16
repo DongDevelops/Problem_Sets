@@ -153,9 +153,10 @@ def place_bid(request):
         original_bid = int(request.POST["amount"])
         id = request.POST["id"]
         username = request.POST["username"]
+        user = User.objects.get(username=username)
         now = datetime.now()
         if new_bid > original_bid:
-            New = Bids(time=now, amount=new_bid)
+            New = Bids(time=now, amount=new_bid, highest_bidder=user)
             New.save()
             Update = Listings.objects.get(id=id)
             Update.bid = New
