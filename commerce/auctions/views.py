@@ -256,7 +256,7 @@ def closed_item(request, id):
         return render(request, "auctions/index.html")
 
 @login_required
-def comments(request, id):
+def comments(request):
     if request.method == "POST":
         comment = request.POST["comment"]
         current_time = datetime.now()
