@@ -100,6 +100,7 @@ def item(request, id):
         image = request.POST["image"]
         username = request.POST["username"]
         creator = request.POST["creator"]
+        comments = item.item_comments.all()
         item = Listings.objects.get(id=id)
         close = item
         watchlist = item
@@ -111,7 +112,8 @@ def item(request, id):
                 "amount": amount,
                 "time": time,
                 "image": image,
-                "watchlist": watchlist
+                "watchlist": watchlist,
+                "comments": comments
             })
         elif username != creator and item.watchlist == True:
                 return render(request, "auctions/item.html", {
@@ -120,7 +122,8 @@ def item(request, id):
                     "description": description,
                     "amount": amount,
                     "time": time,
-                    "image": image
+                    "image": image,
+                    "comments": comments
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
@@ -131,7 +134,8 @@ def item(request, id):
                     "time": time,
                     "image": image,
                     "watchlist": watchlist,
-                    "close": close
+                    "close": close,
+                    "comments": comments
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
@@ -141,7 +145,8 @@ def item(request, id):
                     "amount": amount,
                     "time": time,
                     "image": image,
-                    "close": close
+                    "close": close,
+                    "comments": comments
                 })
     else:
         return render(request, "auctions/index.html")
@@ -268,11 +273,11 @@ def comments(request, id):
 
         return HttpResponseRedirect(reverse("item", args=(item.id)))
         new_comment.save()
-        comments = item.item_comments.all()
+
 
 
         return render(request, "auctions/item.html", {
-            "comments": comments
+
         })
 
     else:
