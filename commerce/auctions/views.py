@@ -93,9 +93,8 @@ def create(request):
 
 def item(request, listing_id):
         listing = Listings.objects.get(id=listing_id)
-        listing.
+        creator = listing.creator
         username = request.POST["username"]
-        creator = request.POST["creator"]
         comments = listing.item_comments.all()
 
         close = listing
