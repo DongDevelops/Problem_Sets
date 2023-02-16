@@ -261,7 +261,8 @@ def comments(request):
         comment = request.POST["comment"]
         time = datetime.now()
         username = request.POST["username"]
-        commentator =
+        user = User.objects.get(username=username)
+        commentor =
         comments = Comments.objects.all()
 
     return render(request, "auctions/comments.html", {
