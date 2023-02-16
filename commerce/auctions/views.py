@@ -254,3 +254,7 @@ def closed_item(request, id):
         })
     else:
         return render(request, "auctions/index.html")
+
+
+def comments(request):
+    
