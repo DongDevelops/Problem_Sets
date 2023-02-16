@@ -26,7 +26,7 @@
 
     </br>
     <img src="{{ listing.image }}" alt="image" width="150" height="150"></br>
-    <h3>Price: ${{ amount }}.00</h3>
+    <h3>Price: ${{ listing.bid.amount }}.00</h3>
 
     {% if message %}
     <button type="button" class="btn btn-secondary" disabled>Bidding closed</button>
@@ -43,8 +43,8 @@
     </form>
 
 
-    <h3>Created {{ time }}</h3>
-    <h3>Description: {{ description }}</h3></br>
+    <h3>Created {{ listing.bid.time }}</h3>
+    <h3>Description: {{ listing.description }}</h3></br>
 
 
 
