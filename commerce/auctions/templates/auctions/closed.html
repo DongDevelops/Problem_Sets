@@ -2,6 +2,7 @@
 
 {% block body %}
     <h2>Closed Listings</h2>
+    {{ message }}
 
     <ul>
         {% for listing in listings %}
@@ -34,7 +35,7 @@
                 <input type="submit" value="Go" class="btn btn-success">
             </form>
 
-            
+
     </br></br>
         {% endfor %}
     </ul>
