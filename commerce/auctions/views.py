@@ -90,7 +90,7 @@ def create(request):
         return render(request, "auctions/create.html")
 
 
-def item(request, id):
+def item(request, item_id):
     if request.method == "POST":
         id = request.POST["id"]
         title = request.POST["title"]
@@ -100,7 +100,7 @@ def item(request, id):
         image = request.POST["image"]
         username = request.POST["username"]
         creator = request.POST["creator"]
-        item = Listings.objects.get(id=id)
+        item = Listings.objects.get(id=item_id)
         comments = item.item_comments.all()
 
         close = item
@@ -262,9 +262,9 @@ def closed_item(request, id):
         return render(request, "auctions/index.html")
 
 @login_required
-def comments(request, id):
+def comments(request, item_id):
     if request.method == "POST":
-        item = Listings.objects.get(id=id)
+        item = Listings.objects.get(id=item_id)
         comment = request.POST["comment"]
         current_time = datetime.now()
         username = request.POST["username"]
