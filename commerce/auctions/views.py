@@ -258,6 +258,7 @@ def closed_item(request, id):
 @login_required
 def comments(request, id):
     if request.method == "POST":
+        id = request.POST["id"]
         comment = request.POST["comment"]
         current_time = datetime.now()
         username = request.POST["username"]
