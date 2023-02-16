@@ -219,7 +219,7 @@ def close(request):
         item.save()
         winner = item.bid.highest_bidder
 
-        return render(request, "auctions/idex.html", {
+        return render(request, "auctions/item.html", {
             "message": f"This listing is closed, the winner is {winner}."
         })
     else:
