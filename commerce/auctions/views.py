@@ -219,4 +219,5 @@ def close(request):
         return render(request, "auctions/idex.html", {
             "message": f"This listing is closed, the winner is {winner}."
         })
-    pass
+    else:
+        return render(request, "auctions/index.html")
