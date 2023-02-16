@@ -101,7 +101,7 @@ def item(request, listing_id):
         username = request.POST["username"]
         creator = request.POST["creator"]
         listing = Listings.objects.get(id=listing_id)
-        comments = listing.item_comments.all()
+
 
         close = listing
         watchlist = listing
@@ -271,5 +271,6 @@ def comments(request, listing_id):
         user = User.objects.get(username=username)
         new_comment = Comments.objects.create(time=current_time, commentor=user, comment=comment)
         new_comment.item_comments.add(listing)
+        comments = listing.item_comments.all()
 
         return HttpResponseRedirect(reverse("item", args=(listing.id,)))
