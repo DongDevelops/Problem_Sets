@@ -28,18 +28,18 @@
     <img src="{{ image }}" alt="image" width="150" height="150"></br>
     <h3>Price: ${{ amount }}.00</h3>
 
-
+    {% if message %}
+    
+    {% else %}
     <form action="{% url 'place_bid' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ id }}" name="id" id="id">
         <input type="hidden" value="{{ user.username }}" name="username" id="username">
         <input type="hidden" value="{{ amount }}" name="amount" id="amount">
         <input type="number" placeholder="Bid" min="10" name="place_bid">
-        {% if message %}
 
-        {% else %}
         <input type="submit" value="Place Bid" class="btn btn-primary">
-        {% endif %}
+    {% endif %}
     </form>
 
 
