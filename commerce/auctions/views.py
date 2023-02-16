@@ -100,8 +100,9 @@ def item(request, id):
         image = request.POST["image"]
         username = request.POST["username"]
         creator = request.POST["creator"]
-        comments = item.item_comments.all()
         item = Listings.objects.get(id=id)
+        comments = item.item_comments.all()
+
         close = item
         watchlist = item
         if username != creator and item.watchlist == False:
