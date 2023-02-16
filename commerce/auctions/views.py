@@ -255,7 +255,7 @@ def closed_item(request, id):
     else:
         return render(request, "auctions/index.html")
 
-
+@login_required
 def comments(request):
 
     comments = Comments.objects.all()
