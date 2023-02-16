@@ -256,7 +256,7 @@ def closed_item(request, id):
         return render(request, "auctions/index.html")
 
 @login_required
-def comments(request):
+def comments(request, id):
     if request.method == "POST":
         comment = request.POST["comment"]
         current_time = datetime.now()
@@ -266,7 +266,7 @@ def comments(request):
         new_comment.save()
         comments = Comments.objects.all()
 
-        return render(request, "auctions/item.html", {
+        return render(request, f"auctions/item/{id}/comments.html", {
             "comments": comments
         })
 
