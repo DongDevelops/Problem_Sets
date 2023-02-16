@@ -19,6 +19,7 @@
     {% endif %}
 
 
+    
     </br>
     <img src="{{ image }}" alt="image" width="150" height="150"></br>
     <h3>Price: ${{ amount }}.00</h3>
@@ -31,6 +32,8 @@
     </form>
     <h3>Created {{ time }}</h3>
     <h3>Description: {{ description }}</h3></br>
+
+
 
     {% if close %}
     <form action="{% url 'close' %}" method="POST">
