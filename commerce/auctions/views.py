@@ -105,7 +105,7 @@ def item(request, listing_id):
 
         close = listing
         watchlist = listing
-        if username != creator and item.watchlist == False:
+        if username != creator and listing.watchlist == False:
             return render(request, "auctions/item.html", {
                 "id": id,
                 "title": title,
@@ -116,7 +116,7 @@ def item(request, listing_id):
                 "watchlist": watchlist,
                 "comments": comments
             })
-        elif username != creator and item.watchlist == True:
+        elif username != creator and listing.watchlist == True:
                 return render(request, "auctions/item.html", {
                     "id": id,
                     "title": title,
@@ -126,7 +126,7 @@ def item(request, listing_id):
                     "image": image,
                     "comments": comments
                 })
-        elif username == creator and item.watchlist == False:
+        elif username == creator and listing.watchlist == False:
                 return render(request, "auctions/item.html", {
                     "id": id,
                     "title": title,
@@ -138,7 +138,7 @@ def item(request, listing_id):
                     "close": close,
                     "comments": comments
                 })
-        elif username == creator and item.watchlist == False:
+        elif username == creator and listing.watchlist == False:
                 return render(request, "auctions/item.html", {
                     "id": id,
                     "title": title,
