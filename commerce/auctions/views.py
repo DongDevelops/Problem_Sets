@@ -265,6 +265,7 @@ def comments(request, id):
         username = request.POST["username"]
         user = User.objects.get(username=username)
         new_comment = Comments(time=current_time, commentor=user, comment=comment)
+        new_comment.item_comments
         new_comment.save()
         comments = item.item_comments.all()
 
