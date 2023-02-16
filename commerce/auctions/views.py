@@ -265,6 +265,8 @@ def comments(request, id):
         user = User.objects.get(username=username)
         new_comment = Comments.objects.create(time=current_time, commentor=user, comment=comment)
         new_comment.item_comments.add(item)
+
+        return HttpResponseRedirect(reverse("item", args=(item.id)))
         new_comment.save()
         comments = item.item_comments.all()
 
