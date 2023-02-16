@@ -262,7 +262,7 @@ def comments(request):
         current_time = datetime.now()
         username = request.POST["username"]
         user = User.objects.get(username=username)
-        new_comment = Comments(time=time, commentor=user, comment=comment)
+        new_comment = Comments(time=current_time, commentor=user, comment=comment)
         new_comment.save()
         comments = Comments.objects.all()
 
@@ -273,7 +273,6 @@ def comments(request):
         amount = request.POST["amount"]
         time = request.POST["time"]
         image = request.POST["image"]
-        username = request.POST["username"]
         creator = request.POST["creator"]
         item = Listings.objects.get(id=id)
         close = item
