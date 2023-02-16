@@ -58,9 +58,8 @@
 
 
     {% for comment in comments %}
-    Comment: {{ comment.comment }}
-    
-    </br>
+    Comment: {{ comment.comment }} by {{ comment.commentor}} at {{ comment.time }}
+    {% endfor %}
 
-
+    <form
 {% endblock %}
