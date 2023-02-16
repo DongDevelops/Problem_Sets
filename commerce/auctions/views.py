@@ -257,8 +257,12 @@ def closed_item(request, id):
 
 @login_required
 def comments(request):
-
-    comments = Comments.objects.all()
+    if request.method == "POST":
+        comment = request.POST["comment"]
+        time = datetime.now()
+        
+        commentator =
+        comments = Comments.objects.all()
 
     return render(request, "auctions/comments.html", {
         "comments": comments
