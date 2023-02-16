@@ -59,6 +59,7 @@
 
     {% for comment in comments %}
     Comment: {{ comment.comment }} by {{ comment.commentor}} at {{ comment.time }}
+    </br>
     {% endfor %}
 
     <form action="{% url 'comments' %}" method="POST">
