@@ -90,7 +90,7 @@ def create(request):
         return render(request, "auctions/create.html")
 
 
-def item(request, item_id):
+def item(request, listing_id):
     if request.method == "POST":
         id = request.POST["id"]
         title = request.POST["title"]
@@ -100,11 +100,11 @@ def item(request, item_id):
         image = request.POST["image"]
         username = request.POST["username"]
         creator = request.POST["creator"]
-        item = Listings.objects.get(id=item_id)
-        comments = item.item_comments.all()
+        listing = Listings.objects.get(id=listing_id)
+        comments = listing.item_comments.all()
 
-        close = item
-        watchlist = item
+        close = listing
+        watchlist = listing
         if username != creator and item.watchlist == False:
             return render(request, "auctions/item.html", {
                 "id": id,
@@ -262,14 +262,14 @@ def closed_item(request, id):
         return render(request, "auctions/index.html")
 
 @login_required
-def comments(request, item_id):
+def comments(request, listing_id):
     if request.method == "POST":
-        item = Listings.objects.get(id=item_id)
+        listing = Listings.objects.get(id=listing_id)
         comment = request.POST["comment"]
         current_time = datetime.now()
         username = request.POST["username"]
         user = User.objects.get(username=username)
         new_comment = Comments.objects.create(time=current_time, commentor=user, comment=comment)
-        new_comment.item_comments.add(item)
+        new_comment.item_comments.add(listing)
 
-        return HttpResponseRedirect(reverse("item", args=(item.id)))
+        return HttpResponseRedirect(reverse("item", args=(listing.id)))
