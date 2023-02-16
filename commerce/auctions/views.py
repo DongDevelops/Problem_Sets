@@ -91,66 +91,33 @@ def create(request):
 
 
 def item(request, listing_id):
-    if request.method == "POST":
-        id = request.POST["id"]
-        title = request.POST["title"]
-        description = request.POST["description"]
-        amount = request.POST["amount"]
-        time = request.POST["time"]
-        image = request.POST["image"]
+        listing = Listings.objects.get(id=listing_id)
         username = request.POST["username"]
         creator = request.POST["creator"]
-        listing = Listings.objects.get(id=listing_id)
         comments = listing.item_comments.all()
 
         close = listing
         watchlist = listing
         if username != creator and listing.watchlist == False:
             return render(request, "auctions/item.html", {
-                "id": id,
-                "title": title,
-                "description": description,
-                "amount": amount,
-                "time": time,
-                "image": image,
                 "watchlist": watchlist,
                 "comments": comments
             })
         elif username != creator and listing.watchlist == True:
                 return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
                     "comments": comments
                 })
         elif username == creator and listing.watchlist == False:
                 return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
                     "watchlist": watchlist,
                     "close": close,
                     "comments": comments
                 })
         elif username == creator and listing.watchlist == False:
                 return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
                     "close": close,
                     "comments": comments
                 })
-    else:
-        return render(request, "auctions/index.html")
 
 
 @login_required
