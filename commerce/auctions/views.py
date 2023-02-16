@@ -236,6 +236,8 @@ def closed(request):
 def closed_item(request, id):
     if request.method == "POST":
         item_id = request.POST["id"]
+        item = Listings.objects.get(id=item_id)
+        winner = item.bid.highest_bidder
         title = request.POST["title"]
         description = request.POST["description"]
         amount = request.POST["amount"]
@@ -250,3 +252,5 @@ def closed_item(request, id):
                 "image": image,
                 "message": f"This listing is closed, the winner is {winner}."
         })
+    else:
+        return render(request, "auctions/index.html")
