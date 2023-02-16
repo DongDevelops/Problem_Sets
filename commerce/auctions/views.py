@@ -235,7 +235,7 @@ def comments(request, listing_id):
         listing = Listings.objects.get(id=listing_id)
         comment = request.POST["comment"]
         current_time = datetime.now()
-        username = request.user
+        username = request.POST["username"]
         user = User.objects.get(username=username)
         new_comment = Comments.objects.create(time=current_time, commentor=user, comment=comment)
         new_comment.item_comments.add(listing)
