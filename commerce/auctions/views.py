@@ -234,4 +234,6 @@ def closed(request):
         })
 
 def closed_item(request, id):
-    
+    return render(request, "auctions/closed_item.html", {
+        "
+    })
