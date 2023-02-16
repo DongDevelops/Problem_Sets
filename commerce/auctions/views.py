@@ -92,7 +92,7 @@ def create(request):
 
 def item(request, id):
     if request.method == "POST":
-        item_id = request.POST["id"]
+        id = request.POST["id"]
         title = request.POST["title"]
         description = request.POST["description"]
         amount = request.POST["amount"]
@@ -105,7 +105,7 @@ def item(request, id):
         watchlist = item
         if username != creator and item.watchlist == False:
             return render(request, "auctions/item.html", {
-                "id": item_id,
+                "id": id,
                 "title": title,
                 "description": description,
                 "amount": amount,
@@ -115,7 +115,7 @@ def item(request, id):
             })
         elif username != creator and item.watchlist == True:
                 return render(request, "auctions/item.html", {
-                    "id": item_id,
+                    "id": id,
                     "title": title,
                     "description": description,
                     "amount": amount,
@@ -124,7 +124,7 @@ def item(request, id):
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
-                    "id": item_id,
+                    "id": id,
                     "title": title,
                     "description": description,
                     "amount": amount,
@@ -135,7 +135,7 @@ def item(request, id):
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
-                    "id": item_id,
+                    "id": id,
                     "title": title,
                     "description": description,
                     "amount": amount,
@@ -235,8 +235,8 @@ def closed(request):
 
 def closed_item(request, id):
     if request.method == "POST":
-        item_id = request.POST["id"]
-        item = Listings.objects.get(id=item_id)
+        id = request.POST["id"]
+        item = Listings.objects.get(id=id)
         winner = item.bid.highest_bidder
         title = request.POST["title"]
         description = request.POST["description"]
@@ -244,7 +244,7 @@ def closed_item(request, id):
         time = request.POST["time"]
         image = request.POST["image"]
         return render(request, "auctions/closed_item.html", {
-                "id": item_id,
+                "id": id,
                 "title": title,
                 "description": description,
                 "amount": amount,
