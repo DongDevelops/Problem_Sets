@@ -16,7 +16,7 @@
             <li>Image: Not-provided </li></br>
             {% endif %}
 
-            <form action="{% url 'item' listing.id %}" method="POST">
+            <form action="{% url 'closed_item' listing.id %}" method="POST">
                 {% csrf_token %}
                 <input type="hidden" name="title" id="title" value="{{ listing.title }}">
                 <input type="hidden" name="id" id="id" value="{{ listing.id }}">
