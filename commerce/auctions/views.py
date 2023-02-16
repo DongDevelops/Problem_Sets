@@ -266,7 +266,6 @@ def comments(request):
         new_comment.save()
         comments = Comments.objects.all()
 
-
         id = request.POST["id"]
         title = request.POST["title"]
         description = request.POST["description"]
@@ -285,7 +284,8 @@ def comments(request):
                 "amount": amount,
                 "time": time,
                 "image": image,
-                "watchlist": watchlist
+                "watchlist": watchlist,
+                "comments": comments
             })
         elif username != creator and item.watchlist == True:
                 return render(request, "auctions/item.html", {
@@ -294,7 +294,8 @@ def comments(request):
                     "description": description,
                     "amount": amount,
                     "time": time,
-                    "image": image
+                    "image": image,
+                    "comments": comments
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
@@ -305,7 +306,8 @@ def comments(request):
                     "time": time,
                     "image": image,
                     "watchlist": watchlist,
-                    "close": close
+                    "close": close,
+                    "comments": comments
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
@@ -315,13 +317,9 @@ def comments(request):
                     "amount": amount,
                     "time": time,
                     "image": image,
-                    "close": close
+                    "close": close,
+                    "comments": comments
                 })
-
-
-        return render(request, "auctions/item.html", {
-            "comments": comments
-        })
 
     else:
         return render(request, "auctions/index.html")
