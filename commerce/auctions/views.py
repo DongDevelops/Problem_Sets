@@ -225,3 +225,10 @@ def close(request):
         })
     else:
         return render(request, "auctions/index.html")
+
+
+def closed(request):
+    closed_listings = Listings.objects.filter(active=False)
+    return render(request, "auctions/closed.html", {
+            "listings": closed_listings
+        })
