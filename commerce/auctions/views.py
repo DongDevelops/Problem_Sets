@@ -234,6 +234,18 @@ def closed(request):
         })
 
 def closed_item(request, id):
-    return render(request, "auctions/closed_item.html", {
-        "
-    })
+    if request.method == "POST":
+        item_id = request.POST["id"]
+        title = request.POST["title"]
+        description = request.POST["description"]
+        amount = request.POST["amount"]
+        time = request.POST["time"]
+        image = request.POST["image"]
+        return render(request, "auctions/closed_item.html", {
+                "id": id,
+                "title": title,
+                "description": description,
+                "amount": amount,
+                "time": time,
+                "image": image,
+        })
