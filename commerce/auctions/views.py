@@ -266,7 +266,7 @@ def comments(request, id):
         new_comment.save()
         comments = Comments.objects.all()
 
-        return render(request, f"auctions/item/{id}/comments.html", {
+        return render(request, "auctions/item.html", {
             "comments": comments
         })
 
