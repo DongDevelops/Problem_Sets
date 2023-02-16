@@ -272,13 +272,3 @@ def comments(request, id):
         new_comment.item_comments.add(item)
 
         return HttpResponseRedirect(reverse("item", args=(item.id)))
-        new_comment.save()
-
-
-
-        return render(request, "auctions/item.html", {
-
-        })
-
-    else:
-        return render(request, "auctions/index.html")
