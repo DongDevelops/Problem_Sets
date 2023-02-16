@@ -216,5 +216,7 @@ def close(request):
         item_id = request.POST["id"]
         item = Listings.objects.get(id=item_id)
         winner = item.bid.highest_bidder.username
-        return render(request, "auctions/idex.html")
+        return render(request, "auctions/idex.html", {
+            "message": f"This listing is closed, the winner is {winner}."
+        })
     pass
