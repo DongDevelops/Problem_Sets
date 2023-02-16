@@ -266,11 +266,11 @@ def comments(request, id):
         user = User.objects.get(username=username)
         new_comment = Comments(time=current_time, commentor=user, comment=comment)
         new_comment.save()
-        comments = Comments.objects.all()
+        comments = item.item_comments.all()
+
 
         return render(request, "auctions/item.html", {
-            "comments": comments,
-            "id": id
+            "comments": comments
         })
 
     else:
