@@ -266,60 +266,6 @@ def comments(request):
         new_comment.save()
         comments = Comments.objects.all()
 
-        id = request.POST["id"]
-        title = request.POST["title"]
-        description = request.POST["description"]
-        amount = request.POST["amount"]
-        time = request.POST["time"]
-        image = request.POST["image"]
-        creator = request.POST["creator"]
-        item = Listings.objects.get(id=id)
-        close = item
-        watchlist = item
-        if username != creator and item.watchlist == False:
-            return render(request, "auctions/item.html", {
-                "id": id,
-                "title": title,
-                "description": description,
-                "amount": amount,
-                "time": time,
-                "image": image,
-                "watchlist": watchlist,
-                "comments": comments
-            })
-        elif username != creator and item.watchlist == True:
-                return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
-                    "comments": comments
-                })
-        elif username == creator and item.watchlist == False:
-                return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
-                    "watchlist": watchlist,
-                    "close": close,
-                    "comments": comments
-                })
-        elif username == creator and item.watchlist == False:
-                return render(request, "auctions/item.html", {
-                    "id": id,
-                    "title": title,
-                    "description": description,
-                    "amount": amount,
-                    "time": time,
-                    "image": image,
-                    "close": close,
-                    "comments": comments
-                })
 
-    else:
-        return render(request, "auctions/index.html")
+                    "comments": comments
+
