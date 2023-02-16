@@ -9,6 +9,7 @@ class User(AbstractUser):
 class Bids(models.Model):
     time = models.DateTimeField()
     amount = models.IntegerField()
+    highest_bidder = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name="highest_bidder")
     biddings = models.ManyToManyField(User, blank=True, related_name="biddings")
 
     def __str__(self):
