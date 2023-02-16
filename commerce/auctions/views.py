@@ -213,7 +213,7 @@ def close(request):
     if request.method == "POST":
         item_id = request.POST["id"]
         item = Listings.objects.get(id=item_id)
-        
+        winning_amount = item.bid.amount
         return render(request, "auctions/item.html", {
             "message": f"This listing is closed, the winner is {winner}."
         })
