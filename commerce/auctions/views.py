@@ -212,4 +212,7 @@ def remove(request):
 def close(request):
     if request.method == "POST":
         
+        return render(request, "auctions/item.html", {
+            "message": "This listing is closed."
+        })
     pass

@@ -1,7 +1,11 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-    <h2>Listing: {{ title }}</h2>
+    <h2>Listing: {{ title }}
+        {% if message %}
+            {{ message }}
+        {% endif %}
+    </h2>
 
 
     {% if watchlist %}
@@ -19,7 +23,7 @@
     {% endif %}
 
 
-    
+
     </br>
     <img src="{{ image }}" alt="image" width="150" height="150"></br>
     <h3>Price: ${{ amount }}.00</h3>
