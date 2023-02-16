@@ -211,8 +211,8 @@ def remove(request):
 @login_required
 def close(request):
     if request.method == "POST":
-        
+
         return render(request, "auctions/item.html", {
-            "message": "This listing is closed."
+            "message": f"This listing is closed, the winner is {winner}."
         })
     pass
