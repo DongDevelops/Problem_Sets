@@ -10,8 +10,9 @@ from .models import User, Comments, Bids, Listings
 
 
 def index(request):
+    active_listings = Listings.objects.filter(active=True)
     return render(request, "auctions/index.html", {
-            "listings": Listings.objects.all()
+            "listings": active_listings
         })
 
 def login_view(request):
