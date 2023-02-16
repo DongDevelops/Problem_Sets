@@ -1,7 +1,7 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-    <h2>Listing: {{ title }}
+    <h2>Listing: {{ listing.title }}
         {% if message %}
             {{ message }}
         {% endif %}
@@ -11,13 +11,13 @@
     {% if watchlist %}
         <form action="{% url 'watchlist' %}" method="POST">
             {% csrf_token %}
-            <input type="hidden" value="{{ id }}" name="id" id="id">
+            <input type="hidden" value="{{ listing.id }}" name="id" id="id">
             <input type="submit" class="btn btn-success btn-sm" value="Add to the Watchlist">
         </form>
     {% else %}
         <form action="{% url 'remove' %}" method="POST">
             {% csrf_token %}
-            <input type="hidden" value="{{ id }}" name="id" id="id">
+            <input type="hidden" value="{{ listing.id }}" name="id" id="id">
             <input type="submit" class="btn btn-danger btn-sm" value="Remove from the Watchlist">
         </form>
     {% endif %}
@@ -25,7 +25,7 @@
 
 
     </br>
-    <img src="{{ image }}" alt="image" width="150" height="150"></br>
+    <img src="{{ listing.image }}" alt="image" width="150" height="150"></br>
     <h3>Price: ${{ amount }}.00</h3>
 
     {% if message %}
@@ -33,9 +33,9 @@
     {% else %}
     <form action="{% url 'place_bid' %}" method="POST">
         {% csrf_token %}
-        <input type="hidden" value="{{ id }}" name="id" id="id">
+        <input type="hidden" value="{{ listing.id }}" name="id" id="id">
         <input type="hidden" value="{{ user.username }}" name="username" id="username">
-        <input type="hidden" value="{{ amount }}" name="amount" id="amount">
+        <input type="hidden" value="{{ listing.bid.amount }}" name="amount" id="amount">
         <input type="number" placeholder="Bid" min="10" name="place_bid">
 
         <input type="submit" value="Place Bid" class="btn btn-primary">

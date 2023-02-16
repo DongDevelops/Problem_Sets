@@ -101,21 +101,25 @@ def item(request, listing_id):
         watchlist = listing
         if username != creator and listing.watchlist == False:
             return render(request, "auctions/item.html", {
+                "listing": listing,
                 "watchlist": watchlist,
                 "comments": comments
             })
         elif username != creator and listing.watchlist == True:
                 return render(request, "auctions/item.html", {
+                    "listing": listing,
                     "comments": comments
                 })
         elif username == creator and listing.watchlist == False:
                 return render(request, "auctions/item.html", {
+                    "listing": listing,
                     "watchlist": watchlist,
                     "close": close,
                     "comments": comments
                 })
         elif username == creator and listing.watchlist == False:
                 return render(request, "auctions/item.html", {
+                    "listing": listing,
                     "close": close,
                     "comments": comments
                 })
