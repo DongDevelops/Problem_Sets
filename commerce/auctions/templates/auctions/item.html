@@ -51,7 +51,7 @@
     {% if close %}
     <form action="{% url 'close' %}" method="POST">
         {% csrf_token %}
-        <input type="hidden" value="{{ id }}" name="id" id="id">
+        <input type="hidden" value="{{ listing.id }}" name="id" id="id">
         <input type="submit" class="btn btn-secondary btn-sm" value="Close">
     </form>
     {% endif %}
@@ -62,10 +62,10 @@
     </br>
     {% endfor %}
 
-    <form action="{% url 'comments' id %}" method="POST">
+    <form action="{% url 'comments' listing.id %}" method="POST">
         {% csrf_token %}
-        <input type="hidden" value="{{ id }}" name="id" id="id">
-        <input type="hidden" value="{{ user.username }}" name="username" id="username">
+        <input type="hidden" value="{{ listing.id }}" name="id" id="id">
+        <input type="hidden" value="{{ username }}" name="username" id="username">
         <input type="text" name="comment" id="comment" placeholder="Enter your comment here.">
         <input type="submit" value="Add a comment" class="btn btn-primary btn-sm">
     </form>
