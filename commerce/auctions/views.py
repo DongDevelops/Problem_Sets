@@ -248,4 +248,5 @@ def closed_item(request, id):
                 "amount": amount,
                 "time": time,
                 "image": image,
+                "message": f"This listing is closed, the winner is {winner}."
         })
