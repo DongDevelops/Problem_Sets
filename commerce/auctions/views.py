@@ -272,4 +272,4 @@ def comments(request, listing_id):
         new_comment = Comments.objects.create(time=current_time, commentor=user, comment=comment)
         new_comment.item_comments.add(listing)
 
-        return HttpResponseRedirect(reverse("item", args=(listing.id)))
+        return HttpResponseRedirect(reverse("item", args=(listing.id,)))
