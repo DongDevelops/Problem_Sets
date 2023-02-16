@@ -258,7 +258,6 @@ def closed_item(request, id):
 @login_required
 def comments(request, id):
     if request.method == "POST":
-        id = request.POST["id"]
         item = Listings.objects.get(id=id)
         comment = request.POST["comment"]
         current_time = datetime.now()
