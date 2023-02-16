@@ -105,7 +105,7 @@ def item(request, id):
         watchlist = item
         if username != creator and item.watchlist == False:
             return render(request, "auctions/item.html", {
-                "id": id,
+                "id": item_id,
                 "title": title,
                 "description": description,
                 "amount": amount,
@@ -115,7 +115,7 @@ def item(request, id):
             })
         elif username != creator and item.watchlist == True:
                 return render(request, "auctions/item.html", {
-                    "id": id,
+                    "id": item_id,
                     "title": title,
                     "description": description,
                     "amount": amount,
@@ -124,7 +124,7 @@ def item(request, id):
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
-                    "id": id,
+                    "id": item_id,
                     "title": title,
                     "description": description,
                     "amount": amount,
@@ -135,7 +135,7 @@ def item(request, id):
                 })
         elif username == creator and item.watchlist == False:
                 return render(request, "auctions/item.html", {
-                    "id": id,
+                    "id": item_id,
                     "title": title,
                     "description": description,
                     "amount": amount,
@@ -242,7 +242,7 @@ def closed_item(request, id):
         time = request.POST["time"]
         image = request.POST["image"]
         return render(request, "auctions/closed_item.html", {
-                "id": id,
+                "id": item_id,
                 "title": title,
                 "description": description,
                 "amount": amount,
