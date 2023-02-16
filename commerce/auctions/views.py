@@ -233,5 +233,5 @@ def closed(request):
             "listings": closed_listings
         })
 
-def closed_item(request):
+def closed_item(request, id):
     
