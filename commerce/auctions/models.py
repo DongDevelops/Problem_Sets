@@ -25,6 +25,7 @@ class Listings(models.Model):
     active = models.BooleanField(default=True)
     creator = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name="creator")
     listings = models.ManyToManyField(User, blank=True, related_name="listings")
+    comments = 
 
     def __str__(self):
         return f"{self.id}: {self.title}"
