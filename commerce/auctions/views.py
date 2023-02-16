@@ -260,7 +260,7 @@ def comments(request):
     if request.method == "POST":
         comment = request.POST["comment"]
         time = datetime.now()
-        
+        username = request.POST["username"]
         commentator =
         comments = Comments.objects.all()
 

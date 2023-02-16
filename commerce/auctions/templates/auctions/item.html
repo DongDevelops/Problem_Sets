@@ -62,6 +62,7 @@
     {% endfor %}
 
     <form action="{% url 'comments' %}" method="POST">
+        <input type="hidden" value="{{ user.username }}" name="username" id="username">
         <input type="text" name="comment" id="comment" placeholder="Enter your comment here.">
         <input type="submit" value="Add a comment" class="btn btn-primary btn-sm">
     </form>
