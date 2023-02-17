@@ -15,7 +15,7 @@ class Bids(models.Model):
     def __str__(self):
         return f"{self.amount} at {self.time}"
 
-
+class 
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
