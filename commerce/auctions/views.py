@@ -181,9 +181,9 @@ def remove(request):
     if request.method == "POST":
         id = request.POST["id"]
         item = Listings.objects.get(id=id)
-        item.watchlist = False
-        item.save()
-        watchlist_items = Listings.objects.filter(watchlist=True)
+        user = request.user
+        item.listings.add(user)
+        watchlist_items = user.listings.all()
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
