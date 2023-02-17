@@ -239,3 +239,7 @@ def comments(request, listing_id):
         new_comment.item_comments.add(listing)
 
         return HttpResponseRedirect(reverse("item", args=(listing.id,)))
+
+
+def category(request):
+    
