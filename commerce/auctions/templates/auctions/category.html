@@ -2,7 +2,13 @@
 
 {% block body %}
     <h2>Categories</h2>
-
+    <form action="{% url 'category' %}" method="POST">
+        {% csrf_token %}
+        <select name="category" id="">
+            {% for category in categories %}
+                <option value="{{ categ}}"
+        </select>
+    </form>
     <ul>
         {% for listing in listings %}
             <li>Title: {{ listing.title }}</li>
