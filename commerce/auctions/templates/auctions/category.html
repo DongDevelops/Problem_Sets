@@ -15,10 +15,7 @@
             {% else %}
             <li>Image: Not-provided </li></br>
             {% endif %}
-            <form action="{% url 'item' listing.id %}" method="POST">
-                {% csrf_token %}
-                <input type="submit" value="Go" class="btn btn-success">
-            </form>
+            <a href="{% url 'item' listing.id %}" class="btn btn-success" role="button">Go</a>
     </br></br>
         {% endfor %}
     </ul>
