@@ -15,8 +15,6 @@ class Bids(models.Model):
     def __str__(self):
         return f"{self.amount} at {self.time}"
 
-class Categories(models.Model):
-    categories = models.CharField(null=True, blank=True)
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
@@ -24,7 +22,7 @@ class Listings(models.Model):
     bid = models.ForeignKey(Bids, on_delete=models.CASCADE, related_name="bid")
     image = models.URLField(null=True, blank=True)
     active = models.BooleanField(default=True)
-    category = models.ForeignKey(Categories, on_delete=models.CASCADE, related_name="category")
+    category = models.CharField(max_length=64, null=True, blank=True)
     creator = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name="creator")
     listings = models.ManyToManyField(User, blank=True, related_name="listings")
 
