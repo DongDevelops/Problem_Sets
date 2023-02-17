@@ -19,6 +19,9 @@ class Bids(models.Model):
 class Categories(models.Model):
     name = models.CharField(max_length=64)
 
+    def __str__(self):
+        return f"{self.id}: {self.name}"
+
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
