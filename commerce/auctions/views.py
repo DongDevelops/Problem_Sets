@@ -244,8 +244,9 @@ def comments(request, listing_id):
 
 def category(request):
     if request.method == "POST":
-        category = request.POST["categories"]
-        selected_listings = Listings.objects.filter(category=category).filter(active=True)
+        selected_category_id = request.POST["category.id"]
+        selected_category = Categories.objects.get(id=selected_category_id)
+        selected_listings = Listings.objects.filter(category=selected_category).filter(active=True)
         return render(request, "auctions/category.html", {
             "listings": selected_listings
         })
