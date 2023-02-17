@@ -242,4 +242,4 @@ def comments(request, listing_id):
 
 
 def category(request):
-    
+    pass
