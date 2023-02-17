@@ -22,6 +22,6 @@ class Migration(migrations.Migration):
             model_name='listings',
             name='category',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='category', to='auctions.categories'),
-            preserve_default=False,
+            preserve_default=True,
         ),
     ]
