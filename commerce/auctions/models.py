@@ -16,7 +16,7 @@ class Bids(models.Model):
         return f"{self.amount} at {self.time}"
 
 class Categories(models.Model):
-    categories = models.CharField(max_length=64, null=True, blank=True)
+    categories = models.CharField(max_length=64, null=True, blank=True, default="No")
 
 class Listings(models.Model):
     title = models.CharField(max_length=64)
