@@ -77,9 +77,9 @@ def create(request):
         user = User.objects.get(username=username)
         amount = request.POST["starting_bid"]
         now = datetime.now()
-        bid = Bids(time=now, amount=amount)
+        bid = Bids.objects.create(time=now, amount=amount)
         bid.save()
-        new_listing = Listings(title=title, creator=user, image=image, description=description, bid=bid)
+        new_listing = Listings.objects.create(title=title, creator=user, image=image, description=description, bid=bid)
         new_listing.listings.add(user)
         new_listing.save()
 
