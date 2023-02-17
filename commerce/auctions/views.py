@@ -81,14 +81,13 @@ def create(request):
         try:
             bid = Bids.objects.create(time=now, amount=amount)
             bid.save()
-        except:
-            IntegrityError:
-            return render(request, "auctions/register.html", {
-                "message": "Username already taken."
+            new_listing = Listings.objects.create(title=title, creator=user, image=image, description=description, bid=bid)
+            new_listing.listings.add(user)
+            new_listing.save()
+        except IntegrityError:
+            return render(request, "auctions/create.html", {
+                "message": "Fields with * mark should be filled."
             })
-        new_listing = Listings.objects.create(title=title, creator=user, image=image, description=description, bid=bid)
-        new_listing.listings.add(user)
-        new_listing.save()
 
         return render(request, "auctions/index.html", {
             "listings": Listings.objects.all()

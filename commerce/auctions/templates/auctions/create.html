@@ -3,19 +3,23 @@
 {% block body %}
     <h2>Create Listings</h2>
 
+    {% if message %}
+    <div>{{ message }}</div>
+    {% endif %}
+
     <div>
         <form action="{% url 'create' %}" method="POST">
             {% csrf_token %}
             {% if user.is_authenticated %}
             <input type="hidden" name="username" id="username" value="{{ user.username }}">
             {% endif %}
-            <label for="title">Title</label>
+            <label for="title">*Title</label>
             <div class="input">
             <input type="text" id="title" name="title" placeholder="Enter the title">
             </div>
             </br>
 
-            <label for="description">Description</label></br>
+            <label for="description">*Description</label></br>
             <textarea id="description" name="description" rows="5" cols="33"></textarea>
             </br></br>
 
@@ -25,7 +29,7 @@
             </div>
             </br>
 
-            <label for="starting_bid">Starting Bid</label>
+            <label for="starting_bid">*Starting Bid</label>
             <div class="input">
             <input type="number" id="starting_bid" name="starting_bid" min="10">
             </div>
