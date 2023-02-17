@@ -163,6 +163,7 @@ def watchlist(request):
         id = request.POST["id"]
         item = Listings.objects.get(id=id)
         user = request.user
+        item.listings.add(user)
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
