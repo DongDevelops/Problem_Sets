@@ -5,7 +5,8 @@
 
     <form action="{% url 'category' %}" method="POST">
         {% csrf_token %}
-        <select name="categories" id="">
+        <select name="categories" id="" class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
             {% for category in categories %}
                 <option value="{{ category.id }}">{{ category }}</option>
             {% endfor %}
