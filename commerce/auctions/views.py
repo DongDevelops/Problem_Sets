@@ -162,9 +162,7 @@ def watchlist(request):
     if request.method == "POST":
         id = request.POST["id"]
         item = Listings.objects.get(id=id)
-        item.watchlist = True
-        item.save()
-        watchlist_items = Listings.objects.filter(watchlist=True)
+        user = request.user
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
