@@ -74,6 +74,7 @@ def create(request):
         description = request.POST["description"]
         image = request.POST["image"]
         username = request.POST["username"]
+        category = request.POST["category"]
         user = User.objects.get(username=username)
         amount = request.POST["starting_bid"]
         now = datetime.now()
@@ -81,7 +82,8 @@ def create(request):
         try:
             bid = Bids.objects.create(time=now, amount=amount)
             bid.save()
-            new_listing = Listings.objects.create(title=title, creator=user, image=image, description=description, bid=bid)
+            new_category = Categories.objects.create(category=category)
+            new_listing = Listings.objects.create(title=title, category=new_category, creator=user, image=image, description=description, bid=bid)
             new_listing.listings.add(user)
             new_listing.save()
         except IntegrityError:
