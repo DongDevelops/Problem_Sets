@@ -98,14 +98,7 @@ def item(request, listing_id):
         comments = listing.item_comments.all()
 
         close = listing
-        if username != creator and listing.watchlist == False:
-            return render(request, "auctions/item.html", {
-                "listing": listing,
-                "username": username,
-                "watchlist": watchlist,
-                "comments": comments
-            })
-        elif username != creator and listing.watchlist == True:
+        if username != creator:
                 return render(request, "auctions/item.html", {
                     "listing": listing,
                     "username": username,
