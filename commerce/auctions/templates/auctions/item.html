@@ -34,7 +34,7 @@
     <form action="{% url 'place_bid' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ listing.id }}" name="id" id="id">
-        <input type="hidden" value="{{ username }}" name="username" id="username">
+        <input type="hidden" value="{{ request.user.username }}" name="username" id="username">
         <input type="hidden" value="{{ listing.bid.amount }}" name="amount" id="amount">
         <input type="number" placeholder="Bid" min="10" name="place_bid">
 
@@ -65,7 +65,7 @@
     <form action="{% url 'comments' listing.id %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{ listing.id }}" name="id" id="id">
-        <input type="hidden" value="{{ username }}" name="username" id="username">
+        <input type="hidden" value="{{ request.user.username }}" name="username" id="username">
         <input type="text" name="comment" id="comment" placeholder="Enter your comment here.">
         <input type="submit" value="Add a comment" class="btn btn-primary btn-sm">
     </form>

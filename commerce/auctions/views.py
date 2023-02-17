@@ -101,7 +101,6 @@ def item(request, listing_id):
         if username != creator:
                 return render(request, "auctions/item.html", {
                     "listing": listing,
-                    "username": username,
                     "comments": comments
                 })
         elif username == creator and listing.watchlist == False:
