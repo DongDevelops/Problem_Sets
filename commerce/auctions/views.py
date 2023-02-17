@@ -77,8 +77,15 @@ def create(request):
         user = User.objects.get(username=username)
         amount = request.POST["starting_bid"]
         now = datetime.now()
-        bid = Bids.objects.create(time=now, amount=amount)
-        bid.save()
+
+        try:
+            bid = Bids.objects.create(time=now, amount=amount)
+            bid.save()
+        except:
+            IntegrityError:
+            return render(request, "auctions/register.html", {
+                "message": "Username already taken."
+            })
         new_listing = Listings.objects.create(title=title, creator=user, image=image, description=description, bid=bid)
         new_listing.listings.add(user)
         new_listing.save()
