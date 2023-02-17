@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
-from .models import User, Comments, Bids, Listings
+from .models import User, Comments, Bids, Listings, Categories
 
 
 def index(request):
