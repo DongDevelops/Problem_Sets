@@ -17,7 +17,7 @@ class Bids(models.Model):
 
 
 class Categories(models.Model):
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=64, default='')
 
 
 class Listings(models.Model):
