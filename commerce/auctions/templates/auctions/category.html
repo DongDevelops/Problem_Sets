@@ -7,7 +7,7 @@
         {% csrf_token %}
         <select name="categories" id="">
             {% for category in categories %}
-                <option value="{{ category.id }}">{{ category }}</option>
+                <option value="{{ category.name }}">{{ category }}</option>
             {% endfor %}
         </select>
         <input type="submit">
