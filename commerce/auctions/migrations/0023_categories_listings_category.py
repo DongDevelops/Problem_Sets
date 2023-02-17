@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Categories',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('categories', models.CharField(blank=True, default=None, max_length=64, null=True)),
+                ('categories', models.CharField(blank=True, max_length=64, null=True)),
             ],
         ),
         migrations.AddField(
