@@ -10,7 +10,7 @@
 
     <form action="{% url 'watchlist' %}" method="POST">
         {% csrf_token %}
-            <input type="hidden" value="{{ listing.id }}" name="id" id="id">
+        <input type="hidden" value="{{ listing.id }}" name="id" id="id">
         <input type="submit" class="btn btn-success btn-sm" value="Add to the Watchlist">
     </form>
 
