@@ -99,25 +99,16 @@ def item(request, listing_id):
 
         close = listing
         if username != creator:
-                return render(request, "auctions/item.html", {
-                    "listing": listing,
-                    "comments": comments
-                })
-        elif username == creator and listing.watchlist == False:
-                return render(request, "auctions/item.html", {
-                    "listing": listing,
-                    "username": username,
-                    "watchlist": watchlist,
-                    "close": close,
-                    "comments": comments
-                })
-        elif username == creator and listing.watchlist == False:
-                return render(request, "auctions/item.html", {
-                    "listing": listing,
-                    "close": close,
-                    "username": username,
-                    "comments": comments
-                })
+            return render(request, "auctions/item.html", {
+                "listing": listing,
+                "comments": comments
+            })
+        else:
+            return render(request, "auctions/item.html", {
+                "listing": listing,
+                "close": close,
+                "comments": comments
+            })
 
 
 @login_required
