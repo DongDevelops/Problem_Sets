@@ -7,7 +7,7 @@
         {% csrf_token %}
         <select name="category" id="">
             {% for listing in listings %}
-                <option value="{{ listing.id }}">{{ listing.category }}</option>
+                <option value="{{ listing.category }}">{{ listing.category }}</option>
             {% endfor %}
         </select>
         <input type="submit">
