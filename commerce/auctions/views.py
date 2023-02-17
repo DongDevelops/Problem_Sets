@@ -250,5 +250,7 @@ def category(request):
             "listings": selected_listings
         })
     else:
-        
-        return render(request, "auctions/category.html")
+        categories = Categories.objects.all()
+        return render(request, "auctions/category.html", {
+            "categories": categories
+        })
