@@ -242,6 +242,9 @@ def comments(request, listing_id):
 
 
 def category(request):
-    return render(request, "auctions/category.html", {
-        "listings": listings
-    })
+    if request.method == "POST":
+        return render(request, "auctions/category.html", {
+            "listings": listings
+        })
+    else:
+        return render(request, "auctions/category.html")
