@@ -5,7 +5,7 @@
 
     <ul>
         {% for item in items %}
-            <li>Title: {{ item.title }}</li>
+            <li>Title: <a href="{% url 'item' item.id %}">{{ item.title }}</a></li>
             <li>Description: {{ item.description }}</li>
             <li>Price: ${{ item.bid.amount }}.00</li>
             <li>Created {{ item.bid.time }}</li>
