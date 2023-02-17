@@ -242,4 +242,6 @@ def comments(request, listing_id):
 
 
 def category(request):
-    pass
+    return render(request, "auctions/category.html", {
+        
+    })

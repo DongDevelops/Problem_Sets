@@ -1,0 +1,40 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+
+    <ul>
+        {% for listing in listings %}
+            <li>Title: {{ listing.title }}</li>
+            <li>Description: {{ listing.description }}</li>
+            <li>Price: ${{ listing.bid.amount }}.00</li>
+            <li>Created {{ listing.bid.time }}</li>
+            <li>By {{ listing.creator.username }}</li>
+            {% if listing.image %}
+            <li>Image: </br></br><img src="{{ listing.image }}" alt="image" width="150" height="150"></li></br>
+            {% else %}
+            <li>Image: Not-provided </li></br>
+            {% endif %}
+            <form action="{% url 'item' listing.id %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="title" id="title" value="{{ listing.title }}">
+                <input type="hidden" name="id" id="id" value="{{ listing.id }}">
+                <input type="hidden" name="description" id="description" value="{{ listing.description }}">
+                <input type="hidden" name="amount" id="amount" value="{{ listing.bid.amount }}">
+                <input type="hidden" name="time" id="time" value="{{ listing.bid.time }}">
+                <input type="hidden" name="image" id="image" value="{{ listing.image }}">
+                <input type="hidden" name="creator" id="creator" value="{{ listing.creator.username }}">
+                {% if user.is_authenticated %}
+                <input type="hidden" name="username" id="username" value="{{ user.username }}">
+                {% else %}
+                <input type="hidden" name="username" id="username" value="Null">
+                {% endif %}
+                <input type="submit" value="Go" class="btn btn-success">
+            </form>
+    </br></br>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'create' %}" role="button" class="btn btn-primary">Create Listing</a>
+
+{% endblock %}
