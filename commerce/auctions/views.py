@@ -98,7 +98,6 @@ def item(request, listing_id):
         comments = listing.item_comments.all()
 
         close = listing
-        watchlist = listing
         if username != creator and listing.watchlist == False:
             return render(request, "auctions/item.html", {
                 "listing": listing,
