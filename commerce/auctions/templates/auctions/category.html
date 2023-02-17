@@ -5,8 +5,8 @@
     <form action="{% url 'category' %}" method="POST">
         {% csrf_token %}
         <select name="category" id="">
-            {% for category in categories %}
-                <option value="{{ categ}}"
+            {% for listing in listings %}
+                <option value="{{ listing.category }}"></option>
         </select>
     </form>
     <ul>
