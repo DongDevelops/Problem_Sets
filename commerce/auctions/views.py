@@ -169,7 +169,8 @@ def watchlist(request):
             "items": watchlist_items
         })
     else:
-        watchlist_items = Listings.objects.filter(watchlist=True)
+        user = request.user
+        watchlist_items = user.listings.all()
         return render(request, "auctions/watchlist.html", {
             "items": watchlist_items
         })
