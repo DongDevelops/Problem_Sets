@@ -15,7 +15,7 @@
 
     <ul>
         {% for listing in listings %}
-            <li>Title: {{ listing.title }}</li>
+            <li>Title: <a href="{% url 'item' listing.id %}">{{ listing.title }}</a></li>
             <li>Description: {{ listing.description }}</li>
             <li>Price: ${{ listing.bid.amount }}.00</li>
             <li>Created {{ listing.bid.time }}</li>
