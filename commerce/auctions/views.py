@@ -10,6 +10,7 @@ from .models import User, Comments, Bids, Listings, Categories
 
 
 def index(request):
+    Listings.objects.filter(id=14).delete()
     active_listings = Listings.objects.filter(active=True)
     return render(request, "auctions/index.html", {
             "listings": active_listings
