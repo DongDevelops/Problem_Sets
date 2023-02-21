@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('/emails', {
       method: 'POST',
       body: JSON.stringify({
-        
+        recipients: '
       })
     })
   }
