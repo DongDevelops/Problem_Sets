@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#sent').addEventListener('click', () => load_mailbox('sent'));
   document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
   document.querySelector('#compose').addEventListener('click', compose_email);
+
+  const recipients = document.querySelector('#compose-recipients');
+  const subject = document.querySelector('#compose-subject');
+  const body = document.querySelector('#compose-body');
+  const submit = document.querySelector('submit');
+
   document.querySelector('form').onsubmit = () => {
-
-    const recipients = document.querySelector('#compose-recipients');
-    const subject = document.querySelector('#compose-subject');
-    const body = document.querySelector('#compose-body');
-
-    
 
     fetch('/emails', {
       method: 'POST',
