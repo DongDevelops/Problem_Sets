@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
   document.querySelector('#compose').addEventListener('click', compose_email);
   document.querySelector('form').onsubmit = function() {
-    fetch()
+    fetch('/emails', {
+      method: 'POST',
+      body: JSON.stringify({
+        
+      })
+    })
   }
 
   // By default, load the inbox
