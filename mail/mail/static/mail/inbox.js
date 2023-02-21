@@ -9,7 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const recipients = document.querySelector('#compose-recipients');
   const subject = document.querySelector('#compose-subject');
   const body = document.querySelector('#compose-body');
-  const submit = document.querySelector('submit');
+  const submit = document.querySelector('#submit');
+
+  submit.disabled = true;
+
+  newTask.onkeyup = () => {
+    if (recipients.value.length > 0 and subject.value.length > 0 and body.value.length > 0)
+  }
 
   document.querySelector('form').onsubmit = () => {
 
