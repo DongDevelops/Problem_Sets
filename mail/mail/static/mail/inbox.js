@@ -14,7 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
   submit.disabled = true;
 
   newTask.onkeyup = () => {
-    if (recipients.value.length > 0 and subject.value.length > 0 and body.value.length > 0)
+    if (recipients.value.length > 0 and subject.value.length > 0 and body.value.length > 0) {
+      submit.disabled = flase;
+    }
+    else {
+      submit.disabled = true;
+    }
   }
 
   document.querySelector('form').onsubmit = () => {
