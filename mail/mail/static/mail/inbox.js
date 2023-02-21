@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#compose').addEventListener('click', compose_email);
   document.querySelector('form').onsubmit = () => {
 
-    
+    const recipients = document.querySelector('#compose-recipients');
+    const subject =
+    const body = 
     fetch('/emails', {
       method: 'POST',
       body: JSON.stringify({
