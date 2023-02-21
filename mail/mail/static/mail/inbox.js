@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('form').onsubmit = () => {
 
     const recipients = document.querySelector('#compose-recipients');
-    const subject =
-    const body = 
+    const subject = document.querySelector('#compose-subject');
+    const body = document.querySelector('#compose-body');
+    
     fetch('/emails', {
       method: 'POST',
       body: JSON.stringify({
