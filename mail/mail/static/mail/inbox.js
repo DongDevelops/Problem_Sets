@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(result => {
       console.log(result);
     });
+    load_mailbox('sent');
   }
 
   // By default, load the inbox
