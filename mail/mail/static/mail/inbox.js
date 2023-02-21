@@ -24,10 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('form').onsubmit = () => {
 
+    const new_recipients = recipients.value;
+    const new_subject = subject.value;
+    const new_body = body.value;
+
     fetch('/emails', {
       method: 'POST',
       body: JSON.stringify({
-        recipients: '
+        recipients: 'new_recipients',
+        subject: 'new_subject',
+        body: 'new_body'
       })
     })
   }
