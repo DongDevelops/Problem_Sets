@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#sent').addEventListener('click', () => load_mailbox('sent'));
   document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
   document.querySelector('#compose').addEventListener('click', compose_email);
-  document.querySelector('form').onsubmit = function() {
+  document.querySelector('form').onsubmit = () => {
+
+    
     fetch('/emails', {
       method: 'POST',
       body: JSON.stringify({
