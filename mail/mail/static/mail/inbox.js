@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
         body: 'new_body'
       })
     })
+    .then(response => response.json())
+    .then(result => {
+      console.log(result);
+    })
   }
 
   // By default, load the inbox
