@@ -5,14 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#sent').addEventListener('click', () => load_mailbox('sent'));
   document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
   document.querySelector('#compose').addEventListener('click', compose_email);
+  document.querySelector('submit').addEventListener('click', send_email);
 
+function send_email() {
 
   const recipients = document.querySelector('#compose-recipients');
   const subject = document.querySelector('#compose-subject');
   const body = document.querySelector('#compose-body');
-  const submit = document.querySelector('#submit');
-
-  submit.disabled = true;
 
   document.querySelector('form').onsubmit = () => {
 
@@ -35,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     load_mailbox('sent');
     return false;
   }
+}
+
 
   // By default, load the inbox
   load_mailbox('inbox');
