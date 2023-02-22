@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('#compose-form').onsubmit = () => {
 
-      const new_recipients = document.querySelector('#compose-recipients').value;
-      const new_subject = document.querySelector('#compose-subject').value;
-      const new_body = document.querySelector('#compose-body').value;
+      const new_recipients = recipients.value;
+      const new_subject = subject.value;
+      const new_body = body.value;
 
       fetch('/emails', {
         method: 'POST',
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(result);
         load_mailbox('sent');
       });
+      return false;
     }
 
 
