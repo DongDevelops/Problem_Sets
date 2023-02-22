@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function send_email(event) {
       event.preventDefault();
-      
+
       const new_recipients = document.querySelector('#compose-recipients').value;
       const new_subject = document.querySelector('#compose-subject').value;
       const new_body = document.querySelector('#compose-body').value;
@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(result => {
         console.log(result);
       });
-
-      return false;
     }
 
 
