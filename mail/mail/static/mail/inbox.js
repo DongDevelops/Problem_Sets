@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(result => {
         console.log(result);
       });
+
+      return false;
     }
 
 
