@@ -7,28 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#compose').addEventListener('click', compose_email);
     document.querySelector('#compose-form').addEventListener('submit', send_email);
 
-
-    const recipients = document.querySelector('#compose-recipients');
-    const subject = document.querySelector('#compose-subject');
-    const body = document.querySelector('#compose-body');
-    const submit = document.querySelector('#submit');
-
-    submit.disabled = true;
-
-    recipients.onkeyup = () => {
-      if (recipients.value.length > 0) {
-        submit.disabled = false;
-      }
-      else {
-        submit.disabled = true;
-      }
-    }
-
-    document.querySelector('#compose-form').onsubmit = () => {
-
-      const new_recipients = recipients.value;
-      const new_subject = subject.value;
-      const new_body = body.value;
+    function send_email(event) {
+      event.preventDefault();
+      
+      const new_recipients = document.querySelector('#compose-recipients').value;
+      const new_subject = document.querySelector('#compose-subject').value;
+      const new_body = document.querySelector('#compose-body').value;
 
       fetch('/emails', {
         method: 'POST',
