@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(result => {
         console.log(result);
+        load_mailbox('sent');
       });
     }
 
