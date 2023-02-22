@@ -5,13 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#sent').addEventListener('click', () => load_mailbox('sent'));
     document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
     document.querySelector('#compose').addEventListener('click', compose_email);
-    document.querySelector('#compose-form').addEventListener('submit', send_email);
+
+
+    const recipients = document.querySelector('#compose-recipients').value;
+    const subject = document.querySelector('#compose-subject').value;
+    const body = document.querySelector('#compose-body').value;
+    const submit = document.querySelector('#submit');
+
+    submit.disabled = true;
+
+    recipients
+
+    fetch()
+
+
+
 
     // By default, load the inbox
     load_mailbox('inbox');
   });
 
-d 
+
   function compose_email() {
 
     // Show compose view and hide other views
@@ -34,9 +48,3 @@ d
     document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
   }
 
-
-  function send_email(event) {
-
-    event.preventDefault();
-    console.log("hi");
-  }
