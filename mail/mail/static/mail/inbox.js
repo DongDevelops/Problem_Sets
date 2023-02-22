@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    document.querySelector('form').onsubmit = () => {
+    document.querySelector('#compose-form').onsubmit = () => {
 
       new_recipients = recipients.value;
       new_subject = subject.value;
