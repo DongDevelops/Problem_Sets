@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('#compose-form').onsubmit = () => {
 
-      new_recipients = recipients.value;
-      new_subject = subject.value;
-      new_body = body.value;
+      const new_recipients = recipients.value;
+      const new_subject = subject.value;
+      const new_body = body.value;
 
       fetch('/emails', {
         method: 'POST',
