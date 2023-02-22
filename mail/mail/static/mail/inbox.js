@@ -11,17 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const body = document.querySelector('#compose-body');
   const submit = document.querySelector('#submit');
 
-  submit.disabled = true;
-
-  body.onkeyup = () => {
-    if (recipients.value.length > 0 and subject.value.length > 0 and body.value.length > 0) {
-      submit.disabled = flase;
-    }
-    else {
-      submit.disabled = true;
-    }
-  }
-
   document.querySelector('form').onsubmit = () => {
 
     const new_recipients = recipients.value;
