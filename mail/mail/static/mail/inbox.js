@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       new_subject = subject.value;
       new_body = body.value;
 
-      fetch('/emails', {
+      fetch('https://whatsoever22-ideal-winner-x554g759gx92944-8000.preview.app.github.dev/emails', {
         method: 'POST',
         body: JSON.stringify({
           recipients: 'new_recipients',
