@@ -28,11 +28,12 @@ function compose_email() {
   document.querySelector('#compose-subject').value = '';
   document.querySelector('#compose-body').value = '';
 
-
   const recipients = document.querySelector('#compose-recipients');
   const subject = document.querySelector('#compose-subject');
   const body = document.querySelector('#compose-body');
   const submit = document.querySelector('#submit');
+
+  submit.disabled = true;
 
   document.querySelector('form').onsubmit = () => {
 
