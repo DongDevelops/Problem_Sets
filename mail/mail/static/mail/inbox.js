@@ -16,7 +16,7 @@ function send_email(event) {
 
   event.preventDefault();
 
-  console.log(hi);
+  console.log("hi");
 }
 
 
