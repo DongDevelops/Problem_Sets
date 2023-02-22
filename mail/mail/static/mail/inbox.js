@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(result);
     });
     load_mailbox('sent');
+    return false;
   }
 
   // By default, load the inbox
