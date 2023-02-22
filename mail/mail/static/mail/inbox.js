@@ -5,10 +5,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#sent').addEventListener('click', () => load_mailbox('sent'));
     document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
     document.querySelector('#compose').addEventListener('click', compose_email);
-    document.querySelector('#compose-form').addEventListener('submit', send_email);
 
-    function send_email(event) {
-      event.preventDefault();
+
+    const recipients = document.querySelector('#compose-recipients');
+    const subject = document.querySelector('#compose-subject');
+    const body = document.querySelector('#compose-body');
+    const submit = document.querySelector('#submit');
+
+    submit.disabled = true;
+
+    recipients.onkeyup = () => {
+      if (recipients.value.length > 0) {
+        submit.disabled = false;
+      }
+      else {
+        submit.disabled = true;
+      }
+    }
+
+    document.querySelector('#compose-form').onsubmit = () => {
 
       const new_recipients = document.querySelector('#compose-recipients').value;
       const new_subject = document.querySelector('#compose-subject').value;

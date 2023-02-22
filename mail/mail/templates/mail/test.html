@@ -23,25 +23,26 @@ document.querySelector('#compose-form').onsubmit = () => {
 
 
 
+    document.querySelector('#compose-form').addEventListener('submit', send_email);
 
     function send_email(event) {
-        event.preventDefault();
+      event.preventDefault();
 
-        const new_recipients = document.querySelector('#compose-recipients').value;
-        const new_subject = document.querySelector('#compose-subject').value;
-        const new_body = document.querySelector('#compose-body').value;
+      const new_recipients = document.querySelector('#compose-recipients').value;
+      const new_subject = document.querySelector('#compose-subject').value;
+      const new_body = document.querySelector('#compose-body').value;
 
-        fetch('/emails', {
-          method: 'POST',
-          body: JSON.stringify({
-            recipients: new_recipients,
-            subject: new_subject,
-            body: new_body
-          })
+      fetch('/emails', {
+        method: 'POST',
+        body: JSON.stringify({
+          recipients: new_recipients,
+          subject: new_subject,
+          body: new_body
         })
-        .then(response => response.json())
-        .then(result => {
-          console.log(result);
-          load_mailbox('sent');
-        });
-      }
+      })
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        load_mailbox('sent');
+      });
+    }
