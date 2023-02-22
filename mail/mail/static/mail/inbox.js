@@ -23,9 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    new_
+    document.querySelector('form').onsubmit = () => {
 
-    fetch()
+      new_recipients = recipients.value;
+      new_subject = subject.value;
+      new_body = body.value;
+
+      fetch('/emails', {
+        method: 'POST',
+        body: JSON.stringify({
+          recipients: 'new_recipients',
+          subject: 'new_subject',
+          body: 'new_body'
+        })
+      })
+    }
 
 
 
