@@ -7,14 +7,23 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#compose').addEventListener('click', compose_email);
 
 
-    const recipients = document.querySelector('#compose-recipients').value;
-    const subject = document.querySelector('#compose-subject').value;
-    const body = document.querySelector('#compose-body').value;
+    const recipients = document.querySelector('#compose-recipients');
+    const subject = document.querySelector('#compose-subject');
+    const body = document.querySelector('#compose-body');
     const submit = document.querySelector('#submit');
 
     submit.disabled = true;
 
-    recipients
+    recipients.onkeyup = () => {
+      if (recipients.value.length > 0) {
+        submit.disabled = false;
+      }
+      else {
+        submit.disabled = true;
+      }
+    }
+
+    new_
 
     fetch()
 
