@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  
+
 
 
 
@@ -27,6 +27,34 @@ function compose_email() {
   document.querySelector('#compose-recipients').value = '';
   document.querySelector('#compose-subject').value = '';
   document.querySelector('#compose-body').value = '';
+
+
+  const recipients = document.querySelector('#compose-recipients');
+  const subject = document.querySelector('#compose-subject');
+  const body = document.querySelector('#compose-body');
+  const submit = document.querySelector('#submit');
+
+  document.querySelector('form').onsubmit = () => {
+
+    const new_recipients = recipients.value;
+    const new_subject = subject.value;
+    const new_body = body.value;
+
+    fetch('/emails', {
+      method: 'POST',
+      body: JSON.stringify({
+        recipients: 'new_recipients',
+        subject: 'new_subject',
+        body: 'new_body'
+      })
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log(result);
+    });
+    load_mailbox('sent');
+  }
+
 }
 
 function load_mailbox(mailbox) {
