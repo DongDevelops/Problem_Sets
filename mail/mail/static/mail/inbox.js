@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   submit.disabled = true;
 
-  newTask.onkeyup = () => {
+  body.onkeyup = () => {
     if (recipients.value.length > 0 and subject.value.length > 0 and body.value.length > 0) {
       submit.disabled = flase;
     }
