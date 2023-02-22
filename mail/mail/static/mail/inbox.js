@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function send_email() {
+function send_email(event) {
 
-  preventDefault();
+  event.preventDefault();
 
   console.log(hi);
 }
