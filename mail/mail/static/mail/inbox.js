@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch('/emails', {
         method: 'POST',
         body: JSON.stringify({
-          recipients: 'new_recipients',
-          subject: 'new_subject',
-          body: 'new_body'
+          recipients: new_recipients,
+          subject: new_subject,
+          body: new_body
         })
       })
       .then(response => response.json())
