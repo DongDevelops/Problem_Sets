@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const tr = document.createElement('tr');
         const th = document.createElement('th');
         table.innerHTML = email;
+        document.querySelector('tr').append(th);
+        document.querySelector('thead').append(tr);
         document.querySelector('table').append(thead);
         document.querySelector('#emails-view').append(table);
       });
