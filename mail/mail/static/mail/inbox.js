@@ -77,19 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
 
-    const table = document.createElement('table');
-    const thead = document.createElement('thead');
-    const tr = document.createElement('tr');
-    const th = document.createElement('th');
-    th.innerHTML = recipients
-    document.querySelector('tr').append(th)
+
 
     fetch('emails/sent')
     .then(response => response.json())
     .then(emails => {
       console.log(emails);
       emails.forEach(email => {
-
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tr = document.createElement('tr');
+        const th = document.createElement('th');
+        th.innerHTML = recipients
+        document.querySelector('th').append(th)
         table.innerHTML = email;
         document.querySelector('tr').append(th);
         document.querySelector('thead').append(tr);
