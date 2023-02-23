@@ -98,6 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (email.read === true) {
           tr.classname = "table-light";
         }
+        else {
+          tr.classname = "table-info";
+        }
         table.appendChild(tr);
       });
     })
