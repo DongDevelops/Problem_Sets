@@ -81,7 +81,17 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(emails => {
       console.log(emails);
-
+      emails.forEach(email => {
+        const td1 = document.createElement('td');
+        const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
+        td1.innerHTML = email.recipient;
+        td2.innerHTML = email.subject;
+        td3.innerHTML = email.timestamp;
+        document.querySelector('tr').append(td1);
+        document.querySelector('tr').append(td2);
+        document.querySelector('tr').append(td3);
+      });
     })
 
   }
