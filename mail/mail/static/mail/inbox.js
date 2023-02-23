@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    fetch(`emails/${mailbox}`)
+    fetch('emails/sent')
     .then(response => response.json())
     .then(emails => {
       console.log(emails);
