@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     th1.innerHTML = Sender;
     th2.innerHTML = Subject;
     th3.innerHTML = Time;
-    document.querySelector('table').append(thead);
+
     document.querySelector('table').append(ttr);
     document.querySelector('table').append(th1);
     document.querySelector('table').append(th2);
