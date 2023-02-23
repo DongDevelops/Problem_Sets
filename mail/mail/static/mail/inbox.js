@@ -95,6 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
+        if (email.read === true) {
+          tr.display.
+        }
         table.appendChild(tr);
       });
     })
