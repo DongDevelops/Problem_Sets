@@ -90,7 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
         td1.innerHTML = email.sender
         td2.innerHTML = email.subject
         td3.innerHTML = email.timestamp
-        document.querySelector('tr').append(td)
+        document.querySelector('tr').append(td1)
+        document.querySelector('tr').append(td2)
+        document.querySelector('tr').append(td3)
       });
     })
 
