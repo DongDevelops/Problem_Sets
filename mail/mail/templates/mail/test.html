@@ -1,48 +1,11 @@
-const recipients = document.querySelector('#compose-recipients');
-const subject = document.querySelector('#compose-subject');
-const body = document.querySelector('#compose-body');
-const submit = document.querySelector('#submit');
-
-submit.disabled = true;
-
-recipients.onkeyup = () => {
-  if (recipients.value.length > 0) {
-    submit.disabled = false;
-  }
-  else {
-    submit.disabled = true;
-  }
-}
-
-document.querySelector('#compose-form').onsubmit = () => {
-
-
-
-
-
-
-
-
-    document.querySelector('#compose-form').addEventListener('submit', send_email);
-
-    function send_email(event) {
-      event.preventDefault();
-
-      const new_recipients = document.querySelector('#compose-recipients').value;
-      const new_subject = document.querySelector('#compose-subject').value;
-      const new_body = document.querySelector('#compose-body').value;
-
-      fetch('/emails', {
-        method: 'POST',
-        body: JSON.stringify({
-          recipients: new_recipients,
-          subject: new_subject,
-          body: new_body
-        })
-      })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result);
-        load_mailbox('sent');
-      });
-    }
+emails.forEach(email => {
+  const td1 = document.createElement('td');
+  const td2 = document.createElement('td');
+  const td3 = document.createElement('td');
+  td1.innerHTML = email.recipient;
+  td2.innerHTML = email.subject;
+  td3.innerHTML = email.timestamp;
+  document.querySelector('tr').append(td1);
+  document.querySelector('tr').append(td2);
+  document.querySelector('tr').append(td3);
+});
