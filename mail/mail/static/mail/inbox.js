@@ -80,15 +80,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('table').append(thead);
     const ttr = document.createElement('tr');
     document.querySelector('thead').append(ttr);
-    
+
     const th1 = document.createElement('th');
-    th1.innerHTML = Sender;
-    document.querySelector('ttr').append(th1);
+
+
     const th2 = document.createElement('th');
-    th2.innerHTML = Subject;
-    document.querySelector('ttr').append(th2);
+
+
     const th3 = document.createElement('th');
+    th1.innerHTML = Sender;
+    th2.innerHTML = Subject;
     th3.innerHTML = Time;
+    document.querySelector('ttr').append(th1);
+    document.querySelector('ttr').append(th2);
     document.querySelector('ttr').append(th3);
     const tbody = document.createElement('tbody');
     document.querySelector('table').append(tbody);
