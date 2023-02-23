@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  
+
+  // Mailbox
+
 
   function compose_email() {
 
