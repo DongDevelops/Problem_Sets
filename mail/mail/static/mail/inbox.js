@@ -96,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('tr').append(td1);
         document.querySelector('tr').append(td2);
         document.querySelector('tr').append(td3);
-
-
       });
     })
 
