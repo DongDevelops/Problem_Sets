@@ -17,3 +17,19 @@ fetch('emails/sent')
     document.querySelector('tr').append(td3);
   });
 })
+
+
+
+
+const ttr = document.createElement('tr');
+document.querySelector('tbody').append(ttr);
+
+const th1 = document.createElement('td');
+th1.innerHTML = Sender;
+document.querySelector('ttr').append(th1);
+const th2 = document.createElement('td');
+th2.innerHTML = Subject;
+document.querySelector('ttr').append(th2);
+const th3 = document.createElement('td');
+th3.innerHTML = Time;
+document.querySelector('ttr').append(th3);

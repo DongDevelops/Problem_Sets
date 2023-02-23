@@ -78,20 +78,27 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#emails-view').append(table);
     const tbody = document.createElement('tbody');
     document.querySelector('table').append(tbody);
-    const ttr = document.createElement('tr');
-    document.querySelector('tbody').append(ttr);
-
-    const th1 = document.createElement('td');
-    th1.innerHTML = Sender;
-    document.querySelector('ttr').append(th1);
-    const th2 = document.createElement('td');
-    th2.innerHTML = Subject;
-    document.querySelector('ttr').append(th2);
-    const th3 = document.createElement('td');
-    th3.innerHTML = Time;
-    document.querySelector('ttr').append(th3);
 
 
+
+    fetch('emails/sent')
+    .then(response => response.json())
+    .then(emails => {
+      console.log(emails);
+      emails.forEach(email => {
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td');
+        const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
+        td1.innerHTML = email.sender;
+        td2.innerHTML = email.subject;
+        td3.innerHTML = email.timestamp;
+        document.querySelector('tbody').append(tr);
+        document.querySelector('tr').append(td1);
+        document.querySelector('tr').append(td2);
+        document.querySelector('tr').append(td3);
+      });
+    })
 
   }
 
