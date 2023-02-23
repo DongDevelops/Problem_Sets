@@ -95,11 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
-        if (email.read === "True") {
-          tr.classname = "table-light";
-        } else {
-          tr.classname = "table-info";
-        }
+
         table.appendChild(tr);
       });
     })
