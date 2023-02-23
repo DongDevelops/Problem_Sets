@@ -96,11 +96,10 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         table.appendChild(tr);
-
         if (email.read === "True") {
-          tr.style.color = "red";
+          tr.style.backgroundColor = "gray";
         } else {
-          tr.style.color = "blue";
+          tr.style.backgroundColor = "white";
         }
       });
     })
