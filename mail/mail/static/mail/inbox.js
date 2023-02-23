@@ -75,5 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show the mailbox name
     document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+
+    fetch('/emails/)
   }
 
