@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(emails);
       const li = document.createElement('li');
       li.innerHTML = emails;
+      document.querySelector('#emails-view').append(li);
     })
 
   }
