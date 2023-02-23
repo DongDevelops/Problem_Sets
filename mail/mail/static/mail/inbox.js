@@ -83,7 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(emails);
       emails.forEach(email => {
         const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tr = document.createElement('tr');
+        const th = document.createElement('th');
         table.innerHTML = email;
+        document.querySelector('table').append(thead);
         document.querySelector('#emails-view').append(table);
       });
     })
