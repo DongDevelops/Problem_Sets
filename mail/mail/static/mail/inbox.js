@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show the mailbox name
     document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
     const table = document.createElement('table');
-    table.className = "table-primary";
+    table.className = "table";
     document.querySelector('#emails-view').append(table);
 
 
@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
 
-        document.querySelector('#emails-view').append(tr);
-        document.querySelector('#emails-view').append(td1);
-        document.querySelector('#emails-view').append(td2);
-        document.querySelector('#emails-view').append(td3);
+        document.querySelector('table').append(tr);
+        document.querySelector('table').append(td1);
+        document.querySelector('table').append(td2);
+        document.querySelector('table').append(td3);
       });
     })
 
