@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const table = document.createElement('table');
     table.className = "table";
     document.querySelector('#emails-view').append(table);
-    const tbody = document.createElement('tbody');
-    document.querySelector('table').append(tbody);
+    const tboy = document.createElement('tbody');
+    document.querySelector('table').append(tboy);
     const ttr = document.createElement('tr');
-    document.querySelector('tbody').append(ttr);
+    document.querySelector('tboy').append(ttr);
 
     const th1 = document.createElement('td');
     th1.innerHTML = Sender;
