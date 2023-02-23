@@ -73,7 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show the mailbox name
     document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
-
+    const table = document.createElement('table');
+    table.className = "table-primary";
+    document.querySelector('#emails-view').append(table);
 
 
     fetch('emails/sent')
@@ -81,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(emails => {
       console.log(emails);
       emails.forEach(email => {
-        const table = document.createElement('table');
         const tr = document.createElement('tr');
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
-        
+
         document.querySelector('#emails-view').append(tr);
         document.querySelector('#emails-view').append(td1);
         document.querySelector('#emails-view').append(td2);
