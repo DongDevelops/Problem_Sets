@@ -86,6 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(emails);
       emails.forEach(email => {
         const tr = document.createElement('tr');
+        if (email.read === "True") {
+          tr.classname = "table-light";
+        } else {
+          tr.classname = "table-info";
+        }
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
@@ -96,11 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         table.appendChild(tr);
-        if (email.read === "True") {
-          tr.classname = "table-light";
-        } else {
-          tr.classname = "table-info";
-        }
       });
     })
 
