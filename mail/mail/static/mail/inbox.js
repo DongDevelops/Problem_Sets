@@ -81,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(emails => {
       console.log(emails);
+      const li = document.createElement('li');
+      li.innerHTML = emails;
     })
 
   }
