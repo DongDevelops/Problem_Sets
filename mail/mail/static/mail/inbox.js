@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(emails => {
       console.log(emails);
       emails.forEach(email => {
-        const li = document.createElement('div');
-        li.innerHTML = email.recipients;
+        const div = document.createElement('div');
+        div.innerHTML = email.recipients;
         document.querySelector('#emails-view').append(div);
       });
     })
