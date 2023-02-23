@@ -96,7 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         table.appendChild(tr);
-        tr.classname = "table-light";
+
+        if (email.read === "True") {
+          tr.style.color = "red";
+        } else {
+          tr.style.color = "blue";
+        }
       });
     })
 
