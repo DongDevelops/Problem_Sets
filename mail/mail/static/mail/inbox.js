@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
-        tr.innerHTML = `${td1}`
+        tr.innerHTML = email.sender;
         document.querySelector('#emails-view').append(tr);
         document.querySelector('#emails-view').append(td1);
         document.querySelector('#emails-view').append(td2);
