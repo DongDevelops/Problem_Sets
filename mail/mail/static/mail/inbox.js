@@ -81,13 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const ttr = document.createElement('tr');
     document.querySelector('thead').append(ttr);
 
-    const th1 = document.createElement('th');
+    const th1 = document.createElement('td');
 
 
-    const th2 = document.createElement('th');
+    const th2 = document.createElement('td');
 
 
-    const th3 = document.createElement('th');
+    const th3 = document.createElement('td');
     th1.innerHTML = Sender;
     th2.innerHTML = Subject;
     th3.innerHTML = Time;
