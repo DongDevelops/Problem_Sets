@@ -82,12 +82,14 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(emails => {
       console.log(emails);
       emails.forEach(email => {
+        const tr = document.createElement('tr')
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
+        document.querySelector('#emails-view').append(tr);
         document.querySelector('#emails-view').append(td1);
         document.querySelector('#emails-view').append(td2);
         document.querySelector('#emails-view').append(td3);
