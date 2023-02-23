@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const thead = document.createElement('thead');
     const tr = document.createElement('tr');
     const th = document.createElement('th');
+    th.
 
     fetch('emails/sent')
     .then(response => response.json())
