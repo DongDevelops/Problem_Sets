@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const th3 = document.createElement('td');
     th3.innerHTML = Time;
     document.querySelector('ttr').append(th3);
-    
+
     const tbody = document.createElement('tbody');
     document.querySelector('table').append(tbody);
 
