@@ -82,18 +82,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('thead').append(ttr);
 
     const th1 = document.createElement('td');
-
-
-    const th2 = document.createElement('td');
-
-
-    const th3 = document.createElement('td');
     th1.innerHTML = Sender;
-    th2.innerHTML = Subject;
-    th3.innerHTML = Time;
     document.querySelector('ttr').append(th1);
+    const th2 = document.createElement('td');
+    th2.innerHTML = Subject;
     document.querySelector('ttr').append(th2);
+    const th3 = document.createElement('td');
+    th3.innerHTML = Time;
     document.querySelector('ttr').append(th3);
+    
     const tbody = document.createElement('tbody');
     document.querySelector('table').append(tbody);
 
