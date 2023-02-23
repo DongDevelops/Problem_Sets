@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#emails-view').append(table);
     const thead = document.createElement('thead');
     document.querySelector('table').append(thead);
-    const ttr = document.createElement('ttr');
+    const ttr = document.createElement('tr');
     document.querySelector('thead').append(ttr);
     const th1 = document.createElement('th');
     th1.innerHTML = Sender;
