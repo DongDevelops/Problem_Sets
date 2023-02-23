@@ -96,10 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         if (email.read === true) {
-          document.querySelector('tr').style.color = 'gray';
-        }
-        else {
-          document.querySelector('tr').style.color = 'white';
+          tr.classname = "table-light";
         }
         table.appendChild(tr);
       });
