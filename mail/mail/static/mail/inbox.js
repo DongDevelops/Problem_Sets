@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
         td1.innerHTML = email.sender
-        td2.innerHTML = email.sender
-        td3.innerHTML = email.recipients
+        td2.innerHTML = email.subject
+        td3.innerHTML = email.time
         document.querySelector('th').append(th)
         table.innerHTML = email;
         document.querySelector('tr').append(th);
