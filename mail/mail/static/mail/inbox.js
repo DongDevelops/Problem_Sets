@@ -76,15 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const table = document.createElement('table');
     table.className = "table";
     document.querySelector('#emails-view').append(table);
-    const th1 = document.createElement('th');
-    const th2 = document.createElement('th');
-    const th3 = document.createElement('th');
-    th1.innerHTML = Sender;
-    th2.innerHTML = Subject;
-    th3.innerHTML = Time;
-    document.querySelector('table').append(th1);
-    document.querySelector('table').append(th2);
-    document.querySelector('table').append(th3);
+
 
 
     fetch('emails/sent')
