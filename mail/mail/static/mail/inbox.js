@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(emails => {
       console.log(emails);
       emails.forEach(email => {
+        const table = document.createElement('tr');
         const tr = document.createElement('tr');
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
