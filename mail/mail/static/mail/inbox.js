@@ -53,8 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // Mailbox
-
-
   function compose_email() {
 
     // Show compose view and hide other views
