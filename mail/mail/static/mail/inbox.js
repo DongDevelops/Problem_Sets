@@ -86,18 +86,17 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(emails);
       emails.forEach(email => {
         let tr = document.createElement('tr');
-        tr.innerHTML = email.id;
-        document.querySelector('table').append(tr);
         let td1 = document.createElement('td');
         let td2 = document.createElement('td');
         let td3 = document.createElement('td');
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
+        tr.innerHTML = email.id;
+        document.querySelector('table').append(tr);
         document.querySelector('tr').append(td1);
         document.querySelector('tr').append(td2);
         document.querySelector('tr').append(td3);
-
       });
     })
 
