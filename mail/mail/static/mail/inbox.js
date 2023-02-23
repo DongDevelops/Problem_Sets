@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         table.appendChild(tr);
 
         if (email.read === "True") {
-          tr.style.background-color = "red";
+          tr.style.color = "red";
         } else {
           tr.style.color = "blue";
         }
