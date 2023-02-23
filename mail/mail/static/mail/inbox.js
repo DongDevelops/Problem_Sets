@@ -80,10 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('emails/sent')
     .then(response => response.json())
     .then(emails => {
-      console.log(emails);
-      const li = document.createElement('li');
-      li.innerHTML = emails;
-      document.querySelector('#emails-view').append(li);
+      forEach(emails => console.log(emails));
+      
     })
 
   }
