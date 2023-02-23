@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
-        document.querySelector('table').append(tr);
-        document.querySelector('table').append(td1);
-        document.querySelector('table').append(td2);
-        document.querySelector('table').append(td3);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        table.appendChild(tr);
       });
     })
 
