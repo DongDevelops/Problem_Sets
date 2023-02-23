@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
         document.querySelector('#emails-view').append(tr);
-        document.querySelector('#emails-view').append(td1);
-        document.querySelector('#emails-view').append(td2);
-        document.querySelector('#emails-view').append(td3);
+        document.querySelector('tr').append(td1);
+        document.querySelector('tr').append(td2);
+        document.querySelector('tr').append(td3);
       });
     })
 
