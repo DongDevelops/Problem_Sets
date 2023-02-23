@@ -76,6 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const table = document.createElement('table');
     table.className = "table";
     document.querySelector('#emails-view').append(table);
+    const thead = document.createElement('thead');
+    document.querySelector('table').append(thead);
+    const ttr = document.createElement('ttr');
+    document.querySelector('thead').append(ttr);
+    const th1 = document.createElement('th');
+    document.querySelector('ttr').append(th1);
+    const th2 = document.createElement('th2');
+    document.querySelector('ttr').append(th2);
+    const th3 = document.createElement('th3');
+    document.querySelector('ttr').append(th3);
 
 
 
