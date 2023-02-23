@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(emails);
       emails.forEach(email => {
         const tr = document.createElement('tr')
-        tr.classname = "talbe-primary";
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
