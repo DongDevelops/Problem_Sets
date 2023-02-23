@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
 
-    fetch('emails/')
+    fetch('emails/sent')
     .then(response => response.json())
     .then(emails => {
       console.log(emails);
