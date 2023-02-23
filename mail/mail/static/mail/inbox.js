@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const td3 = document.createElement('td');
         td1.innerHTML = email.sender
         td2.innerHTML = email.subject
-        td3.innerHTML = email.time
+        td3.innerHTML = email.timestamp
         document.querySelector('th').append(th)
         table.innerHTML = email;
         document.querySelector('tr').append(th);
