@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const th3 = document.createElement('th');
     th3.innerHTML = Time;
     document.querySelector('ttr').append(th3);
+    const tbody = document.createElement('tbody');
+    document.querySelector('table').append(tbody);
 
 
 
@@ -104,10 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
-        document.querySelector('table').append(tr);
-        document.querySelector('table').append(td1);
-        document.querySelector('table').append(td2);
-        document.querySelector('table').append(td3);
+        document.querySelector('tbody').append(tr);
+        document.querySelector('tr').append(td1);
+        document.querySelector('tr').append(td2);
+        document.querySelector('tr').append(td3);
       });
     })
 
