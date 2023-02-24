@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
-        tr.setAttribute('id', 'email.id');
+        tr.setAttribute('id', email.id);
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
@@ -103,7 +103,11 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-
+    document.querySelectorAll('tr').forEach(tr => {
+      tr.onclick = function () {
+        
+      }
+    })
 
 
 
