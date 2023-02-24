@@ -78,8 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#emails-view').append(table);
 
 
-
-
     fetch(`/emails/${mailbox}`)
     .then(response => response.json())
     .then(emails => {
@@ -105,8 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-    document.addEventListener
-
+    document.querySelectorAll('tr').onclick = 
 
 
 
