@@ -108,8 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-    
-
     document.querySelectorAll('tr').forEach(tr => {
       tr.onclick = function () {
         emailId = tr.td4;
