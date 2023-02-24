@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-    document.querySelectorAll('tr').onclick = 
+    document.querySelectorAll('tr').forEach
 
 
 
