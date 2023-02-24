@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
         tr.innerHTML = email.id;
-        tr.setAttribute("type", "hidden");
+        tr.style.visibility = "hidden";
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
@@ -105,11 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-    document.querySelectorAll('tr').forEach(tr => {
-      tr.onclick = function {
-        fetch()
-      }
-    }
 
 
 
