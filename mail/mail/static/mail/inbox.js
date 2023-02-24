@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
         td4.innerHTML = email.id;
-        td4.style.visivility = "hidden";
+        td4.style.visibility = "hidden";
         tr.setAttribute('id', email.id);
         tr.appendChild(td1);
         tr.appendChild(td2);
