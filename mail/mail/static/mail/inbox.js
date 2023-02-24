@@ -87,13 +87,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
+        const td4 = document.createElement('td');
         td1.innerHTML = email.sender;
         td2.innerHTML = email.subject;
         td3.innerHTML = email.timestamp;
+        td4.innerHTML = email.id;
+        td4.style.visivility = "hidden";
         tr.setAttribute('id', email.id);
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
+        tr.appendChild(td4);
         table.appendChild(tr);
         if (email.read === "True") {
           tr.style.backgroundColor = "gray";
@@ -105,11 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    document.querySelectorAll('tr').forEach(tr => {
-      tr.onclick = function () {
-        document.getElementById()
-      }
-    })
 
 
 
