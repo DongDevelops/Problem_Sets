@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('tr').forEach(tr => {
       tr.onclick = function () {
-        emailId = tr.td4;
+        emailId = tr["id"];
         fetch(`/emails/${emailId}`)
         .then(response => response.json())
         .then(email => {
