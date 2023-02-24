@@ -89,10 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const td3 = document.createElement('td');
         const td4 = document.createElement('td');
         td1.innerHTML = email.sender;
-        td2.innerHTML = email.subject;
+        td2.innerHTML = email.id;
         td3.innerHTML = email.timestamp;
-        td4.innerHTML = email.id;
-        td4.style.visibility = "hidden";
+        td4.innerHTML = email.subject;
+        td2.style.visibility = "hidden";
         tr.setAttribute('id', email.id);
         tr.appendChild(td1);
         tr.appendChild(td2);
@@ -108,6 +108,16 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
+    document.querySelectorAll('tr').forEach(tr => {
+      tr.onclick = function () {
+        emailId = tr.td4;
+        fetch(`/emails/${emailId}`)
+        .then(response => response.json())
+        .then(email => {
+          console.log(email);
+        })
+      }
+    })
 
 
 
