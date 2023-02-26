@@ -108,9 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    document.querySelector('tr').onclick = function() {
-      this.style.color = "red";
-    }
+    const button = document.createElement('button');
 
 
 
