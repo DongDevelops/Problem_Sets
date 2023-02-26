@@ -109,18 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     })
-
-
-    document.getElementById("each").onclick = () => {
-      fetch(`/emails/${this.tr.id}`)
-      .then(response => response.json())
-      .then(email => {
-          // Print email
-          console.log(email);
-
-
-      });
-    };
   }
 
 
