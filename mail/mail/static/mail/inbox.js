@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('div').onclick = () => {
       console.log('dd')
-      }
+      };
 
 
 
