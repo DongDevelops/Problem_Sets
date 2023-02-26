@@ -110,7 +110,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-
+    div.addEventListener('click', function() {
+      console.log('dd');
+    });
 
 
 
