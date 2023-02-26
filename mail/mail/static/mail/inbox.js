@@ -109,12 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    div.addEventListener('click', function() {
-      console.log('dd')
+    document.querySelectorAll('div').forEach(function(div) {
+      div.onclick = function ({
+        this.style.color = "gray";
+      }
     });
-
-
-
   }
 
 
