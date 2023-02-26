@@ -109,11 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    document.querySelector('div').onclick {
-      div.onclick = function () {
-        this.style.color = "gray";
+    document.querySelector('div').onclick = () => {
+      console.log('dd')
       }
-    });
-  }
+
 
 
