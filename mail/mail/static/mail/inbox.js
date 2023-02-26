@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-    document.querySelectorAll('tr').forEach(tr => {
+    document.querySelecotrAll('tr').forEach(tr => {
       tr.onclick = function () {
         emailId = tr["id"];
         fetch(`/emails/${emailId}`)
