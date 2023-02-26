@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
       });
-    };
+    }
   }
 
 
