@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    document.getElementById('each').onclick = () => {
+    document.querySelector('div').onclick = () => {
       console.log('dd')
     };
   }
