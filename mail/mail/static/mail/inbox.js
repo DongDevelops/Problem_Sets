@@ -102,13 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td4);
         each.appendChild(tr);
         table.appendChild(each);
-        each.addEventListner('click', function() {
-          fetch(`/emails/${email.id}`)
-          .then(response => response.json())
-          .then(result => {
-              console.log(result);
-          });
-        })
+
         if (email.read === "True") {
           each.style.backgroundColor = "gray";
         } else {
@@ -116,6 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     })
+
+    
 
   }
 
