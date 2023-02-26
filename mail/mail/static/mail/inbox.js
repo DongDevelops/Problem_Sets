@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
-        div.appendChild(tr);
+        each.appendChild(tr);
         table.appendChild(each);
         if (email.read === "True") {
           each.style.backgroundColor = "gray";
