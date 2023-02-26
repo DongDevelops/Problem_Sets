@@ -76,6 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const table = document.createElement('table');
     table.className = "table";
     document.querySelector('#emails-view').append(table);
+    function seeMail(x) {
+      fetch(`/emails/${x}`)
+      .then(response => response.json())
+      .then(result => {
+          console.log(result);
+      });
+    }
 
 
     fetch(`/emails/${mailbox}`)
@@ -94,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td4.innerHTML = email.subject;
         td2.style.visibility = "hidden";
         tr.setAttribute('id', email.id);
-        tr.setAttribute("onclick", ")
+        tr.setAttribute("onclick", "seeMail(email.id)")
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
