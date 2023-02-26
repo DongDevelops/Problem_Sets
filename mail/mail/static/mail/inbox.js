@@ -103,9 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
         div.appendChild(tr);
         table.appendChild(div);
         if (email.read === "True") {
-          tr.style.backgroundColor = "gray";
+          div.style.backgroundColor = "gray";
         } else {
-          tr.style.backgroundColor = "white";
+          div.style.backgroundColor = "white";
         }
       });
     })
@@ -117,11 +117,3 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-
-  function view_email(email_id) {
-    fetch(`/emails/${email_id}`)
-    .then(response => response.json())
-    .then(email => {
-      console.log(email);
-    })
-  }
