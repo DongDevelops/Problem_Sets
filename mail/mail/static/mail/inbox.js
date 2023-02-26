@@ -108,11 +108,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    document.querySelectorAll('tr').forEach(tr => {
-      tr.onclick = function () {
-        tr.style.color = "red";
-      }
-    })
+    document.querySelector('tr').onclick = function() {
+      this.style.color = "red";
+    }
+
 
 
 
