@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    document.querySelectorAll('div').forEach(function(div) {
+    document.querySelector('div').onclick {
       div.onclick = function () {
         this.style.color = "gray";
       }
