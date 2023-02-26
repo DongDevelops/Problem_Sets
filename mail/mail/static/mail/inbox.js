@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const table = document.createElement('table');
     table.className = "table";
     document.querySelector('#emails-view').append(table);
+
     function seeMail(x) {
       fetch(`/emails/${x}`)
       .then(response => response.json())
