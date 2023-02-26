@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td4.innerHTML = email.subject;
         td2.style.visibility = "hidden";
         tr.setAttribute('id', email.id);
-        tr.setAttribute("onclick", "seeMail(email.id)")
+        tr.setAttribute("onclick", seeMail(email.id))
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
