@@ -88,24 +88,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
         const td4 = document.createElement('td');
-        const each = document.createElement('div');
         td1.innerHTML = email.sender;
         td2.innerHTML = email.id;
         td3.innerHTML = email.timestamp;
         td4.innerHTML = email.subject;
         td2.style.visibility = "hidden";
         tr.setAttribute('id', email.id);
+        tr.setAttribute("onclick", ")
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
-        each.appendChild(tr);
-        table.appendChild(each);
+        table.appendChild(tr);
 
         if (email.read === "True") {
-          each.style.backgroundColor = "gray";
+          tr.style.backgroundColor = "gray";
         } else {
-          each.style.backgroundColor = "white";
+          tr.style.backgroundColor = "white";
         }
       });
     })
