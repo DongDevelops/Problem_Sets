@@ -108,6 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
           div.style.backgroundColor = "white";
         }
       });
+      div.addEventListner('click', function() {
+        fetch(`/emails/${email.id}`)
+        .then(response => response.json())
+        .then(email => {
+            console.log(email);
+        });
+      })
     })
   }
 
