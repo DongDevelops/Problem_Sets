@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-    document.querySelecotrAll('tr').forEach(tr => {
+    document.querySelectorAll('tr').forEach(tr => {
       tr.onclick = function () {
         tr.style.color = "red";
       }
