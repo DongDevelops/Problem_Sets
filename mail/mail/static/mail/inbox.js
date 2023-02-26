@@ -110,12 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelecotrAll('tr').forEach(tr => {
       tr.onclick = function () {
-        emailId = tr["id"];
-        fetch(`/emails/${emailId}`)
-        .then(response => response.json())
-        .then(email => {
-          console.log(email);
-        })
+        tr.style.color = "red";
       }
     })
 
