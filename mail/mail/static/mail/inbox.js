@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td3.innerHTML = email.timestamp;
         td4.innerHTML = email.subject;
         td2.style.visibility = "hidden";
+        div.setAttribute('id', each_mail);
         tr.setAttribute('id', email.id);
         tr.appendChild(td1);
         tr.appendChild(td2);
@@ -109,9 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    document.querySelector('div').onclick = () => {
+    document.getElementById('each_mail').onclick = () => {
       console.log('dd')
-      };
+    };
+  }
 
 
 
