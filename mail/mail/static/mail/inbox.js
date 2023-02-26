@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
 
-    document.querySelector('div').tr.onclick = () => {
-      fetch(`/emails/${this.id}`)
+    document.querySelector('div').onclick = () => {
+      fetch(`/emails/${this.tr.id}`)
       .then(response => response.json())
       .then(email => {
           // Print email
