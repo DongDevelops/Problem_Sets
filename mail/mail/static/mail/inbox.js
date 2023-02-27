@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(`/emails/${mailbox}`)
     .then(response => response.json())
     .then(emails => {
-      console.log(emails);
       emails.forEach(email => {
         const tr = document.createElement('tr');
         const td1 = document.createElement('td');
