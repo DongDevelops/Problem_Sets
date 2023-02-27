@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-
     fetch(`/emails/${mailbox}`)
     .then(response => response.json())
     .then(emails => {
@@ -106,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td3);
         each.appendChild(tr);
         table.appendChild(each);
-
         if (email.read === "True") {
           each.style.backgroundColor = "gray";
         } else {
