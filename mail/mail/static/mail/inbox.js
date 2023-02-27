@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const td3 = document.createElement('td');
         td1.innerHTML = email.sender;
         td2.innerHTML = email.timestamp;
-        td3.innerHTML = email.subject;
+        td3.innerHTML = email.read;
         tr.onclick = function() {
           seeMail(email.id);
         }
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch(`/emails/${x}`, {
         method: 'PUT',
         body: JSON.stringify({
-          read: false
+          read: true
         })
       })
       fetch(`/emails/${x}`)
