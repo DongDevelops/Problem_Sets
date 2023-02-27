@@ -114,6 +114,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show a mail
 
     function seeMail(x) {
+      fetch(`/emails/${x}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+          archived: true
+        })
+      })
       fetch(`/emails/${x}`)
       .then(response => response.json())
       .then(email => {
@@ -130,12 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <li>Body: ${email.body}</li>
           </ul>
           `
-          fetch(`/emails/${email.id}`, {
-            method: 'PUT',
-            body: JSON.stringify({
-              archived: true
-            })
-          })
       });
     }
   }
