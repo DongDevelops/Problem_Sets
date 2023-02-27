@@ -110,6 +110,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Show a mail
+
+    if div {
+      div.remove();
+    } else {
+      
+    }
     const div = document.createElement('div');
     div.setAttribute("id", "email-view");
 
