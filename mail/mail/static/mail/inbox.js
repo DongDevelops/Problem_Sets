@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const td3 = document.createElement('td');
         td1.innerHTML = email.sender;
         td2.innerHTML = email.timestamp;
-        td3.innerHTML = email.read;
+        td3.innerHTML = email.subject;
         tr.onclick = function() {
           seeMail(email.id);
         }
