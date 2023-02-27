@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show the mailbox name
     document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
     const table = document.createElement('table');
+    table.className = "table";
     document.querySelector('#emails-view').append(table);
 
     fetch(`/emails/${mailbox}`)
@@ -106,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show a mail
 
     const div = document.createElement('div');
+    div.setAttribute("id", "email-view");
     document.querySelector('.container').append(div);
-
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
