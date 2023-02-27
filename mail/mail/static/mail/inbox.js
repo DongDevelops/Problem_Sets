@@ -132,10 +132,11 @@ document.addEventListener('DOMContentLoaded', function() {
           div.appendChild(timestamp);
           div.appendChild(body);
           document.querySelector('.container').append(div);
+          div.remove();
       });
     }
 
-    document.querySelector('#email-view').remove();
+
   }
 
 
