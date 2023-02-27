@@ -83,10 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(email => {
           console.log(email);
           const div = document.createElement('div');
-          div.setAttribute(class)
+          div.setAttribute("id", "email-view");
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
+          
       });
     }
 
