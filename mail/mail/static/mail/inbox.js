@@ -6,10 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
     document.querySelector('#compose').addEventListener('click', compose_email);
 
-
-    const div = document.createElement('div');
-    div.setAttribute("id", "email-view");
-
     // By default, load the inbox
     load_mailbox('inbox');
 
@@ -90,9 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(email => {
           console.log(email);
+          const div = document.createElement('div');
+          div.setAttribute("id", "email-view");
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
-          document.querySelector('#email-view').style.display = 'block';
           const sender = document.createElement('h3');
           const recipients = document.createElement('h3');
           const subject = document.createElement('h3');
@@ -108,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
           div.appendChild(subject);
           div.appendChild(timestamp);
           div.appendChild(body);
-
       });
     }
 
