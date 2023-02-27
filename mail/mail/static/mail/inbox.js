@@ -130,6 +130,12 @@ document.addEventListener('DOMContentLoaded', function() {
           <li>Body: ${email.body}</li>
           </ul>
           `
+          fetch(`/emails/${email.id}`, {
+            method: 'PUT',
+            body: JSON.stringify({
+              read: true
+            })
+          })
       });
     }
   }
