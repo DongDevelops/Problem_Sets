@@ -108,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const div = document.createElement('div');
     div.setAttribute("id", "email-view");
-    div.style.display = 'none';
     document.querySelector('.container').append(div);
 
     function seeMail(x) {
