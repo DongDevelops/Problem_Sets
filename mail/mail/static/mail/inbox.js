@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
           subject.innerHTML = email.subject;
           timestamp.innerHTML = email.timestamp;
           body.innerHTML = email.body;
-          div.appendChild(sender);
-          div.appendChild(recipients);
-          div.appendChild(subject);
-          div.appendChild(timestamp);
-          div.appendChild(body);
+          div.append(sender);
+          div.append(recipients);
+          div.append(subject);
+          div.append(timestamp);
+          div.append(body);
       });
     }
 
