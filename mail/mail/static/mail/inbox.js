@@ -81,8 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show a mail
 
-
-
     function seeMail(x) {
       fetch(`/emails/${x}`)
       .then(response => response.json())
@@ -91,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           const div = document.createElement('div');
-          div.setAttribute("id", "email-view");
+          div.setAttribute("style", "display: block");
           const sender = document.createElement('h3');
           const recipients = document.createElement('h3');
           const subject = document.createElement('h3');
@@ -102,11 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
           subject.innerHTML = email.subject;
           timestamp.innerHTML = email.timestamp;
           body.innerHTML = email.body;
-          div.append(sender);
-          div.append(recipients);
-          div.append(subject);
-          div.append(timestamp);
-          div.append(body);
+          div.appendChild(sender);
+          div.appendChild(recipients);
+          div.appendChild(subject);
+          div.appendChild(timestamp);
+          div.appendChild(body);
       });
     }
 
