@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch(`/emails/${x}`)
       .then(response => response.json())
       .then(email => {
-          email.
+          email.read = true;
           console.log(email);
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         table.appendChild(tr);
-        if (email.read === "True") {
+        if (email.read === "true") {
           tr.style.backgroundColor = "gray";
         } else {
           tr.style.backgroundColor = "white";
