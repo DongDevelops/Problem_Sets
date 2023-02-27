@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // By default, load the inbox
     load_mailbox('inbox');
 
+    const div = document.createElement('div');
+    div.setAttribute("id", "email-view");
+
     // Send Mail
     const recipients = document.querySelector('#compose-recipients');
     const subject = document.querySelector('#compose-subject');
@@ -108,10 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    
+
     // Show a mail
-    const div = document.createElement('div');
-    div.setAttribute("id", "email-view");
+
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
