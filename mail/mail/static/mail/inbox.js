@@ -87,7 +87,17 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
-          
+          const sender = document.createElement('h3');
+          const recipients = document.createElement('h3');
+          const subject = document.createElement('h3');
+          const timestamp = document.createElement('h3');
+          const body = document.createElement('h3');
+          sender.innerHTML = email.sender;
+          recipients.innerHTML = email.recipients;
+          subject.innerHTML = email.subject;
+          timestamp.innerHTML = email.timestamp;
+          body.innerHTML = email.body;
+          append()
       });
     }
 
