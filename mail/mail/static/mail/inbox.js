@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
-          document.querySelector('#email-view').innerHTML =
           const sender = document.createElement('h4');
           const recipients = document.createElement('h4');
           const subject = document.createElement('h4');
@@ -130,11 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
           subject.innerHTML = `Subject: ${email.subject}`;
           timestamp.innerHTML = `Timestamp: ${email.timestamp}`;
           body.innerHTML = `Body: ${email.body}`;
-          div.appendChild(sender);
-          div.appendChild(recipients);
-          div.appendChild(subject);
-          div.appendChild(timestamp);
-          div.appendChild(body);
+          document.querySelector('#email-view').appendChild(sender);
+          document.querySelector('#email-view').appendChild(recipients);
+          document.querySelector('#email-view').appendChild(subject);
+          document.querySelector('#email-view').appendChild(timestamp);
+          document.querySelector('#email-view').appendChild(body);
       });
     }
   }
