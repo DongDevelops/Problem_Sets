@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log(email);
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
+          div.style.display = 'block';
           const sender = document.createElement('h4');
           const recipients = document.createElement('h4');
           const subject = document.createElement('h4');
