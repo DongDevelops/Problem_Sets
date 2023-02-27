@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         td1.innerHTML = email.sender;
         td2.innerHTML = email.timestamp;
         td3.innerHTML = email.subject;
-        each.setAttribute("onclick", seeMail(email.id))
+        each.setAttribute("onclick", () => seeMail(email.id));
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
