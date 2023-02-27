@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
           div.appendChild(timestamp);
           div.appendChild(body);
       });
-      document.querySelector('#email-view').style.display = 'block';
     }
 
     fetch(`/emails/${mailbox}`)
