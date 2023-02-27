@@ -109,8 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    document.querySelector('#email-view').style.display = 'block';
-
     fetch(`/emails/${mailbox}`)
     .then(response => response.json())
     .then(emails => {
