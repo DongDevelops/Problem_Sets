@@ -106,8 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show a mail
 
-    document.querySelector('#email-view').remove;
-
     function seeMail(x) {
       fetch(`/emails/${x}`)
       .then(response => response.json())
@@ -136,6 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('.container').append(div);
       });
     }
+
+    document.querySelector('#email-view').remove;
   }
 
 
