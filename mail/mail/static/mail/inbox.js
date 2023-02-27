@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show compose view and hide other views
     document.querySelector('#emails-view').style.display = 'none';
     document.querySelector('#compose-view').style.display = 'block';
+    document.querySelector('#email-view').style.display = 'none';
 
 
     // Clear out composition fields
