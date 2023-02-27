@@ -81,6 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show a mail
 
+    const div = document.createElement('div');
+    div.setAttribute("id", "email-view");
+    div.setAttribute("style", "display: none");
+
     function seeMail(x) {
       fetch(`/emails/${x}`)
       .then(response => response.json())
@@ -88,8 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log(email);
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
-          const div = document.createElement('div');
-          div.setAttribute("style", "display: block");
+          document.querySelector('#email-view').style.display = 'block';
           const sender = document.createElement('h3');
           const recipients = document.createElement('h3');
           const subject = document.createElement('h3');
