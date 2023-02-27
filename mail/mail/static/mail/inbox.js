@@ -111,12 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show a mail
 
-    if div.exists() {
+    if (div !== null) {
       div.remove();
       div.style.display = 'block';
     } else {
       div.style.display = 'block';
     }
+    
     const div = document.createElement('div');
     div.setAttribute("id", "email-view");
 
