@@ -102,9 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
           td4.className = "btn btn-primay";
           td4.innerHTML = (email.archived === true) ? "Unarchive":"Archive";
           tr.appendChild(td4);
-        } else {
-          pass;
-        }
+        } 
         table.appendChild(tr);
         if (email.read === true) {
           tr.style.backgroundColor = "gray";
