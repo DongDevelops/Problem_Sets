@@ -102,7 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
           td4.className = "btn btn-primay";
           td4.innerHTML = (email.archived === true) ? "Unarchive":"Archive";
           tr.appendChild(td4);
-        } 
+          td4.onclick = function() {
+            archiveMail(email.id);
+          }
+        }
         table.appendChild(tr);
         if (email.read === true) {
           tr.style.backgroundColor = "gray";
@@ -113,7 +116,14 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-
+    function archiveMail(x) {
+      fetch(`/emails/${x}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+          archived: true
+        })
+      })
+    }
 
 
 
