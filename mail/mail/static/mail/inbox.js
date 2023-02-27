@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch(`/emails/${x}`, {
         method: 'PUT',
         body: JSON.stringify({
-          archived: true
+          read: true
         })
       })
       fetch(`/emails/${x}`)
