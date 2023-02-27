@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log(email);
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
-          document.querySelector('#email-view').style.display = 'block';
+          document.querySelector('#email-view').style.display = 'block', false;
           const sender = document.createElement('h4');
           const recipients = document.createElement('h4');
           const subject = document.createElement('h4');
