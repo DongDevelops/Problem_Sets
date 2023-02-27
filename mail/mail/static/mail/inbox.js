@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Show a mail
-
+    const div = document.createElement('div');
+    document.querySelector('.container').append(div);
 
 
     function seeMail(x) {
@@ -90,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log(email);
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
-          const div = document.createElement('div');
           const sender = document.createElement('h3');
           const recipients = document.createElement('h3');
           const subject = document.createElement('h3');
