@@ -106,9 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show a mail
 
-    if div {
-      
-    }
+    document.querySelector('#email-view').remove;
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
