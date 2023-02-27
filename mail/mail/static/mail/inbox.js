@@ -78,6 +78,31 @@ document.addEventListener('DOMContentLoaded', function() {
     table.className = "table";
     document.querySelector('#emails-view').append(table);
 
+    fetch(`/emails/${mailbox}`)
+    .then(response => response.json())
+    .then(emails => {
+      emails.forEach(email => {
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td');
+        const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
+        td1.innerHTML = email.sender;
+        td2.innerHTML = email.timestamp;
+        td3.innerHTML = email.subject;
+        tr.onclick = function() {
+          seeMail(email.id);
+        }
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        table.appendChild(tr);
+        if (email.read === "True") {
+          tr.style.backgroundColor = "gray";
+        } else {
+          tr.style.backgroundColor = "white";
+        }
+      });
+    })
 
     // Show a mail
     const div = document.createElement('div');
@@ -109,33 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
           div.appendChild(body);
       });
     }
-
-    fetch(`/emails/${mailbox}`)
-    .then(response => response.json())
-    .then(emails => {
-      emails.forEach(email => {
-        const tr = document.createElement('tr');
-        const td1 = document.createElement('td');
-        const td2 = document.createElement('td');
-        const td3 = document.createElement('td');
-        td1.innerHTML = email.sender;
-        td2.innerHTML = email.timestamp;
-        td3.innerHTML = email.subject;
-        tr.onclick = function() {
-          seeMail(email.id);
-        }
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        table.appendChild(tr);
-        if (email.read === "True") {
-          tr.style.backgroundColor = "gray";
-        } else {
-          tr.style.backgroundColor = "white";
-        }
-      });
-    })
-
 
 
   }
