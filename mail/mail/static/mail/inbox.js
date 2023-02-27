@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show a mail
 
     const div = document.createElement('div');
-    div.style.display = 'none';
     document.querySelector('.container').append(div);
+    div.style.display = 'none', false;
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
@@ -135,8 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
           div.appendChild(body);
       });
     }
-
-
   }
 
 
