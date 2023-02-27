@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const div = document.createElement('div');
     div.setAttribute("id", "email-view");
-    body.appendChild(div);
 
     // By default, load the inbox
     load_mailbox('inbox');
