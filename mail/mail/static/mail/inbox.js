@@ -92,6 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
           const td4 = document.createElement('button');
           td4.className = "btn btn-primay";
           td4.innerHTML = "Archive";
+        } else {
+          pass
         }
         td1.innerHTML = email.sender;
         td2.innerHTML = email.id;
@@ -102,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
+        tr.appendChild(td4);
         table.appendChild(tr);
         if (email.read === true) {
           tr.style.backgroundColor = "gray";
