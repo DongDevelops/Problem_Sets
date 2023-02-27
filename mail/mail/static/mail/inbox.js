@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
           div.appendChild(subject);
           div.appendChild(timestamp);
           div.appendChild(body);
+          
       });
     }
 
