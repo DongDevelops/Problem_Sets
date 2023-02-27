@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     // Show a mail
+    div.style.display = 'none';
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
