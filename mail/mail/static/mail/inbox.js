@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show a mail
 
-    if div {
+    if div.exists() {
       div.remove();
       div.style.display = 'block';
     } else {
