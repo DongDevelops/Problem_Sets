@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
           fetch(`/emails/${email.id}`, {
             method: 'PUT',
             body: JSON.stringify({
-              read: true
+              archived: true
             })
           })
       });
