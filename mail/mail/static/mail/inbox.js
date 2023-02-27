@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const div = document.createElement('div');
     document.querySelector('.container').append(div);
-    div.style.display = 'none', false;
+    div.style.display = 'none';
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
