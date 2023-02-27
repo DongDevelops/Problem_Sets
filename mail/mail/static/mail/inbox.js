@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show a mail
 
 
-
+    document.querySelector('#email-view').style.display = 'none';
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           const div = document.createElement('div');
+          div.setAttribute("id", "email-view");
           const sender = document.createElement('h4');
           const recipients = document.createElement('h4');
           const subject = document.createElement('h4');
