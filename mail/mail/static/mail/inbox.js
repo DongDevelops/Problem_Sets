@@ -80,8 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function seeMail(x) {
       fetch(`/emails/${x}`)
       .then(response => response.json())
-      .then(result => {
-          console.log(result);
+      .then(email => {
+          console.log(email);
+          
       });
     }
 
@@ -93,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
-        const each = document.createElement('div');
         td1.innerHTML = email.sender;
         td2.innerHTML = email.timestamp;
         td3.innerHTML = email.subject;
@@ -103,12 +103,11 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
-        each.appendChild(tr);
-        table.appendChild(each);
+        table.appendChild(tr);
         if (email.read === "True") {
-          each.style.backgroundColor = "gray";
+          tr.style.backgroundColor = "gray";
         } else {
-          each.style.backgroundColor = "white";
+          tr.style.backgroundColor = "white";
         }
       });
     })
