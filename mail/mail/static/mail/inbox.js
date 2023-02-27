@@ -99,9 +99,9 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td3);
         table.appendChild(tr);
         if (email.read === true) {
-          tr.style.backgroundColor = "red";
-        } else {
           tr.style.backgroundColor = "gray";
+        } else {
+          tr.style.backgroundColor = "white";
         }
       });
     })
