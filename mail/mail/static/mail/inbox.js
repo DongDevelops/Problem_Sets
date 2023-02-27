@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
         td1.innerHTML = email.sender;
-        td2.innerHTML = email.id;
+        td2.innerHTML = email.username;
         td3.innerHTML = email.read;
         tr.onclick = function() {
           seeMail(email.id);
