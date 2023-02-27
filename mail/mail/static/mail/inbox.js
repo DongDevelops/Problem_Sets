@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    document.querySelector('#email-view').remove;
+    document.querySelector('#email-view').remove();
   }
 
 
