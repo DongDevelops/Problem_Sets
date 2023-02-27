@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     // Show a mail
-    div.style.display = 'none';
+
 
     function seeMail(x) {
       fetch(`/emails/${x}`)
@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('.container').append(div);
       });
     }
+    div.style.display = 'none';
   }
 
 
