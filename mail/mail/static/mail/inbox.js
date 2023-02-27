@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mailbox === "inbox") {
           const td4 = document.createElement('button');
           td4.className = "btn btn-primay";
-          td4.innerHTML = "Archive";
+          if email.archive === true ? td4.innerHTML = "Archive" : ;
         } else {
           pass
         }
