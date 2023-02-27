@@ -111,10 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show a mail
 
-    if div {
+    if div is not None {
       div.remove();
     } else {
-      
+
     }
     const div = document.createElement('div');
     div.setAttribute("id", "email-view");
