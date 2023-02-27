@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const td3 = document.createElement('td');
         if (mailbox === "inbox") {
           const td4 = document.createElement('button');
+          td4.className = "btn btn-primay";
+          td4.innerHTML = "Archive";
         }
         td1.innerHTML = email.sender;
         td2.innerHTML = email.id;
