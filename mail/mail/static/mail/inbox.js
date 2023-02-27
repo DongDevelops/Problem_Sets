@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(email => {
           console.log(email);
-
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           const sender = document.createElement('h3');
@@ -107,9 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
           div.append(subject);
           div.append(timestamp);
           div.append(body);
-          document.querySelector('#email-view').style.display = 'block';
       });
     }
+
+    document.querySelector('#email-view').style.display = 'block';
 
     fetch(`/emails/${mailbox}`)
     .then(response => response.json())
