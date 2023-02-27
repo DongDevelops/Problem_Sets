@@ -120,21 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
-          const sender = document.createElement('h4');
-          const recipients = document.createElement('h4');
-          const subject = document.createElement('h4');
-          const timestamp = document.createElement('h4');
-          const body = document.createElement('h5');
-          sender.innerHTML = `Sender: ${email.sender}`;
-          recipients.innerHTML = `Recipients: ${email.recipients}`;
-          subject.innerHTML = `Subject: ${email.subject}`;
-          timestamp.innerHTML = `Timestamp: ${email.timestamp}`;
-          body.innerHTML = `Body: ${email.body}`;
-          document.querySelector('#email-view').appendChild(sender);
-          document.querySelector('#email-view').appendChild(recipients);
-          document.querySelector('#email-view').appendChild(subject);
-          document.querySelector('#email-view').appendChild(timestamp);
-          document.querySelector('#email-view').appendChild(body);
+          document.querySelector('#email-view').innerHTML = `
+          <ul>
+          <li>Sender: ${email.sender}</li>
+          <li>Recipients: ${email.recipients}</li>
+          <li>Subject: ${email.subject}</li>
+          <li>Timestamp: ${email.timestamp}</li>
+          <li>Body: ${email.body}</li>
+          </ul>
+          `
       });
     }
   }
