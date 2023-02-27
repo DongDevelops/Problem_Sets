@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch(`/emails/${x}`)
       .then(response => response.json())
       .then(email => {
-          email.read = true;
           console.log(email);
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
