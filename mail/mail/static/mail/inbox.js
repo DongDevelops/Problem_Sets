@@ -77,16 +77,20 @@ document.addEventListener('DOMContentLoaded', function() {
     table.className = "table";
     document.querySelector('#emails-view').append(table);
 
+
+    // Show a mail
+    const div = document.createElement('div');
+    div.setAttribute("id", "email-view");
+    document.querySelector('#emails-view').style.display = 'none';
+    document.querySelector('#compose-view').style.display = 'none';
+    document.querySelector('#email-view').style.display = 'block';
+
     function seeMail(x) {
       fetch(`/emails/${x}`)
       .then(response => response.json())
       .then(email => {
           console.log(email);
-          const div = document.createElement('div');
-          div.setAttribute("id", "email-view");
-          document.querySelector('#emails-view').style.display = 'none';
-          document.querySelector('#compose-view').style.display = 'none';
-          document.querySelector('#email-view').style.display = 'block';
+
           const sender = document.createElement('h3');
           const recipients = document.createElement('h3');
           const subject = document.createElement('h3');
@@ -102,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
           div.appendChild(subject);
           div.appendChild(timestamp);
           div.appendChild(body);
+
       });
     }
 
