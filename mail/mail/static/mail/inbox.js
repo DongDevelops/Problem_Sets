@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
               document.querySelector('#compose-view').style.display = 'block';
               document.querySelector('#email-view').style.display = 'none';
 
-              document.querySelector('#compose-recipients').value = `${result.sender;
+              document.querySelector('#compose-recipients').value = `${result.sender}`;
               document.querySelector('#compose-subject').value = `Re: ${result.subject}`;
               document.querySelector('#compose-body').value = '';
             });
