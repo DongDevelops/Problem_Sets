@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
           archived: false
         })
       })
+      load_mailbox(inbox);
     }
 
 
