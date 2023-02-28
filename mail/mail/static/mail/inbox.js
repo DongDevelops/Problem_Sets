@@ -209,7 +209,16 @@ document.addEventListener('DOMContentLoaded', function() {
               document.querySelector('#email-view').style.display = 'none';
 
               document.querySelector('#compose-recipients').value = `${result.sender}`;
-              document.querySelector('#compose-subject').value = `Re: ${result.subject}`;
+
+              const reply_subject = result.subject;
+              const splits = reply_subject.split(" ", 1);
+              if (splits !== "Re:") {
+                subject = "Re:" + result.subject;
+              }
+              else {
+                subject = reply_subject;
+              }
+              document.querySelector('#compose-subject').value = subject;
               document.querySelector('#compose-body').value = `On ${result.timestamp} ${result.sender} wrote: ${result.body}`;
             });
           }
