@@ -184,6 +184,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             `
           }
+          document.querySelector('#btn').addEventListener('click', function() {
+            
+          }
           const button = document.getElementById('btn');
           button.onclick = function() {
             unarchiveMail(email.id);
