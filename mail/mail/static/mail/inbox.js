@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
+          const btn = document.createElement
           document.querySelector('#email-view').innerHTML = (email.archived === true) ? `
           <ul>
           <li>Sender: ${email.sender}</li>
