@@ -185,12 +185,9 @@ document.addEventListener('DOMContentLoaded', function() {
             `
           }
           document.querySelector('#btn').addEventListener('click', function() {
-            
-          }
-          const button = document.getElementById('btn');
-          button.onclick = function() {
             unarchiveMail(email.id);
-          }
+          })
+
           const reply = document.getElementById('reply');
           reply.onclick = function() {
             fetch(`/emails/${email.id}`)
