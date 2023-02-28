@@ -1,5 +1,9 @@
-if (email.read === "True") {
-  tr.classname = "table-light";
-} else {
-  tr.classname = "table-info";
+if (mailbox === "inbox") {
+  const td4 = document.createElement('button');
+  td4.className = "btn btn-primay";
+  td4.innerHTML = (email.archived === true) ? "Unarchive":"Archive";
+  tr.appendChild(td4);
+  td4.onclick = function() {
+    archiveMail(email.id);
+  }
 }
