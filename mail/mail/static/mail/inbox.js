@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <li>Subject: ${email.subject}</li>
           <li>Timestamp: ${email.timestamp}</li>
           <li>Body: ${email.body}</li>
-          <button id="btn" onclick=unarchiveMail(${email.id})>Unarchive</button>
+          <button id="btn">Unarchive</button>
           </ul>
           `:`
           <ul>
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
           `
           const button = document.getElementById('btn');
           button.onclick = function() {
-            
+            unarchiveMail(${email.id});
           }
       });
     }
