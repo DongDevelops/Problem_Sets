@@ -185,8 +185,10 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             `
           }
-
-
+          const archive = document.getElementById('archiveMail');
+          archive.onclick = function() {
+            archiveMail(email.id);
+          }
           const button = document.getElementById('btn');
           button.onclick = function() {
             unarchiveMail(email.id);
