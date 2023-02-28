@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
-          } else if (email.archived === false and email.recipients == document.querySelector('#user').value) {
+          } else if (email.archived === false && email.recipients == document.querySelector('#user').value) {
             document.querySelector('#email-view').innerHTML = `
             <ul>
             <li>Sender: ${email.sender}</li>
@@ -174,10 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
-            const archive = document.getElementById('archiveMail');
-            archive.onclick = function() {
-              archiveMail(email.id);
-            }
           } else {
             document.querySelector('#email-view').innerHTML = `
             <ul>
@@ -190,6 +186,10 @@ document.addEventListener('DOMContentLoaded', function() {
             `
           }
 
+          const archive = document.getElementById('archiveMail');
+          archive.onclick = function() {
+            archiveMail(email.id);
+          }
           const button = document.getElementById('btn');
           button.onclick = function() {
             unarchiveMail(email.id);
