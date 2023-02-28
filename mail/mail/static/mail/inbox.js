@@ -126,6 +126,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    function unarchiveMail(x) {
+      fetch(`/emails/${x}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+          archived: false
+        })
+      })
+    }
+
+
 
     // Show a mail
 
@@ -150,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <li>Subject: ${email.subject}</li>
           <li>Timestamp: ${email.timestamp}</li>
           <li>Body: ${email.body}</li>
-          
+
           </ul>
           `
       });
