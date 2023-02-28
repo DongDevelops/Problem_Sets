@@ -97,15 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
-        if (mailbox === "inbox") {
-          const td4 = document.createElement('button');
-          td4.className = "btn btn-primay";
-          td4.innerHTML = (email.archived === true) ? "Unarchive":"Archive";
-          tr.appendChild(td4);
-          td4.onclick = function() {
-            archiveMail(email.id);
-          }
-        }
+
         table.appendChild(tr);
         if (email.read === true) {
           tr.style.backgroundColor = "gray";
