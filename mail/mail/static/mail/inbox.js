@@ -88,9 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
-        td1.innerHTML = email.sender;
-        td2.innerHTML = email.id;
-        td3.innerHTML = email.archived;
+        td1.innerHTML = `Sender: ${email.sender}`;
+        td2.innerHTML = email.subject;
+        td3.innerHTML = email.timestamp;
         tr.onclick = function() {
           seeMail(email.id);
         }
