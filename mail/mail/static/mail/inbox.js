@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
-
           document.querySelector('#email-view').innerHTML = (email.archived === true) ? `
           <ul>
           <li>Sender: ${email.sender}</li>
@@ -175,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
           `
           const button = document.getElementById('btn');
           button.onclick = function() {
-            unarchiveMail(${email.id});
+            unarchiveMail(email.id);
           }
       });
     }
