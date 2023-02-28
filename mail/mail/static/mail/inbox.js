@@ -136,8 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
       load_mailbox('inbox');
     }
 
-    function reply() {
-      
+    function reply(x) {
+
     }
 
 
