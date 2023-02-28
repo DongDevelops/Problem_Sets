@@ -162,6 +162,25 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
+            const button = document.getElementById('btn');
+            button.onclick = function() {
+            unarchiveMail(email.id);
+            }
+            const reply = document.getElementById('reply');
+            reply.onclick = function() {
+            fetch(`/emails/${email.id}`)
+            .then(response => response.json())
+            .then(result => {
+              console.log(result);
+              document.querySelector('#emails-view').style.display = 'none';
+              document.querySelector('#compose-view').style.display = 'block';
+              document.querySelector('#email-view').style.display = 'none';
+
+              document.querySelector('#compose-recipients').value = `${result.sender}`;
+              document.querySelector('#compose-subject').value = `Re: ${result.subject}`;
+              document.querySelector('#compose-body').value = `On ${result.timestamp} ${result.sender} wrote: ${result.body}`;
+            });
+          }
           } else if (email.archived === false && email.recipients == document.querySelector('#user').value) {
             document.querySelector('#email-view').innerHTML = `
             <ul>
@@ -205,25 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `
           }
 
-          const button = document.getElementById('btn');
-          button.onclick = function() {
-            unarchiveMail(email.id);
-          }
-          const reply = document.getElementById('reply');
-          reply.onclick = function() {
-            fetch(`/emails/${email.id}`)
-            .then(response => response.json())
-            .then(result => {
-              console.log(result);
-              document.querySelector('#emails-view').style.display = 'none';
-              document.querySelector('#compose-view').style.display = 'block';
-              document.querySelector('#email-view').style.display = 'none';
 
-              document.querySelector('#compose-recipients').value = `${result.sender}`;
-              document.querySelector('#compose-subject').value = `Re: ${result.subject}`;
-              document.querySelector('#compose-body').value = `On ${result.timestamp} ${result.sender} wrote: ${result.body}`;
-            });
-          }
       });
     }
   }
