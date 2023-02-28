@@ -143,7 +143,15 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(email => {
           console.log(email);
-
+          function unarchiveMail(x) {
+            fetch(`/emails/${x}`, {
+              method: 'PUT',
+              body: JSON.stringify({
+                archived: false
+              })
+            })
+            load_mailbox('inbox');
+          }
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
