@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
-          } else if (email.recipients === document.querySelector('#user').innerHTML) {
+          } else (email.recipients === document.querySelector('#user').value) {
             document.querySelector('#email-view').innerHTML = `
             <ul>
             <li>Sender: ${email.sender}</li>
@@ -173,19 +173,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
-          } else {
-            document.querySelector('#email-view').innerHTML = `
-            <ul>
-            <li>Sender: ${email.sender}</li>
-            <li>Recipients: ${email.recipients}</li>
-            <li>Subject: ${email.subject}</li>
-            <li>Timestamp: ${email.timestamp}</li>
-            <li>Body: ${email.body}</li>
-            </ul>
-            `
           }
 
-          
+
       });
     }
   }
