@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             `
           }
-          else if (email.recipients === request.user) {
+          else if (email.recipients === document.querySelector('#user').value) {
             document.querySelector('#email-view').innerHTML = `
             <ul>
             <li>Sender: ${email.sender}</li>
