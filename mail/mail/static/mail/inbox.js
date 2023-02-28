@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
               document.querySelector('#compose-recipients').value = `${result.sender}`;
               document.querySelector('#compose-subject').value = `Re: ${result.subject}`;
-              document.querySelector('#compose-body').value = '';
+              document.querySelector('#compose-body').value = 'On ${email.timestamp}';
             });
           }
       });
