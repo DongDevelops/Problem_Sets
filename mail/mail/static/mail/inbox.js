@@ -167,15 +167,29 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             `
           }
-          else if ()
-          <ul>
-          <li>Sender: ${email.sender}</li>
-          <li>Recipients: ${email.recipients}</li>
-          <li>Subject: ${email.subject}</li>
-          <li>Timestamp: ${email.timestamp}</li>
-          <li>Body: ${email.body}</li>
-          </ul>
-          `
+          else if (email.recipients === request.user) {
+            document.querySelector('#email-view').innerHTML = `
+            <ul>
+            <li>Sender: ${email.sender}</li>
+            <li>Recipients: ${email.recipients}</li>
+            <li>Subject: ${email.subject}</li>
+            <li>Timestamp: ${email.timestamp}</li>
+            <li>Body: ${email.body}</li>
+            <button id="reply">Reply</button>
+            </ul>
+            `
+          }
+          else {
+            document.querySelector('#email-view').innerHTML = `
+            <ul>
+            <li>Sender: ${email.sender}</li>
+            <li>Recipients: ${email.recipients}</li>
+            <li>Subject: ${email.subject}</li>
+            <li>Timestamp: ${email.timestamp}</li>
+            <li>Body: ${email.body}</li>
+            </ul>
+            `
+          }
           const button = document.getElementById('btn');
           button.onclick = function() {
             unarchiveMail(email.id);
