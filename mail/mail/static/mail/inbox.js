@@ -174,6 +174,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
+            const archive = document.getElementById('archiveMail');
+            archive.onclick = function() {
+              archiveMail(email.id);
+            }
           } else {
             document.querySelector('#email-view').innerHTML = `
             <ul>
@@ -185,10 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             `
           }
-          const archive = document.getElementById('archiveMail');
-          archive.onclick = function() {
-            archiveMail(email.id);
-          }
+
           const button = document.getElementById('btn');
           button.onclick = function() {
             unarchiveMail(email.id);
