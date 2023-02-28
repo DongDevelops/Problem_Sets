@@ -136,6 +136,10 @@ document.addEventListener('DOMContentLoaded', function() {
       load_mailbox('inbox');
     }
 
+    function reply() {
+      
+    }
+
 
 
     // Show a mail
@@ -193,6 +197,10 @@ document.addEventListener('DOMContentLoaded', function() {
           const button = document.getElementById('btn');
           button.onclick = function() {
             unarchiveMail(email.id);
+          }
+          const reply = document.getElementById('reply');
+          reply.onclick = function() {
+
           }
       });
     }
