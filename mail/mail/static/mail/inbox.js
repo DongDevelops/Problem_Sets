@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>Subject: ${email.subject}</li>
             <li>Timestamp: ${email.timestamp}</li>
             <li>Body: ${email.body}</li>
-            <button id="archiveMail">
+            <button id="archiveMail">Archive</button>
             <button id="reply">Reply</button>
             </ul>
             `
@@ -184,6 +184,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>Body: ${email.body}</li>
             </ul>
             `
+          }
+          const archive = document.getElementById('archiveMail');
+          archive.onclick = function() {
+            archiveMail(email.id);
           }
           const button = document.getElementById('btn');
           button.onclick = function() {
