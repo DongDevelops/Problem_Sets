@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
-          } else if (email.recipients === document.querySelector('#user')) {
+          } else if (email.recipients === document.querySelector('#user').innerHTML) {
             document.querySelector('#email-view').innerHTML = `
             <ul>
             <li>Sender: ${email.sender}</li>
@@ -184,10 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             `
           }
-          const button = document.getElementById('btn');
-          button.onclick = function() {
-            unarchiveMail(email.id);
-          }
+   
           const reply = document.getElementById('reply');
           reply.onclick = function() {
             fetch(`/emails/${email.id}`)
