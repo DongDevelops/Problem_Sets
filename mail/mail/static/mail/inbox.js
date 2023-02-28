@@ -184,22 +184,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             `
           }
-   
-          const reply = document.getElementById('reply');
-          reply.onclick = function() {
-            fetch(`/emails/${email.id}`)
-            .then(response => response.json())
-            .then(result => {
-              console.log(result);
-              document.querySelector('#emails-view').style.display = 'none';
-              document.querySelector('#compose-view').style.display = 'block';
-              document.querySelector('#email-view').style.display = 'none';
 
-              document.querySelector('#compose-recipients').value = `${result.sender}`;
-              document.querySelector('#compose-subject').value = `Re: ${result.subject}`;
-              document.querySelector('#compose-body').value = `On ${result.timestamp} ${result.sender} wrote: ${result.body}`;
-            });
-          }
+          
       });
     }
   }
