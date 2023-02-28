@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(email => {
           console.log(email);
-          
+
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <li>Subject: ${email.subject}</li>
           <li>Timestamp: ${email.timestamp}</li>
           <li>Body: ${email.body}</li>
-          <button onclick=function unarchiveMail(${email.id})}>Unarchive</button>
+          <button onclick=function unarchiveMail(${email.id});}>Unarchive</button>
           </ul>
           `:`
           <ul>
