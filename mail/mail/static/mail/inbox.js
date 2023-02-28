@@ -161,8 +161,8 @@ document.addEventListener('DOMContentLoaded', function() {
           <li>Subject: ${email.subject}</li>
           <li>Timestamp: ${email.timestamp}</li>
           <li>Body: ${email.body}</li>
-          
-          <button onclick="unarchiveMail(${eamil.id})>Unarchive</button>
+
+          <button onclick="unarchiveMail(${email.id})>Unarchive</button>
           </ul>
           `
       });
