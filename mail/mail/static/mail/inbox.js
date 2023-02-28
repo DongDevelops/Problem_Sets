@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         body: JSON.stringify({
           archived: false
         })
-        load_mailbox(inbox);
+        load_mailbox('inbox');
       })
     }
 
