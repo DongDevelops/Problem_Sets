@@ -163,10 +163,11 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>Timestamp: ${email.timestamp}</li>
             <li>Body: ${email.body}</li>
             <button id="btn">Unarchive</button>
+            <button id="reply">Reply</button>
             </ul>
             `
           }
-          elif 
+          else if ()
           <ul>
           <li>Sender: ${email.sender}</li>
           <li>Recipients: ${email.recipients}</li>
