@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
-          document.querySelector('#email-view').innerHTML = (email.archived === )`
+          document.querySelector('#email-view').innerHTML = `
           <ul>
           <li>Sender: ${email.sender}</li>
           <li>Recipients: ${email.recipients}</li>
