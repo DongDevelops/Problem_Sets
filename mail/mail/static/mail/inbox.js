@@ -200,7 +200,18 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           const reply = document.getElementById('reply');
           reply.onclick = function() {
+            fetch(`/emails/${email.id}`)
+            .then(response => response.json())
+            .then(result => {
+              console.log(result);
+              document.querySelector('#emails-view').style.display = 'none';
+              document.querySelector('#compose-view').style.display = 'block';
+              document.querySelector('#email-view').style.display = 'none';
 
+              document.querySelector('#compose-recipients').value = 'result.';
+              document.querySelector('#compose-subject').value = '';
+              document.querySelector('#compose-body').value = '';
+            });
           }
       });
     }
