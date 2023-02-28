@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>Timestamp: ${email.timestamp}</li>
             <li>Body: ${email.body}</li>
             <button id="reply">Reply</button>
-            </ul>
+            </ul> 
             `
           }
 
