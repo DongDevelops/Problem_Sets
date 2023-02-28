@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
-          } else if (email.recipients === document.querySelector('#user').value) {
+          } else if (email.recipients == document.querySelector('#user').value) {
             document.querySelector('#email-view').innerHTML = `
             <ul>
             <li>Sender: ${email.sender}</li>
