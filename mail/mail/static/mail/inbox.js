@@ -161,9 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
           <li>Subject: ${email.subject}</li>
           <li>Timestamp: ${email.timestamp}</li>
           <li>Body: ${email.body}</li>
-          <button onclick="unarchiveMail(${email.id})>Unarchive</button>
+          <button>Unarchive</button>
           </ul>
           `
+          
       });
     }
   }
