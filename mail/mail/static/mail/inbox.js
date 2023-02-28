@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
               document.querySelector('#compose-recipients').value = `${result.sender}`;
 
               const reply_subject = result.subject;
-              const splits = reply_subject.split(" ", 1);
+              const splits = reply_subject.split(" ", 1)[0];
               if (splits !== "Re:") {
                 subject = "Re:" + result.subject;
               }
