@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>Subject: ${email.subject}</li>
             <li>Timestamp: ${email.timestamp}</li>
             <li>Body: ${email.body}</li>
+            <button id="archiveMail">
             <button id="reply">Reply</button>
             </ul>
             `
