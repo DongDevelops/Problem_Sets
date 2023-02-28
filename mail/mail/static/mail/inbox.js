@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         table.appendChild(tr);
         if (email.read === true) {
-          tr.style.backgroundColor = "gray";
-        } else {
           tr.style.backgroundColor = "white";
+        } else {
+          tr.style.backgroundColor = "gray";
         }
       });
     })
@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
           archived: true
         })
       })
+      load_mailbox('inbox');
     }
 
 
