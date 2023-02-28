@@ -150,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(email => {
           console.log(email);
+          
           document.querySelector('#emails-view').style.display = 'none';
           document.querySelector('#compose-view').style.display = 'none';
           document.querySelector('#email-view').style.display = 'block';
