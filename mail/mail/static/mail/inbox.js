@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="reply">Reply</button>
             </ul>
             `
-          } else (email.recipients === document.querySelector('#user').value) {
+          } else if (email.recipients === document.querySelector('#user').value) {
             document.querySelector('#email-view').innerHTML = `
             <ul>
             <li>Sender: ${email.sender}</li>
@@ -171,11 +171,38 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>Timestamp: ${email.timestamp}</li>
             <li>Body: ${email.body}</li>
             <button id="reply">Reply</button>
-            </ul> 
+            </ul>
+            `
+          } else {
+            document.querySelector('#email-view').innerHTML = `
+            <ul>
+            <li>Sender: ${email.sender}</li>
+            <li>Recipients: ${email.recipients}</li>
+            <li>Subject: ${email.subject}</li>
+            <li>Timestamp: ${email.timestamp}</li>
+            <li>Body: ${email.body}</li>
+            </ul>
             `
           }
+          const button = document.getElementById('btn');
+          button.onclick = function() {
+            unarchiveMail(email.id);
+          }
+          const reply = document.getElementById('reply');
+          reply.onclick = function() {
+            fetch(`/emails/${email.id}`)
+            .then(response => response.json())
+            .then(result => {
+              console.log(result);
+              document.querySelector('#emails-view').style.display = 'none';
+              document.querySelector('#compose-view').style.display = 'block';
+              document.querySelector('#email-view').style.display = 'none';
 
-
+              document.querySelector('#compose-recipients').value = `${result.sender}`;
+              document.querySelector('#compose-subject').value = `Re: ${result.subject}`;
+              document.querySelector('#compose-body').value = `On ${result.timestamp} ${result.sender} wrote: ${result.body}`;
+            });
+          }
       });
     }
   }
