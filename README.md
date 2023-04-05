@@ -1,4 +1,4 @@
-# Problem Sets
+# Problem Sets (commerce, mail, search)
 
 Problem sets given by CS50's Web Programming with Python & Javascript Course from Harvard University. It includes three different projects.
 
